@@ -1,8 +1,15 @@
-# Reinforcement Learning From Scratch: the code
+# Reinforcement Learning Fundamentals: the code
 
-This is the Python behind every number on screen in the PhiloAI video *Reinforcement Learning From Scratch: From a Dog's Treat to ChatGPT*.
+This is the Python behind every number on screen in the PhiloAI video *Reinforcement Learning Fundamentals: The Complete Guide From Scratch*.
 
-The video works each number out by hand first, then checks it here. Every file is plain Python with no libraries, so each line maps to an idea from the video.
+The video covers the foundation that the rest of RL builds on:
+- Markov decision processes, return and value;
+- the Bellman equation, value iteration and policy iteration;
+- exploration, and temporal difference (TD) learning;
+- SARSA and Q-learning;
+- the step up to policy gradients and RL for language models.
+
+These files reproduce each of those results. The video works each number out by hand first, then checks it here. Every file is plain Python with no libraries, so each line maps to an idea from the video.
 
 ```bash
 cd rl-basics

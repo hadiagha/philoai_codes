@@ -6,7 +6,7 @@ Each video has its own folder. The code is small, from scratch and plain Python,
 
 | Folder | Video |
 |---|---|
-| [`rl-basics/`](rl-basics/) | *Reinforcement Learning From Scratch: From a Dog's Treat to ChatGPT* |
+| [`rl-basics/`](rl-basics/) | *Reinforcement Learning Fundamentals: The Complete Guide From Scratch* |
 
 Requirements: Python 3.8 or newer. Unless a folder says otherwise, no libraries are needed.
 
