@@ -1,0 +1,77 @@
+{
+ "tag": "nsp-medium-s0/full/choice/v2/rep0/0/0",
+ "model": "kev-latest",
+ "state": "Hospital ward roster for 25 nurses over 28 days. Shifts: Morning, Afternoon, Night.\nThe code already enforces: exact coverage, at most one shift per nurse per day, and no Night followed by next-day Morning.\nPenalty to keep small: 10 points each time a nurse works on a day they asked off, 4 points each time a nurse works a shift type they asked to avoid, and 5 points for every shift of difference between the busiest and the least busy nurse at the end.\nNow filling: Day 1 (Mon), Morning shift. It needs 7 nurses.\nShifts filled so far: 0 of 476. At the end each nurse will average 19.0 shifts.\nNurses who can work this shift:\nN11: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Sat (day 6), Sun (day 7), Sun (day 14), Sun (day 21), Sat (day 27), Sun (day 28). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN16: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Fri (day 5), Sat (day 6), Wed (day 10), Sat (day 13), Sun (day 21), Sat (day 27). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN14: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Fri (day 5), Sun (day 7), Thu (day 11), Sun (day 14), Sun (day 21), Fri (day 26). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN03: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Tue (day 9), Sat (day 20), Sun (day 21), Mon (day 22), Tue (day 23), Sat (day 27). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN07: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Tue (day 2), Thu (day 4), Fri (day 5), Sat (day 20), Thu (day 25), Fri (day 26). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN06: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Thu (day 4), Sat (day 6), Sat (day 20), Sun (day 21), Sat (day 27), Sun (day 28). Last worked: off. Penalty if picked now: 4. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN19: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Tue (day 2), Wed (day 3), Sat (day 13), Tue (day 16), Fri (day 26), Sun (day 28). Last worked: off. Penalty if picked now: 4. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN17: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Fri (day 12), Mon (day 15), Fri (day 19), Sat (day 20), Fri (day 26), Sun (day 28). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN09: 0 shifts so far. Asked for today off: YES. Avoids: Mornings. Days off asked later: Tue (day 16), Sat (day 20), Sun (day 21), Wed (day 24), Sun (day 28). Last worked: off. Penalty if picked now: 14. Fair share so far: 0.0 shifts. Later days they can work without penalty: 22.\nN01: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Sun (day 7), Mon (day 8), Wed (day 17), Sun (day 21), Fri (day 26), Sun (day 28). Last worked: off. Penalty if picked now: 4. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN21: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Sun (day 7), Thu (day 11), Fri (day 12), Sun (day 14), Sun (day 21), Sun (day 28). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN02: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Thu (day 11), Fri (day 12), Sat (day 13), Fri (day 19), Sat (day 27), Sun (day 28). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN20: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Sat (day 13), Sun (day 14), Tue (day 16), Thu (day 25), Fri (day 26), Sat (day 27). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN18: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Fri (day 5), Wed (day 10), Fri (day 12), Thu (day 18), Fri (day 19), Tue (day 23). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN25: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Sat (day 6), Wed (day 10), Thu (day 11), Sat (day 20), Thu (day 25), Sun (day 28). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN22: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Fri (day 12), Sat (day 20), Tue (day 23), Thu (day 25), Fri (day 26), Sun (day 28). Last worked: off. Penalty if picked now: 4. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN24: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Tue (day 2), Sun (day 7), Fri (day 19), Tue (day 23), Fri (day 26), Sun (day 28). Last worked: off. Penalty if picked now: 4. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN05: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Sun (day 7), Sat (day 13), Sun (day 14), Mon (day 22), Sat (day 27), Sun (day 28). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN12: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Fri (day 5), Sat (day 6), Wed (day 10), Sun (day 14), Fri (day 19), Fri (day 26). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN08: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Thu (day 4), Fri (day 5), Sat (day 6), Sun (day 7), Sun (day 14), Tue (day 16). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN15: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Tue (day 2), Sat (day 6), Sun (day 7), Sun (day 14), Fri (day 19), Sat (day 27). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN23: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Tue (day 2), Sun (day 14), Wed (day 17), Sun (day 21), Fri (day 26), Sun (day 28). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN10: 0 shifts so far. Asked for today off: YES. Avoids: nothing. Days off asked later: Wed (day 10), Sun (day 14), Sat (day 20), Sun (day 21), Sun (day 28). Last worked: off. Penalty if picked now: 10. Fair share so far: 0.0 shifts. Later days they can work without penalty: 22.\nN04: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Thu (day 4), Sat (day 6), Wed (day 10), Fri (day 12), Fri (day 19), Fri (day 26). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.\nN13: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Fri (day 5), Sat (day 13), Sun (day 14), Mon (day 22), Tue (day 23), Sat (day 27). Last worked: off. Penalty if picked now: 0. Fair share so far: 0.0 shifts. Later days they can work without penalty: 21.",
+ "questions": {
+  "pick": {
+   "type": "choice",
+   "instructions": "Which nurse is the best pick for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": {
+    "N11": "assign N11",
+    "N16": "assign N16",
+    "N14": "assign N14",
+    "N03": "assign N03",
+    "N07": "assign N07",
+    "N06": "assign N06",
+    "N19": "assign N19",
+    "N17": "assign N17",
+    "N09": "assign N09",
+    "N01": "assign N01",
+    "N21": "assign N21",
+    "N02": "assign N02",
+    "N20": "assign N20",
+    "N18": "assign N18",
+    "N25": "assign N25",
+    "N22": "assign N22",
+    "N24": "assign N24",
+    "N05": "assign N05",
+    "N12": "assign N12",
+    "N08": "assign N08",
+    "N15": "assign N15",
+    "N23": "assign N23",
+    "N10": "assign N10",
+    "N04": "assign N04",
+    "N13": "assign N13"
+   }
+  }
+ },
+ "answers": {
+  "pick": {
+   "type": "choice",
+   "choice": "N11",
+   "confidence": 0.0623,
+   "probabilities": {
+    "N11": 0.0998,
+    "N16": 0.0565,
+    "N14": 0.0543,
+    "N03": 0.0427,
+    "N07": 0.0562,
+    "N06": 0.0063,
+    "N19": 0.0061,
+    "N17": 0.0631,
+    "N09": 0.0044,
+    "N01": 0.0128,
+    "N21": 0.0621,
+    "N02": 0.0671,
+    "N20": 0.0368,
+    "N18": 0.0316,
+    "N25": 0.0467,
+    "N22": 0.0076,
+    "N24": 0.0085,
+    "N05": 0.0629,
+    "N12": 0.0397,
+    "N08": 0.0358,
+    "N15": 0.0322,
+    "N23": 0.051,
+    "N10": 0.0112,
+    "N04": 0.0638,
+    "N13": 0.0407
+   }
+  }
+ },
+ "latency_ms": 3711,
+ "usage": {
+  "input_tokens": 3052,
+  "output_tokens": 356
+ }
+}

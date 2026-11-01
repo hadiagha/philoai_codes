@@ -1,0 +1,120 @@
+{
+ "tag": "notes/0",
+ "model": "typesafe/jev-1.13-20260917",
+ "state": "A nurse's note to the head nurse about the roster for next week (Monday to Sunday):\n\"Can't do Tuesday, dentist at 10.\"",
+ "questions": {
+  "Mon": {
+   "type": "noul",
+   "instructions": "Does the nurse ask to have Monday off, so they don't work at all that day?",
+   "criteria": {
+    "true": "asks for Monday off",
+    "false": "does not ask for Monday off"
+   }
+  },
+  "Tue": {
+   "type": "noul",
+   "instructions": "Does the nurse ask to have Tuesday off, so they don't work at all that day?",
+   "criteria": {
+    "true": "asks for Tuesday off",
+    "false": "does not ask for Tuesday off"
+   }
+  },
+  "Wed": {
+   "type": "noul",
+   "instructions": "Does the nurse ask to have Wednesday off, so they don't work at all that day?",
+   "criteria": {
+    "true": "asks for Wednesday off",
+    "false": "does not ask for Wednesday off"
+   }
+  },
+  "Thu": {
+   "type": "noul",
+   "instructions": "Does the nurse ask to have Thursday off, so they don't work at all that day?",
+   "criteria": {
+    "true": "asks for Thursday off",
+    "false": "does not ask for Thursday off"
+   }
+  },
+  "Fri": {
+   "type": "noul",
+   "instructions": "Does the nurse ask to have Friday off, so they don't work at all that day?",
+   "criteria": {
+    "true": "asks for Friday off",
+    "false": "does not ask for Friday off"
+   }
+  },
+  "Sat": {
+   "type": "noul",
+   "instructions": "Does the nurse ask to have Saturday off, so they don't work at all that day?",
+   "criteria": {
+    "true": "asks for Saturday off",
+    "false": "does not ask for Saturday off"
+   }
+  },
+  "Sun": {
+   "type": "noul",
+   "instructions": "Does the nurse ask to have Sunday off, so they don't work at all that day?",
+   "criteria": {
+    "true": "asks for Sunday off",
+    "false": "does not ask for Sunday off"
+   }
+  },
+  "avoid": {
+   "type": "choice",
+   "instructions": "Which shift type does the nurse ask to avoid next week?",
+   "criteria": {
+    "none": "no shift type to avoid",
+    "Morning": "avoids Morning shifts",
+    "Afternoon": "avoids Afternoon shifts",
+    "Night": "avoids Night shifts"
+   }
+  }
+ },
+ "answers": {
+  "Mon": {
+   "type": "noul",
+   "noul": 0.02
+  },
+  "Tue": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "Wed": {
+   "type": "noul",
+   "noul": 0.02
+  },
+  "Thu": {
+   "type": "noul",
+   "noul": 0.02
+  },
+  "Fri": {
+   "type": "noul",
+   "noul": 0.02
+  },
+  "Sat": {
+   "type": "noul",
+   "noul": 0.02
+  },
+  "Sun": {
+   "type": "noul",
+   "noul": 0.02
+  },
+  "avoid": {
+   "type": "choice",
+   "choice": "Morning",
+   "probabilities": {
+    "none": 0.45,
+    "Morning": 0.55,
+    "Afternoon": 0,
+    "Night": 0
+   },
+   "confidence": 0.4
+  }
+ },
+ "latency_ms": 243,
+ "usage": {
+  "input_tokens": 748,
+  "output_tokens": 159,
+  "cost": 3.1416e-05
+ }
+}

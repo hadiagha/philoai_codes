@@ -1,0 +1,64 @@
+  model runs 50/1000  0s  (new calls: jev 0, kev 0)
+  model runs 100/1000  0s  (new calls: jev 0, kev 0)
+  model runs 150/1000  0s  (new calls: jev 0, kev 0)
+  model runs 200/1000  0s  (new calls: jev 0, kev 0)
+  model runs 250/1000  0s  (new calls: jev 0, kev 0)
+  model runs 300/1000  1s  (new calls: jev 0, kev 0)
+  model runs 350/1000  1s  (new calls: jev 0, kev 0)
+  model runs 400/1000  1s  (new calls: jev 0, kev 0)
+  model runs 450/1000  1s  (new calls: jev 0, kev 0)
+  model runs 500/1000  1s  (new calls: jev 0, kev 0)
+  model runs 550/1000  2s  (new calls: jev 0, kev 0)
+  model runs 600/1000  3s  (new calls: jev 0, kev 0)
+  model runs 650/1000  3s  (new calls: jev 0, kev 0)
+  model runs 700/1000  4s  (new calls: jev 0, kev 0)
+  model runs 750/1000  5s  (new calls: jev 0, kev 0)
+  model runs 800/1000  5s  (new calls: jev 0, kev 0)
+  model runs 850/1000  6s  (new calls: jev 0, kev 0)
+  model runs 900/1000  6s  (new calls: jev 0, kev 0)
+  model runs 950/1000  6s  (new calls: jev 0, kev 0)
+  model runs 1000/1000  6s  (new calls: jev 0, kev 0)
+  CPU jobs: 400
+
+small (20 instances, CP-SAT optimal on 20)   penalty over best: mean ± std (gap %) | time | calls | cost/instance
+  cpsat                    +   0.0 ±   0.0 (  0.0%) |   0.24s |   0.0 | $0.00000
+  greedy+anneal            +   0.8 ±   1.6 (  1.5%) |   0.26s |   0.0 | $0.00000
+  jev_top3gate_v2+polish   +   4.6 ±   3.2 (  9.0%) |   0.03s |   0.0 | $0.00000
+  kev_choice_v2+polish     +   4.8 ±   3.7 ( 10.9%) |   0.03s |   0.0 | $0.00000
+  jev_score_v2+polish      +   5.4 ±   3.4 ( 13.3%) |   0.03s |   0.0 | $0.00000
+  jev_choice_v2+polish     +   5.5 ±   4.1 ( 12.3%) |   0.03s |   0.0 | $0.00000
+  jev_top3_v2+polish       +   6.0 ±   2.7 ( 12.5%) |   0.03s |   0.0 | $0.00000
+  kev_score_v2+polish      +   6.0 ±   4.5 ( 14.8%) |   0.03s |   0.0 | $0.00000
+  greedy+polish            +   6.2 ±   4.5 ( 12.5%) |   0.03s |   0.0 | $0.00000
+  jev_sample8_v2+polish    +   6.7 ±   4.4 ( 15.6%) |   0.03s |   0.0 | $0.00000
+  greedy                   +  13.9 ±   7.9 ( 25.7%) |   0.00s |   0.0 | $0.00000
+  jev_top3gate_v2          +  17.1 ±   8.3 ( 36.2%) |  13.84s |  49.0 | $0.00150
+  jev_sample8_v2           +  17.4 ±   6.2 ( 34.9%) |  91.13s | 168.0 | $0.00734
+  jev_score_v2             +  19.4 ±   7.4 ( 39.3%) |  12.88s |  21.0 | $0.00119
+  kev_choice_v2            +  19.6 ±  10.0 ( 42.1%) |  18.77s |  21.0 | $0.00000
+  jev_top3_v2              +  20.9 ±   7.8 ( 44.4%) |  13.90s |  49.0 | $0.00150
+  jev_choice_v2            +  23.3 ±   9.4 ( 48.1%) |  11.79s |  21.0 | $0.00092
+  jev_score_v1             +  23.4 ±   9.4 ( 49.2%) |  12.29s |  21.0 | $0.00100
+  kev_score_v2             +  26.1 ±   8.3 ( 55.1%) |  23.84s |  21.0 | $0.00000
+
+medium (20 instances, CP-SAT optimal on 20)   penalty over best: mean ± std (gap %) | time | calls | cost/instance
+  cpsat                    +   0.0 ±   0.0 (  0.0%) |   0.16s |   0.0 | $0.00000
+  greedy+anneal            +  14.5 ±   6.9 ( 11.6%) |  18.47s |   0.0 | $0.00000
+  greedy+polish            +  21.7 ±   8.6 ( 18.1%) |   1.85s |   0.0 | $0.00000
+  jev_top3gate_v2+polish   +  24.0 ±   9.4 ( 20.0%) |   1.85s |   0.0 | $0.00000
+  greedy                   +  26.8 ±  10.7 ( 22.5%) |   0.00s |   0.0 | $0.00000
+  jev_choice_v2+polish     +  27.6 ±   9.7 ( 22.0%) |   1.86s |   0.0 | $0.00000
+  jev_sample8_v2+polish    +  28.8 ±   9.2 ( 23.3%) |   1.85s |   0.0 | $0.00000
+  jev_score_v2+polish      +  28.9 ±   9.4 ( 23.6%) |   1.86s |   0.0 | $0.00000
+  jev_top3_v2+polish       +  29.4 ±  10.6 ( 24.0%) |   1.85s |   0.0 | $0.00000
+  kev_score_v2+polish      +  30.0 ±  13.6 ( 24.5%) |   1.85s |   0.0 | $0.00000
+  jev_top3gate_v2          +  30.4 ±   9.5 ( 25.1%) | 136.67s | 476.0 | $0.01614
+  kev_choice_v2+polish     +  31.0 ±  11.2 ( 24.6%) |   1.86s |   0.0 | $0.00000
+  jev_top3_v2              +  42.6 ±  12.8 ( 34.9%) | 136.70s | 476.0 | $0.01617
+  jev_score_v2             +  50.7 ±  10.1 ( 41.7%) |  22.79s |  84.0 | $0.01098
+  jev_score_v1             +  60.6 ±  16.0 ( 49.6%) |  22.65s |  84.0 | $0.00902
+  kev_choice_v2            +  66.9 ±  15.9 ( 55.5%) | 191.01s |  84.0 | $0.00000
+  kev_score_v2             + 112.5 ±  30.4 ( 91.0%) | 251.82s |  84.0 | $0.00000
+  jev_choice_v2            + 135.5 ±  21.2 (111.6%) |  22.16s |  84.0 | $0.00803
+  jev_sample8_v2           + 148.7 ±  21.8 (122.0%) | 175.45s | 672.0 | $0.06418
+new API calls: jev 0 (cached 98700); kev 0

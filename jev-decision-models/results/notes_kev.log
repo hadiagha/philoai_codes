@@ -1,0 +1,25 @@
+{
+ "notes": 60,
+ "fields_right_%": 96.875,
+ "notes_all_right_%": 85.0,
+ "flagged_for_a_human": 17,
+ "auto_notes_all_right_%": 97.67441860465117,
+ "flagged_notes_all_right_%": 52.94117647058823,
+ "median_latency_ms": 528.5,
+ "total_cost_usd": 0,
+ "roster_penalty_true_wishes": {
+  "ignore_notes": 624,
+  "model_reads": 152,
+  "model_plus_human": 42,
+  "perfect_reading": 30
+ }
+}
+  WRONG (flagged): "My sister's wedding is on Saturday so I need the whole weekend off." -> off ['Sat'] avoid None (true ['Sat', 'Sun'] / None)
+  WRONG (flagged): 'Away from Friday to Sunday, family trip.' -> off ['Fri', 'Sun'] avoid None (true ['Fri', 'Sat', 'Sun'] / None)
+  WRONG (flagged): 'Not working weekends this time please.' -> off [] avoid None (true ['Sat', 'Sun'] / None)
+  WRONG: 'Early shifts are rough for me, I take the first bus at 6. Days: no restrictions.' -> off [] avoid None (true [] / Morning)
+  WRONG (flagged): "I'll be at a conference Wed to Thu." -> off [] avoid None (true ['Wed', 'Thu'] / None)
+  WRONG (flagged): 'Visiting my parents Saturday, back the same night.' -> off [] avoid None (true ['Sat'] / None)
+  WRONG (flagged): 'Working is fine every day except the weekend days.' -> off [] avoid None (true ['Sat', 'Sun'] / None)
+  WRONG (flagged): "Not available Mon, Tue, Wed, I'm on a course." -> off [] avoid None (true ['Mon', 'Tue', 'Wed'] / None)
+  WRONG (flagged): 'Mornings please avoid. Weekend off if possible.' -> off [] avoid Morning (true ['Sat', 'Sun'] / Morning)

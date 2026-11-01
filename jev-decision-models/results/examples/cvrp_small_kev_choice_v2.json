@@ -1,0 +1,47 @@
+{
+ "tag": "cvrp10-s0/full/choice/v2/rep0/0",
+ "model": "kev-latest",
+ "state": "Delivery van route planning. Goal: deliver to every stop exactly once with the smallest total distance.\nThe van carries at most 20 units. It reloads only at the DEPOT at (50,50). Every trip starts and ends at the DEPOT.\nNow: the van is at DEPOT (50,50). Load left: 20 of 20. Stops left: 10, total demand 60.\nFull loads still needed for the demand left: at least 2 more trips after this one.\nLegal next moves:\nS8 at (86,50): demand 2, 36.0 away, 36.0 from the depot. Load left after it: 18. Its 3 nearest other stops left: 12.6, 35.5, 37.7.\nS6 at (20,64): demand 8, 33.1 away, 33.1 from the depot. Load left after it: 12. Its 3 nearest other stops left: 4.2, 17.5, 32.0.\nS4 at (73,17): demand 4, 40.2 away, 40.2 from the depot. Load left after it: 16. Its 3 nearest other stops left: 20.4, 35.5, 48.1.\nS1 at (23,67): demand 1, 31.9 away, 31.9 from the depot. Load left after it: 19. Its 3 nearest other stops left: 4.2, 21.6, 29.3.\nS9 at (5,55): demand 8, 45.3 away, 45.3 from the depot. Load left after it: 12. Its 3 nearest other stops left: 17.5, 21.6, 31.3.\nS2 at (14,25): demand 8, 43.8 away, 43.8 from the depot. Load left after it: 12. Its 3 nearest other stops left: 31.3, 39.5, 43.0.\nS7 at (90,62): demand 6, 41.8 away, 41.8 from the depot. Load left after it: 14. Its 3 nearest other stops left: 12.6, 45.2, 48.1.\nS3 at (64,99): demand 5, 51.0 away, 51.0 from the depot. Load left after it: 15. Its 3 nearest other stops left: 45.1, 45.2, 52.0.\nS5 at (19,96): demand 9, 55.5 away, 55.5 from the depot. Load left after it: 11. Its 3 nearest other stops left: 29.3, 32.0, 43.3.\nS10 at (93,13): demand 9, 56.7 away, 56.7 from the depot. Load left after it: 11. Its 3 nearest other stops left: 20.4, 37.7, 49.1.",
+ "questions": {
+  "next": {
+   "type": "choice",
+   "instructions": "Which move should the van make next so that the total distance of all trips is as small as possible?",
+   "criteria": {
+    "S8": "go to S8",
+    "S6": "go to S6",
+    "S4": "go to S4",
+    "S1": "go to S1",
+    "S9": "go to S9",
+    "S2": "go to S2",
+    "S7": "go to S7",
+    "S3": "go to S3",
+    "S5": "go to S5",
+    "S10": "go to S10"
+   }
+  }
+ },
+ "answers": {
+  "next": {
+   "type": "choice",
+   "choice": "S8",
+   "confidence": 0.1299,
+   "probabilities": {
+    "S8": 0.2169,
+    "S6": 0.213,
+    "S4": 0.119,
+    "S1": 0.0821,
+    "S9": 0.0544,
+    "S2": 0.0947,
+    "S7": 0.1057,
+    "S3": 0.0482,
+    "S5": 0.0262,
+    "S10": 0.0398
+   }
+  }
+ },
+ "latency_ms": 1332,
+ "usage": {
+  "input_tokens": 895,
+  "output_tokens": 150
+ }
+}

@@ -1,0 +1,55 @@
+  model runs 50/920  28s  (new calls: jev 645)
+  model runs 100/920  41s  (new calls: jev 1008)
+  model runs 150/920  69s  (new calls: jev 1654)
+  model runs 200/920  96s  (new calls: jev 2362)
+  model runs 250/920  110s  (new calls: jev 2738)
+  model runs 300/920  136s  (new calls: jev 3421)
+  model runs 350/920  152s  (new calls: jev 3796)
+  model runs 400/920  179s  (new calls: jev 4452)
+  model runs 450/920  205s  (new calls: jev 5084)
+  model runs 500/920  476s  (new calls: jev 12251)
+  model runs 550/920  628s  (new calls: jev 16338)
+  model runs 600/920  892s  (new calls: jev 23475)
+  model runs 650/920  1164s  (new calls: jev 30837)
+  model runs 700/920  1312s  (new calls: jev 34914)
+  model runs 750/920  1588s  (new calls: jev 42328)
+  model runs 800/920  1885s  (new calls: jev 49404)
+  model runs 850/920  2035s  (new calls: jev 53520)
+  model runs 900/920  2296s  (new calls: jev 60679)
+  model runs 920/920  2316s  (new calls: jev 60925)
+  CPU jobs: 320
+
+small (20 instances, CP-SAT optimal on 20)   penalty over best: mean ± std (gap %) | time | calls | cost/instance
+  cpsat                    +   0.0 ±   0.0 (  0.0%) |   0.43s |   0.0 | $0.00000
+  greedy+anneal            +   0.8 ±   1.6 (  1.5%) |   0.29s |   0.0 | $0.00000
+  jev_top3gate_v2+polish   +   4.6 ±   3.2 (  9.0%) |   0.03s |   0.0 | $0.00000
+  jev_score_v2+polish      +   5.4 ±   3.4 ( 13.3%) |   0.03s |   0.0 | $0.00000
+  jev_choice_v2+polish     +   5.5 ±   4.1 ( 12.3%) |   0.03s |   0.0 | $0.00000
+  jev_top3_v2+polish       +   6.0 ±   2.7 ( 12.5%) |   0.03s |   0.0 | $0.00000
+  greedy+polish            +   6.2 ±   4.5 ( 12.5%) |   0.03s |   0.0 | $0.00000
+  jev_sample8_v2+polish    +   6.7 ±   4.4 ( 15.6%) |   0.03s |   0.0 | $0.00000
+  greedy                   +  13.9 ±   7.9 ( 25.7%) |   0.00s |   0.0 | $0.00000
+  jev_top3gate_v2          +  17.1 ±   8.3 ( 36.2%) |  13.84s |  49.0 | $0.00150
+  jev_sample8_v2           +  17.4 ±   6.2 ( 34.9%) |  91.13s | 168.0 | $0.00734
+  jev_score_v2             +  19.4 ±   7.4 ( 39.3%) |  12.88s |  21.0 | $0.00119
+  jev_top3_v2              +  20.9 ±   7.8 ( 44.4%) |  13.90s |  49.0 | $0.00150
+  jev_choice_v2            +  23.3 ±   9.4 ( 48.1%) |  11.79s |  21.0 | $0.00092
+  jev_score_v1             +  23.4 ±   9.4 ( 49.2%) |  12.29s |  21.0 | $0.00100
+
+medium (20 instances, CP-SAT optimal on 20)   penalty over best: mean ± std (gap %) | time | calls | cost/instance
+  cpsat                    +   0.0 ±   0.0 (  0.0%) |   0.48s |   0.0 | $0.00000
+  greedy+anneal            +  14.5 ±   6.9 ( 11.6%) |  42.87s |   0.0 | $0.00000
+  greedy+polish            +  21.7 ±   8.6 ( 18.1%) |   4.34s |   0.0 | $0.00000
+  jev_top3gate_v2+polish   +  24.0 ±   9.4 ( 20.0%) |   4.38s |   0.0 | $0.00000
+  greedy                   +  26.8 ±  10.7 ( 22.5%) |   0.00s |   0.0 | $0.00000
+  jev_choice_v2+polish     +  27.6 ±   9.7 ( 22.0%) |   4.23s |   0.0 | $0.00000
+  jev_sample8_v2+polish    +  28.8 ±   9.2 ( 23.3%) |   4.29s |   0.0 | $0.00000
+  jev_score_v2+polish      +  28.9 ±   9.4 ( 23.6%) |   4.28s |   0.0 | $0.00000
+  jev_top3_v2+polish       +  29.4 ±  10.6 ( 24.0%) |   4.21s |   0.0 | $0.00000
+  jev_top3gate_v2          +  30.4 ±   9.5 ( 25.1%) | 136.67s | 476.0 | $0.01614
+  jev_top3_v2              +  42.6 ±  12.8 ( 34.9%) | 136.70s | 476.0 | $0.01617
+  jev_score_v2             +  50.7 ±  10.1 ( 41.7%) |  22.79s |  84.0 | $0.01098
+  jev_score_v1             +  60.6 ±  16.0 ( 49.6%) |  22.65s |  84.0 | $0.00902
+  jev_choice_v2            + 135.5 ±  21.2 (111.6%) |  22.16s |  84.0 | $0.00803
+  jev_sample8_v2           + 148.7 ±  21.8 (122.0%) | 175.45s | 672.0 | $0.06418
+new API calls: jev 60925 (cached 37775)

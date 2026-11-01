@@ -1,0 +1,40 @@
+{
+ "notes": 60,
+ "fields_right_%": 98.33333333333333,
+ "notes_all_right_%": 90.0,
+ "flagged_for_a_human": 15,
+ "auto_notes_all_right_%": 100.0,
+ "flagged_notes_all_right_%": 60.0,
+ "median_latency_ms": 242.0,
+ "total_cost_usd": 0.001884204,
+ "roster_penalty_true_wishes": {
+  "ignore_notes": 555,
+  "model_reads": 63,
+  "model_plus_human": 30,
+  "perfect_reading": 30
+ },
+ "roster_penalty_range": {
+  "ignore_notes": [
+   472,
+   602
+  ],
+  "model_reads": [
+   50,
+   70
+  ],
+  "model_plus_human": [
+   30,
+   30
+  ],
+  "perfect_reading": [
+   30,
+   30
+  ]
+ }
+}
+  WRONG (flagged): "Can't do Tuesday, dentist at 10." -> off [] avoid Morning (true ['Tue'] / None)
+  WRONG (flagged): 'Off on the first day of the week please.' -> off ['Mon', 'Sun'] avoid None (true ['Mon'] / None)
+  WRONG (flagged): "I'll be at a conference Wed to Thu." -> off [] avoid None (true ['Wed', 'Thu'] / None)
+  WRONG (flagged): 'Visiting my parents Saturday, back the same night.' -> off [] avoid None (true ['Sat'] / None)
+  WRONG (flagged): "Saturday I'm running a marathon." -> off [] avoid None (true ['Sat'] / None)
+  WRONG (flagged): 'Mornings please avoid. Weekend off if possible.' -> off ['Sun'] avoid Morning (true ['Sat', 'Sun'] / Morning)

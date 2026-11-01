@@ -1,0 +1,314 @@
+{
+ "tag": "cvrp10-s0/full/score/v2/rep0/0",
+ "model": "kev-latest",
+ "state": "Delivery van route planning. Goal: deliver to every stop exactly once with the smallest total distance.\nThe van carries at most 20 units. It reloads only at the DEPOT at (50,50). Every trip starts and ends at the DEPOT.\nNow: the van is at DEPOT (50,50). Load left: 20 of 20. Stops left: 10, total demand 60.\nFull loads still needed for the demand left: at least 2 more trips after this one.\nLegal next moves:\nS1 at (23,67): demand 1, 31.9 away, 31.9 from the depot. Load left after it: 19. Its 3 nearest other stops left: 4.2, 21.6, 29.3.\nS2 at (14,25): demand 8, 43.8 away, 43.8 from the depot. Load left after it: 12. Its 3 nearest other stops left: 31.3, 39.5, 43.0.\nS3 at (64,99): demand 5, 51.0 away, 51.0 from the depot. Load left after it: 15. Its 3 nearest other stops left: 45.1, 45.2, 52.0.\nS5 at (19,96): demand 9, 55.5 away, 55.5 from the depot. Load left after it: 11. Its 3 nearest other stops left: 29.3, 32.0, 43.3.\nS9 at (5,55): demand 8, 45.3 away, 45.3 from the depot. Load left after it: 12. Its 3 nearest other stops left: 17.5, 21.6, 31.3.\nS7 at (90,62): demand 6, 41.8 away, 41.8 from the depot. Load left after it: 14. Its 3 nearest other stops left: 12.6, 45.2, 48.1.\nS4 at (73,17): demand 4, 40.2 away, 40.2 from the depot. Load left after it: 16. Its 3 nearest other stops left: 20.4, 35.5, 48.1.\nS6 at (20,64): demand 8, 33.1 away, 33.1 from the depot. Load left after it: 12. Its 3 nearest other stops left: 4.2, 17.5, 32.0.\nS8 at (86,50): demand 2, 36.0 away, 36.0 from the depot. Load left after it: 18. Its 3 nearest other stops left: 12.6, 35.5, 37.7.\nS10 at (93,13): demand 9, 56.7 away, 56.7 from the depot. Load left after it: 11. Its 3 nearest other stops left: 20.4, 37.7, 49.1.",
+ "questions": {
+  "S1": {
+   "type": "score",
+   "instructions": "How good is it to go to S1 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "S2": {
+   "type": "score",
+   "instructions": "How good is it to go to S2 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "S3": {
+   "type": "score",
+   "instructions": "How good is it to go to S3 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "S5": {
+   "type": "score",
+   "instructions": "How good is it to go to S5 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "S9": {
+   "type": "score",
+   "instructions": "How good is it to go to S9 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "S7": {
+   "type": "score",
+   "instructions": "How good is it to go to S7 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "S4": {
+   "type": "score",
+   "instructions": "How good is it to go to S4 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "S6": {
+   "type": "score",
+   "instructions": "How good is it to go to S6 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "S8": {
+   "type": "score",
+   "instructions": "How good is it to go to S8 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "S10": {
+   "type": "score",
+   "instructions": "How good is it to go to S10 next, for the smallest total distance of all trips?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  }
+ },
+ "answers": {
+  "S1": {
+   "type": "score",
+   "score": 1.1515,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.3247,
+    "1": 0.3659,
+    "2": 0.1863,
+    "3": 0.0796,
+    "4": 0.0436
+   },
+   "confidence": 0.3326
+  },
+  "S2": {
+   "type": "score",
+   "score": 2.0252,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.112,
+    "1": 0.2189,
+    "2": 0.3268,
+    "3": 0.2165,
+    "4": 0.1258
+   },
+   "confidence": 0.2409
+  },
+  "S3": {
+   "type": "score",
+   "score": 1.5069,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.1944,
+    "1": 0.3207,
+    "2": 0.3186,
+    "3": 0.1164,
+    "4": 0.05
+   },
+   "confidence": 0.2537
+  },
+  "S5": {
+   "type": "score",
+   "score": 1.4331,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.2109,
+    "1": 0.3533,
+    "2": 0.2808,
+    "3": 0.1018,
+    "4": 0.0532
+   },
+   "confidence": 0.2876
+  },
+  "S9": {
+   "type": "score",
+   "score": 2.0992,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.0862,
+    "1": 0.1969,
+    "2": 0.3633,
+    "3": 0.2388,
+    "4": 0.1148
+   },
+   "confidence": 0.3019
+  },
+  "S7": {
+   "type": "score",
+   "score": 2.4209,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.0601,
+    "1": 0.1317,
+    "2": 0.3052,
+    "3": 0.3331,
+    "4": 0.1699
+   },
+   "confidence": 0.2342
+  },
+  "S4": {
+   "type": "score",
+   "score": 2.3177,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.0656,
+    "1": 0.1596,
+    "2": 0.3123,
+    "3": 0.3166,
+    "4": 0.1459
+   },
+   "confidence": 0.1882
+  },
+  "S6": {
+   "type": "score",
+   "score": 2.8479,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.0305,
+    "1": 0.0638,
+    "2": 0.2015,
+    "3": 0.4355,
+    "4": 0.2687
+   },
+   "confidence": 0.4255
+  },
+  "S8": {
+   "type": "score",
+   "score": 2.2705,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.072,
+    "1": 0.1849,
+    "2": 0.3111,
+    "3": 0.2646,
+    "4": 0.1674
+   },
+   "confidence": 0.2263
+  },
+  "S10": {
+   "type": "score",
+   "score": 1.185,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.2678,
+    "1": 0.4064,
+    "2": 0.2308,
+    "3": 0.0631,
+    "4": 0.0319
+   },
+   "confidence": 0.3995
+  }
+ },
+ "latency_ms": 1437,
+ "usage": {
+  "input_tokens": 1171,
+  "output_tokens": 1256
+ }
+}

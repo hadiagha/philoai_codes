@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# raw model answers grow as you call the models; the shipped cache is the .jsonl.gz
+*/cache/*.jsonl

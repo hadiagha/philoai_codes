@@ -1,0 +1,1944 @@
+{
+ "summary": {
+  "notes": 60,
+  "fields_right_%": 96.875,
+  "notes_all_right_%": 85.0,
+  "flagged_for_a_human": 17,
+  "auto_notes_all_right_%": 97.67441860465117,
+  "flagged_notes_all_right_%": 52.94117647058823,
+  "median_latency_ms": 528.5,
+  "total_cost_usd": 0,
+  "roster_penalty_true_wishes": {
+   "ignore_notes": 555,
+   "model_reads": 135.8,
+   "model_plus_human": 37.6,
+   "perfect_reading": 30
+  },
+  "roster_penalty_range": {
+   "ignore_notes": [
+    472,
+    602
+   ],
+   "model_reads": [
+    108,
+    162
+   ],
+   "model_plus_human": [
+    30,
+    46
+   ],
+   "perfect_reading": [
+    30,
+    30
+   ]
+  }
+ },
+ "notes": [
+  {
+   "note": "Can't do Tuesday, dentist at 10.",
+   "true_off": [
+    "Tue"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Tue"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [
+    "Tue"
+   ],
+   "p_days": {
+    "Mon": 0.0116,
+    "Tue": 0.6121,
+    "Wed": 0.012,
+    "Thu": 0.0079,
+    "Fri": 0.0071,
+    "Sat": 0.0069,
+    "Sun": 0.0054
+   },
+   "p_avoid": 0.5727,
+   "latency_ms": 1615,
+   "cost": 0
+  },
+  {
+   "note": "No nights please, I have exams this month.",
+   "true_off": [],
+   "true_avoid": "Night",
+   "read_off": [],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.069,
+    "Tue": 0.0217,
+    "Wed": 0.0174,
+    "Thu": 0.0148,
+    "Fri": 0.0226,
+    "Sat": 0.046,
+    "Sun": 0.0664
+   },
+   "p_avoid": 0.9374,
+   "latency_ms": 528,
+   "cost": 0
+  },
+  {
+   "note": "My sister's wedding is on Saturday so I need the whole weekend off.",
+   "true_off": [
+    "Sat",
+    "Sun"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Sat"
+   ],
+   "read_avoid": null,
+   "days_right": 6,
+   "avoid_right": true,
+   "all_right": false,
+   "unsure": [
+    "Sat"
+   ],
+   "p_days": {
+    "Mon": 0.0478,
+    "Tue": 0.0252,
+    "Wed": 0.022,
+    "Thu": 0.0182,
+    "Fri": 0.1649,
+    "Sat": 0.6322,
+    "Sun": 0.1587
+   },
+   "p_avoid": 0.8203,
+   "latency_ms": 536,
+   "cost": 0
+  },
+  {
+   "note": "Anything works for me this week!",
+   "true_off": [],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0096,
+    "Tue": 0.0081,
+    "Wed": 0.0084,
+    "Thu": 0.0085,
+    "Fri": 0.0095,
+    "Sat": 0.0106,
+    "Sun": 0.0116
+   },
+   "p_avoid": 0.9267,
+   "latency_ms": 551,
+   "cost": 0
+  },
+  {
+   "note": "Mornings are really hard with the school run. Afternoons or nights are fine.",
+   "true_off": [],
+   "true_avoid": "Morning",
+   "read_off": [],
+   "read_avoid": "Morning",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.1335,
+    "Tue": 0.038,
+    "Wed": 0.0385,
+    "Thu": 0.0369,
+    "Fri": 0.0458,
+    "Sat": 0.0478,
+    "Sun": 0.0418
+   },
+   "p_avoid": 0.9262,
+   "latency_ms": 528,
+   "cost": 0
+  },
+  {
+   "note": "I'd like Friday off if possible. Also no night shifts.",
+   "true_off": [
+    "Fri"
+   ],
+   "true_avoid": "Night",
+   "read_off": [
+    "Fri"
+   ],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0069,
+    "Tue": 0.0048,
+    "Wed": 0.0032,
+    "Thu": 0.008,
+    "Fri": 0.9782,
+    "Sat": 0.0237,
+    "Sun": 0.0226
+   },
+   "p_avoid": 0.9451,
+   "latency_ms": 535,
+   "cost": 0
+  },
+  {
+   "note": "Off Mon and Wed, physio appointments.",
+   "true_off": [
+    "Mon",
+    "Wed"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Mon",
+    "Wed"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.9086,
+    "Tue": 0.0734,
+    "Wed": 0.8151,
+    "Thu": 0.0562,
+    "Fri": 0.0184,
+    "Sat": 0.0185,
+    "Sun": 0.0192
+   },
+   "p_avoid": 0.8283,
+   "latency_ms": 525,
+   "cost": 0
+  },
+  {
+   "note": "I can work Thursday, just not Wednesday.",
+   "true_off": [
+    "Wed"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Wed"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0127,
+    "Tue": 0.0284,
+    "Wed": 0.8737,
+    "Thu": 0.1305,
+    "Fri": 0.0151,
+    "Sat": 0.014,
+    "Sun": 0.0111
+   },
+   "p_avoid": 0.7281,
+   "latency_ms": 523,
+   "cost": 0
+  },
+  {
+   "note": "pls no mornings, and i need thurs off for my kid's recital",
+   "true_off": [
+    "Thu"
+   ],
+   "true_avoid": "Morning",
+   "read_off": [
+    "Thu"
+   ],
+   "read_avoid": "Morning",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0761,
+    "Tue": 0.0105,
+    "Wed": 0.0172,
+    "Thu": 0.9684,
+    "Fri": 0.0111,
+    "Sat": 0.0192,
+    "Sun": 0.0117
+   },
+   "p_avoid": 0.9227,
+   "latency_ms": 532,
+   "cost": 0
+  },
+  {
+   "note": "Happy to pick up extra shifts. Only thing: not Sunday, church.",
+   "true_off": [
+    "Sun"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Sun"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.059,
+    "Tue": 0.0202,
+    "Wed": 0.0156,
+    "Thu": 0.0125,
+    "Fri": 0.0243,
+    "Sat": 0.1746,
+    "Sun": 0.8695
+   },
+   "p_avoid": 0.8741,
+   "latency_ms": 536,
+   "cost": 0
+  },
+  {
+   "note": "Away from Friday to Sunday, family trip.",
+   "true_off": [
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Fri",
+    "Sun"
+   ],
+   "read_avoid": null,
+   "days_right": 6,
+   "avoid_right": true,
+   "all_right": false,
+   "unsure": [
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "p_days": {
+    "Mon": 0.0252,
+    "Tue": 0.0169,
+    "Wed": 0.0117,
+    "Thu": 0.022,
+    "Fri": 0.5614,
+    "Sat": 0.4446,
+    "Sun": 0.5962
+   },
+   "p_avoid": 0.6483,
+   "latency_ms": 534,
+   "cost": 0
+  },
+  {
+   "note": "Nights suit me best actually, avoid giving me afternoons if you can.",
+   "true_off": [],
+   "true_avoid": "Afternoon",
+   "read_off": [],
+   "read_avoid": "Afternoon",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0253,
+    "Tue": 0.0135,
+    "Wed": 0.0123,
+    "Thu": 0.0126,
+    "Fri": 0.0168,
+    "Sat": 0.0198,
+    "Sun": 0.0212
+   },
+   "p_avoid": 0.7029,
+   "latency_ms": 533,
+   "cost": 0
+  },
+  {
+   "note": "Monday is my daughter's birthday, I want to be home with her.",
+   "true_off": [
+    "Mon"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Mon"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.8739,
+    "Tue": 0.0569,
+    "Wed": 0.0117,
+    "Thu": 0.0114,
+    "Fri": 0.0435,
+    "Sat": 0.1044,
+    "Sun": 0.0836
+   },
+   "p_avoid": 0.6914,
+   "latency_ms": 534,
+   "cost": 0
+  },
+  {
+   "note": "Not working weekends this time please.",
+   "true_off": [
+    "Sat",
+    "Sun"
+   ],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 5,
+   "avoid_right": true,
+   "all_right": false,
+   "unsure": [
+    "Sat",
+    "Sun"
+   ],
+   "p_days": {
+    "Mon": 0.0595,
+    "Tue": 0.0303,
+    "Wed": 0.0237,
+    "Thu": 0.0258,
+    "Fri": 0.1022,
+    "Sat": 0.3262,
+    "Sun": 0.2702
+   },
+   "p_avoid": 0.8601,
+   "latency_ms": 534,
+   "cost": 0
+  },
+  {
+   "note": "No preferences.",
+   "true_off": [],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0165,
+    "Tue": 0.0183,
+    "Wed": 0.0173,
+    "Thu": 0.0171,
+    "Fri": 0.0179,
+    "Sat": 0.0181,
+    "Sun": 0.0179
+   },
+   "p_avoid": 0.7924,
+   "latency_ms": 529,
+   "cost": 0
+  },
+  {
+   "note": "Could I have Wednesday off? Moving apartments.",
+   "true_off": [
+    "Wed"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Wed"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0058,
+    "Tue": 0.0087,
+    "Wed": 0.9695,
+    "Thu": 0.0182,
+    "Fri": 0.0054,
+    "Sat": 0.008,
+    "Sun": 0.0083
+   },
+   "p_avoid": 0.7993,
+   "latency_ms": 532,
+   "cost": 0
+  },
+  {
+   "note": "I'm fine with any day but I really can't do nights anymore, doctor's orders.",
+   "true_off": [],
+   "true_avoid": "Night",
+   "read_off": [],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0313,
+    "Tue": 0.0131,
+    "Wed": 0.0108,
+    "Thu": 0.01,
+    "Fri": 0.012,
+    "Sat": 0.0244,
+    "Sun": 0.0365
+   },
+   "p_avoid": 0.9711,
+   "latency_ms": 537,
+   "cost": 0
+  },
+  {
+   "note": "Need Saturday off. Sunday is fine.",
+   "true_off": [
+    "Sat"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Sat"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0164,
+    "Tue": 0.0061,
+    "Wed": 0.0034,
+    "Thu": 0.003,
+    "Fri": 0.0078,
+    "Sat": 0.984,
+    "Sun": 0.0041
+   },
+   "p_avoid": 0.8559,
+   "latency_ms": 528,
+   "cost": 0
+  },
+  {
+   "note": "Off on the first day of the week please.",
+   "true_off": [
+    "Mon"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Mon"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.9587,
+    "Tue": 0.0871,
+    "Wed": 0.0157,
+    "Thu": 0.0132,
+    "Fri": 0.0367,
+    "Sat": 0.098,
+    "Sun": 0.073
+   },
+   "p_avoid": 0.8323,
+   "latency_ms": 555,
+   "cost": 0
+  },
+  {
+   "note": "I've worked a lot of nights lately, could I avoid them this week?",
+   "true_off": [],
+   "true_avoid": "Night",
+   "read_off": [],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.1629,
+    "Tue": 0.0917,
+    "Wed": 0.038,
+    "Thu": 0.0405,
+    "Fri": 0.0573,
+    "Sat": 0.1404,
+    "Sun": 0.1526
+   },
+   "p_avoid": 0.9449,
+   "latency_ms": 523,
+   "cost": 0
+  },
+  {
+   "note": "Friday off for a funeral.",
+   "true_off": [
+    "Fri"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Fri"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0193,
+    "Tue": 0.0105,
+    "Wed": 0.0055,
+    "Thu": 0.0109,
+    "Fri": 0.8694,
+    "Sat": 0.0284,
+    "Sun": 0.0129
+   },
+   "p_avoid": 0.6591,
+   "latency_ms": 523,
+   "cost": 0
+  },
+  {
+   "note": "Early shifts are rough for me, I take the first bus at 6. Days: no restrictions.",
+   "true_off": [],
+   "true_avoid": "Morning",
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": false,
+   "all_right": false,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0443,
+    "Tue": 0.0134,
+    "Wed": 0.0121,
+    "Thu": 0.0128,
+    "Fri": 0.0149,
+    "Sat": 0.0168,
+    "Sun": 0.0198
+   },
+   "p_avoid": 0.5449,
+   "latency_ms": 531,
+   "cost": 0
+  },
+  {
+   "note": "Can't work Tuesday or Saturday.",
+   "true_off": [
+    "Tue",
+    "Sat"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Tue",
+    "Sat"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [
+    "Sat"
+   ],
+   "p_days": {
+    "Mon": 0.017,
+    "Tue": 0.8741,
+    "Wed": 0.0057,
+    "Thu": 0.0053,
+    "Fri": 0.0099,
+    "Sat": 0.7718,
+    "Sun": 0.0148
+   },
+   "p_avoid": 0.7932,
+   "latency_ms": 528,
+   "cost": 0
+  },
+  {
+   "note": "Any shift, any day.",
+   "true_off": [],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0468,
+    "Tue": 0.0378,
+    "Wed": 0.0317,
+    "Thu": 0.0323,
+    "Fri": 0.0375,
+    "Sat": 0.0497,
+    "Sun": 0.0551
+   },
+   "p_avoid": 0.8979,
+   "latency_ms": 529,
+   "cost": 0
+  },
+  {
+   "note": "I'll be at a conference Wed to Thu.",
+   "true_off": [
+    "Wed",
+    "Thu"
+   ],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 5,
+   "avoid_right": true,
+   "all_right": false,
+   "unsure": [
+    "Wed",
+    "Thu"
+   ],
+   "p_days": {
+    "Mon": 0.0418,
+    "Tue": 0.1023,
+    "Wed": 0.259,
+    "Thu": 0.2429,
+    "Fri": 0.0961,
+    "Sat": 0.0497,
+    "Sun": 0.0311
+   },
+   "p_avoid": 0.6414,
+   "latency_ms": 525,
+   "cost": 0
+  },
+  {
+   "note": "Afternoons clash with my kids' pickup, so mornings or nights only.",
+   "true_off": [],
+   "true_avoid": "Afternoon",
+   "read_off": [],
+   "read_avoid": "Afternoon",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0447,
+    "Tue": 0.0198,
+    "Wed": 0.0235,
+    "Thu": 0.0221,
+    "Fri": 0.0329,
+    "Sat": 0.0383,
+    "Sun": 0.0411
+   },
+   "p_avoid": 0.9071,
+   "latency_ms": 531,
+   "cost": 0
+  },
+  {
+   "note": "Sunday off please, and if possible no nights.",
+   "true_off": [
+    "Sun"
+   ],
+   "true_avoid": "Night",
+   "read_off": [
+    "Sun"
+   ],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0276,
+    "Tue": 0.0068,
+    "Wed": 0.0054,
+    "Thu": 0.0065,
+    "Fri": 0.0121,
+    "Sat": 0.0403,
+    "Sun": 0.9604
+   },
+   "p_avoid": 0.9148,
+   "latency_ms": 525,
+   "cost": 0
+  },
+  {
+   "note": "I could do the weekend, but Monday I'm out.",
+   "true_off": [
+    "Mon"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Mon"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.8411,
+    "Tue": 0.0642,
+    "Wed": 0.0174,
+    "Thu": 0.0112,
+    "Fri": 0.042,
+    "Sat": 0.1735,
+    "Sun": 0.1602
+   },
+   "p_avoid": 0.7663,
+   "latency_ms": 528,
+   "cost": 0
+  },
+  {
+   "note": "No mornings. Also off Fri.",
+   "true_off": [
+    "Fri"
+   ],
+   "true_avoid": "Morning",
+   "read_off": [
+    "Fri"
+   ],
+   "read_avoid": "Morning",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [
+    "Mon"
+   ],
+   "p_days": {
+    "Mon": 0.2012,
+    "Tue": 0.0435,
+    "Wed": 0.0172,
+    "Thu": 0.0441,
+    "Fri": 0.9171,
+    "Sat": 0.1191,
+    "Sun": 0.1129
+   },
+   "p_avoid": 0.8562,
+   "latency_ms": 532,
+   "cost": 0
+  },
+  {
+   "note": "Please avoid scheduling me on Thursday.",
+   "true_off": [
+    "Thu"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Thu"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [
+    "Thu"
+   ],
+   "p_days": {
+    "Mon": 0.0106,
+    "Tue": 0.0066,
+    "Wed": 0.0094,
+    "Thu": 0.5922,
+    "Fri": 0.0131,
+    "Sat": 0.0066,
+    "Sun": 0.0053
+   },
+   "p_avoid": 0.8004,
+   "latency_ms": 527,
+   "cost": 0
+  },
+  {
+   "note": "Visiting my parents Saturday, back the same night.",
+   "true_off": [
+    "Sat"
+   ],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 6,
+   "avoid_right": true,
+   "all_right": false,
+   "unsure": [
+    "Sat"
+   ],
+   "p_days": {
+    "Mon": 0.108,
+    "Tue": 0.0484,
+    "Wed": 0.0261,
+    "Thu": 0.0234,
+    "Fri": 0.1025,
+    "Sat": 0.4822,
+    "Sun": 0.1741
+   },
+   "p_avoid": 0.6064,
+   "latency_ms": 528,
+   "cost": 0
+  },
+  {
+   "note": "Nothing special this week, thanks!",
+   "true_off": [],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0075,
+    "Tue": 0.0068,
+    "Wed": 0.0069,
+    "Thu": 0.007,
+    "Fri": 0.0082,
+    "Sat": 0.0085,
+    "Sun": 0.0085
+   },
+   "p_avoid": 0.862,
+   "latency_ms": 524,
+   "cost": 0
+  },
+  {
+   "note": "I need Monday and Tuesday off, and I prefer not to do nights.",
+   "true_off": [
+    "Mon",
+    "Tue"
+   ],
+   "true_avoid": "Night",
+   "read_off": [
+    "Mon",
+    "Tue"
+   ],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [
+    "Tue"
+   ],
+   "p_days": {
+    "Mon": 0.9208,
+    "Tue": 0.786,
+    "Wed": 0.0102,
+    "Thu": 0.0074,
+    "Fri": 0.0092,
+    "Sat": 0.0244,
+    "Sun": 0.0209
+   },
+   "p_avoid": 0.9492,
+   "latency_ms": 527,
+   "cost": 0
+  },
+  {
+   "note": "Would love Sunday off, it's my anniversary.",
+   "true_off": [
+    "Sun"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Sun"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0388,
+    "Tue": 0.0118,
+    "Wed": 0.0076,
+    "Thu": 0.008,
+    "Fri": 0.0172,
+    "Sat": 0.0355,
+    "Sun": 0.9362
+   },
+   "p_avoid": 0.815,
+   "latency_ms": 517,
+   "cost": 0
+  },
+  {
+   "note": "Wednesday's out for me, jury duty.",
+   "true_off": [
+    "Wed"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Wed"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0102,
+    "Tue": 0.0087,
+    "Wed": 0.8246,
+    "Thu": 0.0112,
+    "Fri": 0.007,
+    "Sat": 0.0056,
+    "Sun": 0.0052
+   },
+   "p_avoid": 0.657,
+   "latency_ms": 516,
+   "cost": 0
+  },
+  {
+   "note": "I'm okay with nights, mornings, whatever. Just not afternoons, I have therapy.",
+   "true_off": [],
+   "true_avoid": "Afternoon",
+   "read_off": [],
+   "read_avoid": "Afternoon",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0387,
+    "Tue": 0.0516,
+    "Wed": 0.0603,
+    "Thu": 0.0515,
+    "Fri": 0.0426,
+    "Sat": 0.0446,
+    "Sun": 0.0495
+   },
+   "p_avoid": 0.9373,
+   "latency_ms": 532,
+   "cost": 0
+  },
+  {
+   "note": "Off Thu + Fri pls.",
+   "true_off": [
+    "Thu",
+    "Fri"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Thu",
+    "Fri"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0194,
+    "Tue": 0.0049,
+    "Wed": 0.0068,
+    "Thu": 0.8064,
+    "Fri": 0.88,
+    "Sat": 0.0181,
+    "Sun": 0.008
+   },
+   "p_avoid": 0.7991,
+   "latency_ms": 526,
+   "cost": 0
+  },
+  {
+   "note": "Saturday I'm running a marathon.",
+   "true_off": [
+    "Sat"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Sat"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [
+    "Sat"
+   ],
+   "p_days": {
+    "Mon": 0.0931,
+    "Tue": 0.0592,
+    "Wed": 0.0297,
+    "Thu": 0.0309,
+    "Fri": 0.0774,
+    "Sat": 0.5412,
+    "Sun": 0.0865
+   },
+   "p_avoid": 0.7081,
+   "latency_ms": 521,
+   "cost": 0
+  },
+  {
+   "note": "Can I get Tuesday? Off, I mean.",
+   "true_off": [
+    "Tue"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Tue"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0575,
+    "Tue": 0.9401,
+    "Wed": 0.0982,
+    "Thu": 0.0593,
+    "Fri": 0.0251,
+    "Sat": 0.0289,
+    "Sun": 0.0158
+   },
+   "p_avoid": 0.7802,
+   "latency_ms": 519,
+   "cost": 0
+  },
+  {
+   "note": "No night shifts this week, my partner is traveling and I'm alone with the baby.",
+   "true_off": [],
+   "true_avoid": "Night",
+   "read_off": [],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.1437,
+    "Tue": 0.0964,
+    "Wed": 0.0911,
+    "Thu": 0.0843,
+    "Fri": 0.1029,
+    "Sat": 0.1248,
+    "Sun": 0.1275
+   },
+   "p_avoid": 0.797,
+   "latency_ms": 527,
+   "cost": 0
+  },
+  {
+   "note": "Working is fine every day except the weekend days.",
+   "true_off": [
+    "Sat",
+    "Sun"
+   ],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 5,
+   "avoid_right": true,
+   "all_right": false,
+   "unsure": [
+    "Sat"
+   ],
+   "p_days": {
+    "Mon": 0.0281,
+    "Tue": 0.0126,
+    "Wed": 0.0107,
+    "Thu": 0.0121,
+    "Fri": 0.0905,
+    "Sat": 0.2049,
+    "Sun": 0.1819
+   },
+   "p_avoid": 0.8704,
+   "latency_ms": 526,
+   "cost": 0
+  },
+  {
+   "note": "Morning shifts are not great for me, but days are flexible.",
+   "true_off": [],
+   "true_avoid": "Morning",
+   "read_off": [],
+   "read_avoid": "Morning",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0948,
+    "Tue": 0.041,
+    "Wed": 0.0439,
+    "Thu": 0.0435,
+    "Fri": 0.0558,
+    "Sat": 0.0567,
+    "Sun": 0.054
+   },
+   "p_avoid": 0.9032,
+   "latency_ms": 532,
+   "cost": 0
+  },
+  {
+   "note": "I'm free all week.",
+   "true_off": [],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0364,
+    "Tue": 0.0285,
+    "Wed": 0.0323,
+    "Thu": 0.0327,
+    "Fri": 0.0338,
+    "Sat": 0.0409,
+    "Sun": 0.0399
+   },
+   "p_avoid": 0.6681,
+   "latency_ms": 523,
+   "cost": 0
+  },
+  {
+   "note": "Need off on Fri & Sat for a family event.",
+   "true_off": [
+    "Fri",
+    "Sat"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Fri",
+    "Sat"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [
+    "Fri",
+    "Sat"
+   ],
+   "p_days": {
+    "Mon": 0.0066,
+    "Tue": 0.0077,
+    "Wed": 0.0053,
+    "Thu": 0.0101,
+    "Fri": 0.6963,
+    "Sat": 0.7229,
+    "Sun": 0.0133
+   },
+   "p_avoid": 0.7926,
+   "latency_ms": 532,
+   "cost": 0
+  },
+  {
+   "note": "Thursday is a no for me.",
+   "true_off": [
+    "Thu"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Thu"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0138,
+    "Tue": 0.01,
+    "Wed": 0.0102,
+    "Thu": 0.8573,
+    "Fri": 0.0125,
+    "Sat": 0.0113,
+    "Sun": 0.01
+   },
+   "p_avoid": 0.7324,
+   "latency_ms": 530,
+   "cost": 0
+  },
+  {
+   "note": "Please don't put me on nights. I'd also like Monday off.",
+   "true_off": [
+    "Mon"
+   ],
+   "true_avoid": "Night",
+   "read_off": [
+    "Mon"
+   ],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.9798,
+    "Tue": 0.0045,
+    "Wed": 0.0021,
+    "Thu": 0.0023,
+    "Fri": 0.0032,
+    "Sat": 0.0099,
+    "Sun": 0.0119
+   },
+   "p_avoid": 0.9558,
+   "latency_ms": 537,
+   "cost": 0
+  },
+  {
+   "note": "I can take extra afternoons. Avoid mornings if you can.",
+   "true_off": [],
+   "true_avoid": "Morning",
+   "read_off": [],
+   "read_avoid": "Morning",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0796,
+    "Tue": 0.0276,
+    "Wed": 0.0253,
+    "Thu": 0.0266,
+    "Fri": 0.0412,
+    "Sat": 0.0473,
+    "Sun": 0.0474
+   },
+   "p_avoid": 0.9251,
+   "latency_ms": 535,
+   "cost": 0
+  },
+  {
+   "note": "Sunday please, off.",
+   "true_off": [
+    "Sun"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Sun"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.091,
+    "Tue": 0.01,
+    "Wed": 0.005,
+    "Thu": 0.0053,
+    "Fri": 0.0104,
+    "Sat": 0.0284,
+    "Sun": 0.9563
+   },
+   "p_avoid": 0.8435,
+   "latency_ms": 526,
+   "cost": 0
+  },
+  {
+   "note": "Wed off, kid's surgery.",
+   "true_off": [
+    "Wed"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Wed"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0677,
+    "Tue": 0.0623,
+    "Wed": 0.8887,
+    "Thu": 0.1381,
+    "Fri": 0.0972,
+    "Sat": 0.0771,
+    "Sun": 0.0569
+   },
+   "p_avoid": 0.6881,
+   "latency_ms": 525,
+   "cost": 0
+  },
+  {
+   "note": "Nights are fine, mornings are fine, I'll work anything except Tuesday.",
+   "true_off": [
+    "Tue"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Tue"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.086,
+    "Tue": 0.8897,
+    "Wed": 0.1449,
+    "Thu": 0.0589,
+    "Fri": 0.0424,
+    "Sat": 0.0434,
+    "Sun": 0.0557
+   },
+   "p_avoid": 0.8781,
+   "latency_ms": 524,
+   "cost": 0
+  },
+  {
+   "note": "Out of town Friday and Saturday.",
+   "true_off": [
+    "Fri",
+    "Sat"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Fri",
+    "Sat"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [
+    "Fri",
+    "Sat"
+   ],
+   "p_days": {
+    "Mon": 0.0203,
+    "Tue": 0.0164,
+    "Wed": 0.0126,
+    "Thu": 0.0239,
+    "Fri": 0.5713,
+    "Sat": 0.6156,
+    "Sun": 0.032
+   },
+   "p_avoid": 0.7184,
+   "latency_ms": 525,
+   "cost": 0
+  },
+  {
+   "note": "I'd rather not do afternoons. Days off: Sunday.",
+   "true_off": [
+    "Sun"
+   ],
+   "true_avoid": "Afternoon",
+   "read_off": [
+    "Sun"
+   ],
+   "read_avoid": "Afternoon",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.1293,
+    "Tue": 0.0373,
+    "Wed": 0.0324,
+    "Thu": 0.0308,
+    "Fri": 0.0447,
+    "Sat": 0.1088,
+    "Sun": 0.8401
+   },
+   "p_avoid": 0.9221,
+   "latency_ms": 531,
+   "cost": 0
+  },
+  {
+   "note": "Monday off pls, and no nights.",
+   "true_off": [
+    "Mon"
+   ],
+   "true_avoid": "Night",
+   "read_off": [
+    "Mon"
+   ],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.9501,
+    "Tue": 0.0098,
+    "Wed": 0.0058,
+    "Thu": 0.0073,
+    "Fri": 0.0125,
+    "Sat": 0.043,
+    "Sun": 0.0313
+   },
+   "p_avoid": 0.8855,
+   "latency_ms": 531,
+   "cost": 0
+  },
+  {
+   "note": "I don't mind which days. Could you keep me off nights though?",
+   "true_off": [],
+   "true_avoid": "Night",
+   "read_off": [],
+   "read_avoid": "Night",
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.025,
+    "Tue": 0.0127,
+    "Wed": 0.0089,
+    "Thu": 0.008,
+    "Fri": 0.0123,
+    "Sat": 0.0213,
+    "Sun": 0.0222
+   },
+   "p_avoid": 0.9662,
+   "latency_ms": 535,
+   "cost": 0
+  },
+  {
+   "note": "Off Saturday.",
+   "true_off": [
+    "Sat"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Sat"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0191,
+    "Tue": 0.0079,
+    "Wed": 0.0054,
+    "Thu": 0.0056,
+    "Fri": 0.0107,
+    "Sat": 0.9504,
+    "Sun": 0.0093
+   },
+   "p_avoid": 0.8408,
+   "latency_ms": 528,
+   "cost": 0
+  },
+  {
+   "note": "Any day but Wednesday or Friday.",
+   "true_off": [
+    "Wed",
+    "Fri"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Wed",
+    "Fri"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [
+    "Wed",
+    "Fri"
+   ],
+   "p_days": {
+    "Mon": 0.0479,
+    "Tue": 0.0508,
+    "Wed": 0.5833,
+    "Thu": 0.0712,
+    "Fri": 0.6542,
+    "Sat": 0.0582,
+    "Sun": 0.0788
+   },
+   "p_avoid": 0.7209,
+   "latency_ms": 533,
+   "cost": 0
+  },
+  {
+   "note": "No requests.",
+   "true_off": [],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.0241,
+    "Tue": 0.0144,
+    "Wed": 0.015,
+    "Thu": 0.0181,
+    "Fri": 0.02,
+    "Sat": 0.0251,
+    "Sun": 0.0246
+   },
+   "p_avoid": 0.6867,
+   "latency_ms": 527,
+   "cost": 0
+  },
+  {
+   "note": "Not available Mon, Tue, Wed, I'm on a course.",
+   "true_off": [
+    "Mon",
+    "Tue",
+    "Wed"
+   ],
+   "true_avoid": null,
+   "read_off": [],
+   "read_avoid": null,
+   "days_right": 4,
+   "avoid_right": true,
+   "all_right": false,
+   "unsure": [
+    "Mon",
+    "Tue",
+    "Wed"
+   ],
+   "p_days": {
+    "Mon": 0.47,
+    "Tue": 0.3887,
+    "Wed": 0.2996,
+    "Thu": 0.067,
+    "Fri": 0.0284,
+    "Sat": 0.045,
+    "Sun": 0.0366
+   },
+   "p_avoid": 0.7527,
+   "latency_ms": 531,
+   "cost": 0
+  },
+  {
+   "note": "Mornings please avoid. Weekend off if possible.",
+   "true_off": [
+    "Sat",
+    "Sun"
+   ],
+   "true_avoid": "Morning",
+   "read_off": [],
+   "read_avoid": "Morning",
+   "days_right": 5,
+   "avoid_right": true,
+   "all_right": false,
+   "unsure": [
+    "Sat",
+    "Sun"
+   ],
+   "p_days": {
+    "Mon": 0.1966,
+    "Tue": 0.0445,
+    "Wed": 0.0181,
+    "Thu": 0.0173,
+    "Fri": 0.107,
+    "Sat": 0.3992,
+    "Sun": 0.3269
+   },
+   "p_avoid": 0.896,
+   "latency_ms": 528,
+   "cost": 0
+  },
+  {
+   "note": "Tuesday off. I'm happy doing nights.",
+   "true_off": [
+    "Tue"
+   ],
+   "true_avoid": null,
+   "read_off": [
+    "Tue"
+   ],
+   "read_avoid": null,
+   "days_right": 7,
+   "avoid_right": true,
+   "all_right": true,
+   "unsure": [],
+   "p_days": {
+    "Mon": 0.1275,
+    "Tue": 0.8557,
+    "Wed": 0.0396,
+    "Thu": 0.0141,
+    "Fri": 0.0143,
+    "Sat": 0.024,
+    "Sun": 0.0335
+   },
+   "p_avoid": 0.6552,
+   "latency_ms": 531,
+   "cost": 0
+  }
+ ],
+ "wards": [
+  {
+   "ignore_notes": [
+    61,
+    83,
+    131,
+    101,
+    111,
+    103,
+    105,
+    103,
+    101,
+    83
+   ],
+   "model_reads": [
+    15,
+    5,
+    15,
+    15,
+    15,
+    15,
+    5,
+    5,
+    5,
+    15
+   ],
+   "model_plus_human": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "perfect_reading": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  },
+  {
+   "ignore_notes": [
+    103,
+    63,
+    63,
+    83,
+    71,
+    77,
+    85,
+    93,
+    71,
+    83
+   ],
+   "model_reads": [
+    35,
+    35,
+    25,
+    35,
+    35,
+    25,
+    15,
+    35,
+    25,
+    35
+   ],
+   "model_plus_human": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "perfect_reading": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  },
+  {
+   "ignore_notes": [
+    77,
+    67,
+    97,
+    103,
+    107,
+    103,
+    117,
+    85,
+    101,
+    75
+   ],
+   "model_reads": [
+    15,
+    27,
+    23,
+    37,
+    29,
+    23,
+    27,
+    15,
+    25,
+    37
+   ],
+   "model_plus_human": [
+    17,
+    17,
+    21,
+    5,
+    17,
+    13,
+    13,
+    13,
+    5,
+    5
+   ],
+   "perfect_reading": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  },
+  {
+   "ignore_notes": [
+    73,
+    97,
+    85,
+    71,
+    83,
+    37,
+    55,
+    107,
+    69,
+    101
+   ],
+   "model_reads": [
+    15,
+    15,
+    5,
+    15,
+    5,
+    15,
+    15,
+    5,
+    5,
+    5
+   ],
+   "model_plus_human": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "perfect_reading": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  },
+  {
+   "ignore_notes": [
+    81,
+    105,
+    109,
+    87,
+    69,
+    87,
+    71,
+    83,
+    111,
+    77
+   ],
+   "model_reads": [
+    15,
+    25,
+    15,
+    15,
+    15,
+    15,
+    25,
+    25,
+    15,
+    15
+   ],
+   "model_plus_human": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "perfect_reading": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  },
+  {
+   "ignore_notes": [
+    77,
+    115,
+    117,
+    127,
+    73,
+    155,
+    147,
+    115,
+    123,
+    137
+   ],
+   "model_reads": [
+    45,
+    55,
+    55,
+    25,
+    55,
+    15,
+    55,
+    25,
+    45,
+    35
+   ],
+   "model_plus_human": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "perfect_reading": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ]
+  }
+ ]
+}

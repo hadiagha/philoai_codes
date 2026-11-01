@@ -1,0 +1,48 @@
+{
+ "tag": "cvrp10-s0/full/choice/v1/rep0/0",
+ "model": "typesafe/jev-1.13-20260917",
+ "state": "Delivery van route planning. Goal: deliver to every stop exactly once with the smallest total distance.\nThe van carries at most 20 units. It reloads only at the DEPOT at (50,50). Every trip starts and ends at the DEPOT.\nNow: the van is at DEPOT (50,50). Load left: 20 of 20. Stops left: 10, total demand 60.\nLegal next moves:\nS10 at (93,13): demand 9, 56.7 away, 56.7 from the depot.\nS2 at (14,25): demand 8, 43.8 away, 43.8 from the depot.\nS5 at (19,96): demand 9, 55.5 away, 55.5 from the depot.\nS4 at (73,17): demand 4, 40.2 away, 40.2 from the depot.\nS1 at (23,67): demand 1, 31.9 away, 31.9 from the depot.\nS9 at (5,55): demand 8, 45.3 away, 45.3 from the depot.\nS3 at (64,99): demand 5, 51.0 away, 51.0 from the depot.\nS6 at (20,64): demand 8, 33.1 away, 33.1 from the depot.\nS7 at (90,62): demand 6, 41.8 away, 41.8 from the depot.\nS8 at (86,50): demand 2, 36.0 away, 36.0 from the depot.",
+ "questions": {
+  "next": {
+   "type": "choice",
+   "instructions": "Which move should the van make next so that the total distance of all trips is as small as possible?",
+   "criteria": {
+    "S10": "go to S10",
+    "S2": "go to S2",
+    "S5": "go to S5",
+    "S4": "go to S4",
+    "S1": "go to S1",
+    "S9": "go to S9",
+    "S3": "go to S3",
+    "S6": "go to S6",
+    "S7": "go to S7",
+    "S8": "go to S8"
+   }
+  }
+ },
+ "answers": {
+  "next": {
+   "type": "choice",
+   "choice": "S1",
+   "probabilities": {
+    "S10": 0.02,
+    "S2": 0.03,
+    "S5": 0.01,
+    "S4": 0.05,
+    "S1": 0.54,
+    "S9": 0.02,
+    "S3": 0.01,
+    "S6": 0.17,
+    "S7": 0.02,
+    "S8": 0.13
+   },
+   "confidence": 0.49
+  }
+ },
+ "latency_ms": 398,
+ "usage": {
+  "input_tokens": 857,
+  "output_tokens": 99,
+  "cost": 3.5994e-05
+ }
+}

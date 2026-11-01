@@ -1,0 +1,765 @@
+{
+ "tag": "nsp-medium-s0/full/score/v1/rep0/0/0",
+ "model": "typesafe/jev-1.13-20260917",
+ "state": "Hospital ward roster for 25 nurses over 28 days. Shifts: Morning, Afternoon, Night.\nThe code already enforces: exact coverage, at most one shift per nurse per day, and no Night followed by next-day Morning.\nPenalty to keep small: 10 points each time a nurse works on a day they asked off, 4 points each time a nurse works a shift type they asked to avoid, and 5 points for every shift of difference between the busiest and the least busy nurse at the end.\nNow filling: Day 1 (Mon), Morning shift. It needs 7 nurses.\nShifts filled so far: 0 of 476. At the end each nurse will average 19.0 shifts.\nNurses who can work this shift:\nN19: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Tue (day 2), Wed (day 3), Sat (day 13), Tue (day 16), Fri (day 26), Sun (day 28). Last worked: off.\nN01: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Sun (day 7), Mon (day 8), Wed (day 17), Sun (day 21), Fri (day 26), Sun (day 28). Last worked: off.\nN17: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Fri (day 12), Mon (day 15), Fri (day 19), Sat (day 20), Fri (day 26), Sun (day 28). Last worked: off.\nN02: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Thu (day 11), Fri (day 12), Sat (day 13), Fri (day 19), Sat (day 27), Sun (day 28). Last worked: off.\nN16: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Fri (day 5), Sat (day 6), Wed (day 10), Sat (day 13), Sun (day 21), Sat (day 27). Last worked: off.\nN25: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Sat (day 6), Wed (day 10), Thu (day 11), Sat (day 20), Thu (day 25), Sun (day 28). Last worked: off.\nN15: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Tue (day 2), Sat (day 6), Sun (day 7), Sun (day 14), Fri (day 19), Sat (day 27). Last worked: off.\nN24: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Tue (day 2), Sun (day 7), Fri (day 19), Tue (day 23), Fri (day 26), Sun (day 28). Last worked: off.\nN20: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Sat (day 13), Sun (day 14), Tue (day 16), Thu (day 25), Fri (day 26), Sat (day 27). Last worked: off.\nN10: 0 shifts so far. Asked for today off: YES. Avoids: nothing. Days off asked later: Wed (day 10), Sun (day 14), Sat (day 20), Sun (day 21), Sun (day 28). Last worked: off.\nN04: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Thu (day 4), Sat (day 6), Wed (day 10), Fri (day 12), Fri (day 19), Fri (day 26). Last worked: off.\nN12: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Fri (day 5), Sat (day 6), Wed (day 10), Sun (day 14), Fri (day 19), Fri (day 26). Last worked: off.\nN13: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Fri (day 5), Sat (day 13), Sun (day 14), Mon (day 22), Tue (day 23), Sat (day 27). Last worked: off.\nN08: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Thu (day 4), Fri (day 5), Sat (day 6), Sun (day 7), Sun (day 14), Tue (day 16). Last worked: off.\nN14: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Fri (day 5), Sun (day 7), Thu (day 11), Sun (day 14), Sun (day 21), Fri (day 26). Last worked: off.\nN23: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Tue (day 2), Sun (day 14), Wed (day 17), Sun (day 21), Fri (day 26), Sun (day 28). Last worked: off.\nN03: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Tue (day 9), Sat (day 20), Sun (day 21), Mon (day 22), Tue (day 23), Sat (day 27). Last worked: off.\nN21: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Sun (day 7), Thu (day 11), Fri (day 12), Sun (day 14), Sun (day 21), Sun (day 28). Last worked: off.\nN05: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Sun (day 7), Sat (day 13), Sun (day 14), Mon (day 22), Sat (day 27), Sun (day 28). Last worked: off.\nN09: 0 shifts so far. Asked for today off: YES. Avoids: Mornings. Days off asked later: Tue (day 16), Sat (day 20), Sun (day 21), Wed (day 24), Sun (day 28). Last worked: off.\nN22: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Fri (day 12), Sat (day 20), Tue (day 23), Thu (day 25), Fri (day 26), Sun (day 28). Last worked: off.\nN11: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Sat (day 6), Sun (day 7), Sun (day 14), Sun (day 21), Sat (day 27), Sun (day 28). Last worked: off.\nN18: 0 shifts so far. Asked for today off: no. Avoids: nothing. Days off asked later: Fri (day 5), Wed (day 10), Fri (day 12), Thu (day 18), Fri (day 19), Tue (day 23). Last worked: off.\nN07: 0 shifts so far. Asked for today off: no. Avoids: Nights. Days off asked later: Tue (day 2), Thu (day 4), Fri (day 5), Sat (day 20), Thu (day 25), Fri (day 26). Last worked: off.\nN06: 0 shifts so far. Asked for today off: no. Avoids: Mornings. Days off asked later: Thu (day 4), Sat (day 6), Sat (day 20), Sun (day 21), Sat (day 27), Sun (day 28). Last worked: off.",
+ "questions": {
+  "N19": {
+   "type": "score",
+   "instructions": "How good a choice is N19 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N01": {
+   "type": "score",
+   "instructions": "How good a choice is N01 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N17": {
+   "type": "score",
+   "instructions": "How good a choice is N17 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N02": {
+   "type": "score",
+   "instructions": "How good a choice is N02 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N16": {
+   "type": "score",
+   "instructions": "How good a choice is N16 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N25": {
+   "type": "score",
+   "instructions": "How good a choice is N25 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N15": {
+   "type": "score",
+   "instructions": "How good a choice is N15 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N24": {
+   "type": "score",
+   "instructions": "How good a choice is N24 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N20": {
+   "type": "score",
+   "instructions": "How good a choice is N20 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N10": {
+   "type": "score",
+   "instructions": "How good a choice is N10 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N04": {
+   "type": "score",
+   "instructions": "How good a choice is N04 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N12": {
+   "type": "score",
+   "instructions": "How good a choice is N12 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N13": {
+   "type": "score",
+   "instructions": "How good a choice is N13 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N08": {
+   "type": "score",
+   "instructions": "How good a choice is N08 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N14": {
+   "type": "score",
+   "instructions": "How good a choice is N14 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N23": {
+   "type": "score",
+   "instructions": "How good a choice is N23 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N03": {
+   "type": "score",
+   "instructions": "How good a choice is N03 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N21": {
+   "type": "score",
+   "instructions": "How good a choice is N21 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N05": {
+   "type": "score",
+   "instructions": "How good a choice is N05 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N09": {
+   "type": "score",
+   "instructions": "How good a choice is N09 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N22": {
+   "type": "score",
+   "instructions": "How good a choice is N22 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N11": {
+   "type": "score",
+   "instructions": "How good a choice is N11 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N18": {
+   "type": "score",
+   "instructions": "How good a choice is N18 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N07": {
+   "type": "score",
+   "instructions": "How good a choice is N07 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  },
+  "N06": {
+   "type": "score",
+   "instructions": "How good a choice is N06 for this shift, to keep the total penalty of the whole roster small?",
+   "criteria": [
+    "Very bad",
+    "Bad",
+    "Okay",
+    "Good",
+    "Very good"
+   ]
+  }
+ },
+ "answers": {
+  "N19": {
+   "type": "score",
+   "score": 0.83,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.23,
+    "1": 0.73,
+    "2": 0.02,
+    "3": 0.01,
+    "4": 0.01
+   },
+   "confidence": 0.75
+  },
+  "N01": {
+   "type": "score",
+   "score": 0.87,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.21,
+    "1": 0.74,
+    "2": 0.02,
+    "3": 0.02,
+    "4": 0.01
+   },
+   "confidence": 0.75
+  },
+  "N17": {
+   "type": "score",
+   "score": 3.47,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.06,
+    "3": 0.35,
+    "4": 0.58
+   },
+   "confidence": 0.58
+  },
+  "N02": {
+   "type": "score",
+   "score": 3.56,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.05,
+    "3": 0.3,
+    "4": 0.64
+   },
+   "confidence": 0.64
+  },
+  "N16": {
+   "type": "score",
+   "score": 3.83,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.02,
+    "3": 0.12,
+    "4": 0.86
+   },
+   "confidence": 0.87
+  },
+  "N25": {
+   "type": "score",
+   "score": 3.81,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.02,
+    "3": 0.15,
+    "4": 0.83
+   },
+   "confidence": 0.84
+  },
+  "N15": {
+   "type": "score",
+   "score": 3.39,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.07,
+    "3": 0.43,
+    "4": 0.49
+   },
+   "confidence": 0.5
+  },
+  "N24": {
+   "type": "score",
+   "score": 0.83,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.24,
+    "1": 0.71,
+    "2": 0.02,
+    "3": 0.02,
+    "4": 0.01
+   },
+   "confidence": 0.72
+  },
+  "N20": {
+   "type": "score",
+   "score": 3.78,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.02,
+    "3": 0.17,
+    "4": 0.81
+   },
+   "confidence": 0.82
+  },
+  "N10": {
+   "type": "score",
+   "score": 0.12,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.91,
+    "1": 0.08,
+    "2": 0.01,
+    "3": 0,
+    "4": 0
+   },
+   "confidence": 0.92
+  },
+  "N04": {
+   "type": "score",
+   "score": 3.42,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.02,
+    "2": 0.08,
+    "3": 0.37,
+    "4": 0.53
+   },
+   "confidence": 0.51
+  },
+  "N12": {
+   "type": "score",
+   "score": 3.77,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.02,
+    "3": 0.19,
+    "4": 0.79
+   },
+   "confidence": 0.81
+  },
+  "N13": {
+   "type": "score",
+   "score": 3.4,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.07,
+    "3": 0.39,
+    "4": 0.53
+   },
+   "confidence": 0.53
+  },
+  "N08": {
+   "type": "score",
+   "score": 3.67,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.04,
+    "3": 0.23,
+    "4": 0.72
+   },
+   "confidence": 0.72
+  },
+  "N14": {
+   "type": "score",
+   "score": 3.67,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.03,
+    "3": 0.26,
+    "4": 0.71
+   },
+   "confidence": 0.73
+  },
+  "N23": {
+   "type": "score",
+   "score": 3.16,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.02,
+    "1": 0.06,
+    "2": 0.12,
+    "3": 0.33,
+    "4": 0.47
+   },
+   "confidence": 0.31
+  },
+  "N03": {
+   "type": "score",
+   "score": 3.27,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.01,
+    "1": 0.03,
+    "2": 0.11,
+    "3": 0.38,
+    "4": 0.47
+   },
+   "confidence": 0.39
+  },
+  "N21": {
+   "type": "score",
+   "score": 3.74,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.03,
+    "3": 0.19,
+    "4": 0.78
+   },
+   "confidence": 0.79
+  },
+  "N05": {
+   "type": "score",
+   "score": 3.31,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.01,
+    "1": 0.03,
+    "2": 0.11,
+    "3": 0.35,
+    "4": 0.5
+   },
+   "confidence": 0.42
+  },
+  "N09": {
+   "type": "score",
+   "score": 0.03,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.98,
+    "1": 0.02,
+    "2": 0,
+    "3": 0,
+    "4": 0
+   },
+   "confidence": 0.98
+  },
+  "N22": {
+   "type": "score",
+   "score": 0.9,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.21,
+    "1": 0.72,
+    "2": 0.03,
+    "3": 0.03,
+    "4": 0.01
+   },
+   "confidence": 0.73
+  },
+  "N11": {
+   "type": "score",
+   "score": 3.7,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.04,
+    "3": 0.19,
+    "4": 0.76
+   },
+   "confidence": 0.75
+  },
+  "N18": {
+   "type": "score",
+   "score": 3.77,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.02,
+    "3": 0.17,
+    "4": 0.81
+   },
+   "confidence": 0.82
+  },
+  "N07": {
+   "type": "score",
+   "score": 3.43,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.01,
+    "1": 0.03,
+    "2": 0.08,
+    "3": 0.28,
+    "4": 0.6
+   },
+   "confidence": 0.52
+  },
+  "N06": {
+   "type": "score",
+   "score": 0.81,
+   "legend": {
+    "0": "Very bad",
+    "1": "Bad",
+    "2": "Okay",
+    "3": "Good",
+    "4": "Very good"
+   },
+   "probabilities": {
+    "0": 0.3,
+    "1": 0.63,
+    "2": 0.03,
+    "3": 0.03,
+    "4": 0.01
+   },
+   "confidence": 0.65
+  }
+ },
+ "latency_ms": 235,
+ "usage": {
+  "input_tokens": 3964,
+  "output_tokens": 379,
+  "cost": 0.000166488
+ }
+}

@@ -7,8 +7,9 @@ Each video has its own folder. The code is small, from scratch and plain Python,
 | Folder | Video |
 |---|---|
 | [`rl-basics/`](rl-basics/) | *Reinforcement Learning Fundamentals: The Complete Guide From Scratch* |
+| [`jev-decision-models/`](jev-decision-models/) | *Jev Decision Model: How It Works, Tested on 130,000+ Real Decisions* |
 
-Requirements: Python 3.8 or newer. Unless a folder says otherwise, no libraries are needed.
+Requirements: Python 3.8 or newer. Unless a folder says otherwise, no libraries are needed (`jev-decision-models/` needs `ortools`).
 
 ---
 

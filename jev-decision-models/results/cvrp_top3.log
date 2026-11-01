@@ -1,0 +1,70 @@
+  model runs 50/920  6s  (new calls: jev 121)
+  model runs 100/920  9s  (new calls: jev 179)
+  model runs 150/920  14s  (new calls: jev 271)
+  model runs 200/920  20s  (new calls: jev 400)
+  model runs 250/920  24s  (new calls: jev 484)
+  model runs 300/920  29s  (new calls: jev 582)
+  model runs 350/920  33s  (new calls: jev 671)
+  model runs 400/920  37s  (new calls: jev 753)
+  model runs 450/920  42s  (new calls: jev 823)
+  model runs 500/920  72s  (new calls: jev 1537)
+  model runs 550/920  88s  (new calls: jev 1920)
+  model runs 600/920  116s  (new calls: jev 2644)
+  model runs 650/920  141s  (new calls: jev 3195)
+  model runs 700/920  159s  (new calls: jev 3634)
+  model runs 750/920  185s  (new calls: jev 4352)
+  model runs 800/920  211s  (new calls: jev 5021)
+  model runs 850/920  228s  (new calls: jev 5447)
+  model runs 900/920  254s  (new calls: jev 6084)
+  model runs 920/920  257s  (new calls: jev 6125)
+  OR-Tools jobs: 360
+
+small (20 instances)   gap vs best found: mean ± std | time | calls | cost/instance
+  ortools_1s                      0.0% ±   0.0 |   1.05s |   0.0 | $0.00000
+  ortools_ref                     0.0% ±   0.0 |  10.05s |   0.0 | $0.00000
+  nearest+ortools_1s              0.0% ±   0.0 |   1.05s |   0.0 | $0.00000
+  clarke_wright+ortools_1s        0.0% ±   0.0 |   1.05s |   0.0 | $0.00000
+  jev_choice_v2+ortools_1s        0.0% ±   0.0 |   1.00s |   0.0 | $0.00000
+  jev_score_v2+ortools_1s         0.0% ±   0.0 |   1.00s |   0.0 | $0.00000
+  jev_sample8_v2+ortools_1s       0.0% ±   0.0 |   1.00s |   0.0 | $0.00000
+  jev_top3_v2+ortools_1s          0.0% ±   0.0 |   1.00s |   0.0 | $0.00000
+  jev_top3gate_v2+ortools_1s      0.0% ±   0.0 |   1.00s |   0.0 | $0.00000
+  clarke_wright                   1.4% ±   2.1 |   0.00s |   0.0 | $0.00000
+  jev_sample8_v2                 14.5% ±   7.3 |  57.23s |  90.5 | $0.00329
+  jev_choice_v1                  15.0% ±   7.8 |   7.44s |  12.4 | $0.00035
+  jev_score_v2                   20.2% ±   8.6 |   6.70s |  10.4 | $0.00047
+  jev_top3_v2                    20.3% ±   7.5 |   3.00s |  10.6 | $0.00029
+  jev_choice_v2                  22.1% ±   8.1 |   6.31s |  10.7 | $0.00038
+  jev_top3gate_v2                22.6% ±   9.3 |   2.82s |   9.8 | $0.00027
+  nearest                        23.5% ±  10.6 |   0.00s |   0.0 | $0.00000
+  calibration: 222 states, picked the reference move 67% of the time, mean confidence p 0.68
+    p in [0.2, 0.4):   16 states, right 25%
+    p in [0.4, 0.6):   67 states, right 49%
+    p in [0.6, 0.8):   77 states, right 70%
+    p in [0.8, 1.0):   65 states, right 92%
+
+medium (20 instances)   gap vs best found: mean ± std | time | calls | cost/instance
+  ortools_ref                     0.0% ±   0.0 |  60.00s |   0.0 | $0.00000
+  jev_sample8_v2+ortools_1s       2.6% ±   1.9 |   1.00s |   0.0 | $0.00000
+  clarke_wright+ortools_1s        2.7% ±   2.0 |   1.00s |   0.0 | $0.00000
+  ortools_1s                      3.5% ±   2.9 |   1.00s |   0.0 | $0.00000
+  jev_choice_v2+ortools_1s        3.5% ±   2.4 |   1.00s |   0.0 | $0.00000
+  nearest+ortools_1s              4.3% ±   3.1 |   1.00s |   0.0 | $0.00000
+  clarke_wright                   4.5% ±   1.8 |   0.00s |   0.0 | $0.00000
+  jev_top3_v2+ortools_1s          4.5% ±   3.6 |   1.00s |   0.0 | $0.00000
+  jev_top3gate_v2+ortools_1s      5.3% ±   4.7 |   1.00s |   0.0 | $0.00000
+  jev_score_v2+ortools_1s         5.7% ±   3.3 |   1.00s |   0.0 | $0.00000
+  jev_choice_v1                  25.9% ±   6.3 |  16.08s |  55.8 | $0.00374
+  jev_choice_v2                  31.3% ±   6.6 |  14.79s |  52.1 | $0.00516
+  jev_top3_v2                    32.7% ±   5.9 |  14.50s |  51.8 | $0.00162
+  jev_top3gate_v2                39.4% ±   6.8 |  13.92s |  50.2 | $0.00158
+  nearest                        40.1% ±  10.1 |   0.00s |   0.0 | $0.00000
+  jev_sample8_v2                 44.6% ±   8.3 | 135.10s | 447.4 | $0.04598
+  jev_score_v2                   47.3% ±   5.5 |  16.24s |  51.2 | $0.00726
+  calibration: 1076 states, picked the reference move 73% of the time, mean confidence p 0.65
+    p in [0.0, 0.2):    3 states, right 0%
+    p in [0.2, 0.4):  113 states, right 34%
+    p in [0.4, 0.6):  274 states, right 65%
+    p in [0.6, 0.8):  462 states, right 80%
+    p in [0.8, 1.0):  239 states, right 90%
+new API calls: jev 6125 (cached 24835)

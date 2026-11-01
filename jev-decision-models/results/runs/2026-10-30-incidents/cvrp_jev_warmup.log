@@ -1,0 +1,66 @@
+  model runs 50/680  51s  (new calls: jev 603)
+  model runs 100/680  95s  (new calls: jev 1157)
+  model runs 150/680  123s  (new calls: jev 1740)
+  model runs 200/680  174s  (new calls: jev 2320)
+  model runs 250/680  224s  (new calls: jev 2896)
+  model runs 300/680  270s  (new calls: jev 3444)
+  model runs 350/680  370s  (new calls: jev 4722)
+  model runs 400/680  556s  (new calls: jev 7330)
+  model runs 450/680  633s  (new calls: jev 9963)
+  model runs 500/680  710s  (new calls: jev 12630)
+  model runs 550/680  791s  (new calls: jev 15333)
+  model runs 600/680  882s  (new calls: jev 18225)
+  model runs 650/680  966s  (new calls: jev 20894)
+  model runs 680/680  1019s  (new calls: jev 22316)
+  OR-Tools jobs: 280
+Traceback (most recent call last):
+  File "/Users/hadiaghazadeh/Library/Mobile Documents/com~apple~CloudDocs/Hadi_Local_Files/@youtube_channel/youtube_channel/videos/002-jev-decision-models/code/decide.py", line 87, in _post
+    with urllib.request.urlopen(req, timeout=120) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/philoai-lab/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/philoai-lab/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/philoai-lab/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/philoai-lab/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/philoai-lab/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/opt/anaconda3/envs/philoai-lab/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 402: Payment Required
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadiaghazadeh/Library/Mobile Documents/com~apple~CloudDocs/Hadi_Local_Files/@youtube_channel/youtube_channel/videos/002-jev-decision-models/code/run_cvrp.py", line 203, in <module>
+    main()
+  File "/Users/hadiaghazadeh/Library/Mobile Documents/com~apple~CloudDocs/Hadi_Local_Files/@youtube_channel/youtube_channel/videos/002-jev-decision-models/code/run_cvrp.py", line 158, in main
+    for row in f.result():
+               ^^^^^^^^^^
+  File "/opt/anaconda3/envs/philoai-lab/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/philoai-lab/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/anaconda3/envs/philoai-lab/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hadiaghazadeh/Library/Mobile Documents/com~apple~CloudDocs/Hadi_Local_Files/@youtube_channel/youtube_channel/videos/002-jev-decision-models/code/run_cvrp.py", line 55, in calibration_probe
+    pick = pol(inst, s)
+           ^^^^^^^^^^^^
+  File "/Users/hadiaghazadeh/Library/Mobile Documents/com~apple~CloudDocs/Hadi_Local_Files/@youtube_channel/youtube_channel/videos/002-jev-decision-models/code/cvrp.py", line 147, in policy
+    ans, rec = decider.ask(state, q, tag="%s/%s/%d" % (inst["name"], tag, s["steps"]))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hadiaghazadeh/Library/Mobile Documents/com~apple~CloudDocs/Hadi_Local_Files/@youtube_channel/youtube_channel/videos/002-jev-decision-models/code/decide.py", line 68, in ask
+    out, ms = self._post({"model": self.cfg["model"], "state": state, "questions": questions})
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hadiaghazadeh/Library/Mobile Documents/com~apple~CloudDocs/Hadi_Local_Files/@youtube_channel/youtube_channel/videos/002-jev-decision-models/code/decide.py", line 93, in _post
+    raise RuntimeError("HTTP %d: %s" % (e.code, e.read().decode()[:400]))
+RuntimeError: HTTP 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance."}}}
