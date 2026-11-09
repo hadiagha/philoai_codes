@@ -8,8 +8,9 @@ Each video has its own folder. The code is small, from scratch and plain Python,
 |---|---|
 | [`rl-basics/`](rl-basics/) | *Reinforcement Learning Fundamentals: The Complete Guide From Scratch* |
 | [`jev-decision-models/`](jev-decision-models/) | *Jev Decision Model: How It Works, Tested on 130,000+ Real Decisions* |
+| [`claude-code-from-scratch/`](claude-code-from-scratch/) | *Build a Claude Code Clone From Scratch* (series; Part 1: The Agent Loop) |
 
-Requirements: Python 3.8 or newer. Unless a folder says otherwise, no libraries are needed (`jev-decision-models/` needs `ortools`).
+Requirements: Python 3.8 or newer. Unless a folder says otherwise, no libraries are needed (`jev-decision-models/` needs `ortools`; `claude-code-from-scratch/` needs `httpx`).
 
 ---
 
