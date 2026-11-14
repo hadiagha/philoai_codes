@@ -1,0 +1,2341 @@
+{
+ "model": "anthropic/claude-sonnet-5.5",
+ "date": "2026-11-11",
+ "version": "0.3",
+ "demos": {
+  "replay": {
+   "text": "╭──────────────────────────────────────╮\n│  φ Cato Code v0.3                    │\n│  /private/tmp/shop                   │\n│  model: sonnet · /help for commands  │\n╰──────────────────────────────────────╯\n\n> The tests in test_shop.py fail. Find the bug and fix it.\n● Bash(cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | )\n  Cato wants to run cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | tail -30\n  Allow? (y/n) y\n  └ shop.py\n    test_shop.py\n    .F … +13 lines\n● Glob(**/*.py)\n  └ test_shop.py\n    shop.py\n● Read(/private/tmp/shop/shop.py)\n  └      1      \"\"\"A tiny shop: prices in cents, a cart, and a discount code.\"\"\"\n         2      \n         3      PRICES = {\"apple\": 50, \"bread\": 250, \"milk\": 120, \"coffee\": 899} … +24 lines\n● Edit(/private/tmp/shop/shop.py)\n  Cato wants to use Edit(/private/tmp/shop/shop.py)\n  Allow? (y/n) y\n  └ Edited shop.py.\n    @@ -10,5 +10,5 @@\n         total = 0\n         for product, count in items.items():\n    -        total += PRICES[product]\n    +        total += PRICES[product] * count\n         return total\n     \n● Bash(cd /private/tmp/shop && python -m pytest -q 2>&1 | tail -15)\n  Cato wants to run cd /private/tmp/shop && python -m pytest -q 2>&1 | tail -15\n  Allow? (y/n) y\n  └ ....                                                                     [100%]\n    4 passed in 0.02s\nThe bug was in cart_total in shop.py. It added each product's price once and ignored the quantity,  \nso 3 apples came to 50 instead of 150. I changed it to PRICES[product] * count. All 4 tests in      \ntest_shop.py now pass.                                                                              \n  sonnet · 2,815 tokens on the desk · $0.0217 · /help\n\n",
+   "cost": 0.021724
+  },
+  "headless_json": {
+   "result": "The bug was in `cart_total` in `shop.py`. It added each product's price once and ignored the quantity, so 3 apples came to 50 instead of 150. I changed it to `PRICES[product] * count`. All 4 tests in `test_shop.py` now pass.",
+   "turns": 4,
+   "cost": 0.021724,
+   "tokens": 8938,
+   "reason": "end",
+   "seconds": 2.3
+  },
+  "cost_limit": {
+   "result": "",
+   "turns": 3,
+   "cost": 0.015373999999999999,
+   "tokens": 6123,
+   "reason": "cost limit $0.01",
+   "seconds": 1.7
+  },
+  "headless_command": "cato -p \"The tests in test_shop.py fail. Find the bug and fix it.\" --json --yes",
+  "ctrl_c": {
+   "text": "╭──────────────────────────────────────╮\n│  φ Cato Code v0.3                    │\n│  /private/tmp/shop                   │\n│  model: sonnet · /help for commands  │\n╰──────────────────────────────────────╯\n\n> The tests in test_shop.py fail. Find the bug and fix it.\n● Bash(cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | )\n  Cato wants to run cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | tail -30\n  Allow? (y/n) ^C\n  Interrupted. Tell Cato what to do instead.\n  sonnet · 1,590 tokens on the desk · $0.0042 · /help\n\n",
+   "html": "<span class=\"k-cyan\">╭──────────────────────────────────────╮</span>\n<span class=\"k-cyan\">│</span>  <span class=\"k-cyan\">φ</span> <span class=\"b\">Cato Code</span> v0.3                    <span class=\"k-cyan\">│</span>\n<span class=\"k-cyan\">│</span>  <span class=\"k-dim\">/private/tmp/shop</span>                   <span class=\"k-cyan\">│</span>\n<span class=\"k-cyan\">│</span>  <span class=\"k-dim\">model: sonnet · /help for commands</span>  <span class=\"k-cyan\">│</span>\n<span class=\"k-cyan\">╰──────────────────────────────────────╯</span>\n\n<span class=\"k-yel\">&gt;</span> The tests in test_shop.py fail. Find the bug and fix it.\n<span class=\"k-blue\">●</span> <span class=\"b\">Bash(cd /private/tmp/shop &amp;&amp; ls &amp;&amp; python -m pytest -x -q 2&gt;&amp;1 | )</span>\n  <span class=\"k-yel\">Cato wants to run </span><span class=\"k-yel b\">cd /private/tmp/shop &amp;&amp; ls &amp;&amp; python -m pytest -x -q 2&gt;&amp;1 | tail -30</span>\n  Allow? <span class=\"b\">(y/n)</span> ^C\n<span class=\"k-red\">  Interrupted.</span> <span class=\"k-dim\">Tell Cato what to do instead.</span>\n<span class=\"k-dim\">  sonnet · 1,590 tokens on the desk · $0.0042 · /help</span>\n\n",
+   "last": [
+    {
+     "role": "tool",
+     "tool_call_id": "toolu_01NE6kE9Rj3Wb8Rk5pKNBqBE",
+     "content": "Stopped by the user before this finished."
+    },
+    {
+     "role": "tool",
+     "tool_call_id": "toolu_01KgtvXxAE9era2q1XhXRknG",
+     "content": "Stopped by the user before this finished."
+    }
+   ],
+   "roles": [
+    "system",
+    "user",
+    "assistant",
+    "tool",
+    "tool"
+   ]
+  },
+  "commands_html": "<span class=\"k-yel\">&gt;</span> /help\n<span class=\"b\">Commands</span>\n  /help           this list\n  /model [name]   show or switch the model: sonnet, opus, sol, terra, gemini\n  /cost           tokens and dollars so far\n  /clear          start a fresh chat\n  /exit           quit (or Ctrl+D)\n<span class=\"k-dim\">Ctrl+C stops Cato in the middle of an answer.</span>\n\n<span class=\"k-yel\">&gt;</span> /model\n  model: <span class=\"k-cyan\">sonnet</span>  <span class=\"k-dim\">(choices: sonnet, opus, sol, terra, gemini, or any OpenRouter id)</span>\n\n<span class=\"k-yel\">&gt;</span> /cost\n  2,815 tokens on the desk · $0.0217 so far\n\n",
+  "ctrl_c_v02": {
+   "text": "Cato v0.2 · sonnet · type a task, or 'exit'\n\n> Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n    main()\n    ~~~~^^\n  File \"__main__.py\", line 22, in main\n    print(agent_loop(messages, args.model))\n          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"agent.py\", line 46, in agent_loop\n    reply, usage = ask_model(messages, schemas, model)\n                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 6, in model_is_thinking\n    raise KeyboardInterrupt        # you press Ctrl+C while the model is still thinking\n    ^^^^^^^^^^^^^^^^^^^^^^^\nKeyboardInterrupt\n",
+   "exit": -2
+  },
+  "generator": {
+   "code": "def count_to(n):\n    for i in range(1, n + 1):\n        yield i            # hand out one value, then wait here\n\nfor number in count_to(3):\n    print(\"got\", number)",
+   "output": "got 1\ngot 2\ngot 3"
+  },
+  "codes": {
+   "live": [
+    {
+     "markdown": "- **The lo",
+     "bytes": "\n • **The lo                             "
+    },
+    {
+     "markdown": "- **The loop:** You give me a task",
+     "bytes": "\r\u001b[2K\u001b[1A\u001b[2K\n • The loop: You give me a task         "
+    }
+   ],
+   "spinner": "\u001b[?25l⠋ Thinking…\r\u001b[2K⠙ Thinking…\r\u001b[2K⠹ Thinking…\n\u001b[?25h\r\u001b[1A\u001b[2K",
+   "spinner_frames": "⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏",
+   "spinner_ms": 80,
+   "status_fps": 12.5,
+   "live_fps": 12
+  },
+  "stack_v03": {
+   "stack": [
+    "repl",
+    "answer",
+    "run_agent",
+    "stream_model",
+    "pieces_then_ctrl_c"
+   ],
+   "screen": "╭──────────────────────────────────────╮\n│  φ Cato Code v0.3                    │\n│  /private/tmp/shop                   │\n│  model: sonnet · /help for commands  │\n╰──────────────────────────────────────╯\n\n  Interrupted. Tell Cato what to do instead.\n  sonnet · 0 tokens on the desk · $0.0000 · /help\n\n"
+  },
+  "files": {
+   "part1": {
+    "cato.py": {
+     "defs": [
+      "ask_model",
+      "run_bash",
+      "agent_loop",
+      "main"
+     ],
+     "imports": []
+    }
+   },
+   "part2": {
+    "__main__.py": {
+     "defs": [
+      "main"
+     ],
+     "imports": [
+      "agent.py",
+      "model.py"
+     ]
+    },
+    "agent.py": {
+     "defs": [
+      "system_prompt",
+      "describe",
+      "confirm",
+      "agent_loop"
+     ],
+     "imports": [
+      "model.py",
+      "tools.py"
+     ]
+    },
+    "model.py": {
+     "defs": [
+      "ModelError",
+      "model_id",
+      "ask_model"
+     ],
+     "imports": []
+    },
+    "tools.py": {
+     "defs": [
+      "Tool",
+      "full_path",
+      "remember_read",
+      "check_read_first",
+      "make_diff",
+      "short",
+      "walk_files",
+      "read_file",
+      "write_file",
+      "edit_file",
+      "run_bash",
+      "glob_files",
+      "grep_files",
+      "find_tool",
+      "tool_schemas",
+      "check_form",
+      "trim",
+      "run_tool"
+     ],
+     "imports": []
+    }
+   },
+   "part3": {
+    "__main__.py": {
+     "defs": [
+      "headless",
+      "main"
+     ],
+     "imports": [
+      "agent.py",
+      "model.py",
+      "ui.py"
+     ]
+    },
+    "agent.py": {
+     "defs": [
+      "system_prompt",
+      "describe",
+      "run_agent",
+      "repair"
+     ],
+     "imports": [
+      "model.py",
+      "tools.py"
+     ]
+    },
+    "model.py": {
+     "defs": [
+      "ModelError",
+      "model_id",
+      "live_pieces",
+      "replayed_pieces",
+      "glue_tool_call",
+      "glue_reasoning",
+      "stream_model"
+     ],
+     "imports": []
+    },
+    "tools.py": {
+     "defs": [
+      "Tool",
+      "full_path",
+      "remember_read",
+      "check_read_first",
+      "make_diff",
+      "short",
+      "walk_files",
+      "read_file",
+      "write_file",
+      "edit_file",
+      "run_bash",
+      "glob_files",
+      "grep_files",
+      "find_tool",
+      "tool_schemas",
+      "check_form",
+      "trim",
+      "run_tool"
+     ],
+     "imports": []
+    },
+    "ui.py": {
+     "defs": [
+      "Screen",
+      "read_line",
+      "ask_permission",
+      "show_tool_start",
+      "show_tool_end",
+      "status_line",
+      "answer",
+      "run_command",
+      "banner",
+      "repl"
+     ],
+     "imports": [
+      "agent.py",
+      "model.py"
+     ]
+    }
+   }
+  }
+ },
+ "replay_identical": true,
+ "explain": {
+  "task": "Without using any tools, explain how a coding agent like you works, for a new teammate. Use a short heading and a few bullet points.",
+  "seconds": 5.09,
+  "cost": 0.0078,
+  "tokens": 1959,
+  "text": "╭──────────────────────────────────────╮\n│  φ Cato Code v0.3                    │\n│  /private/tmp/shop                   │\n│  model: sonnet · /help for commands  │\n╰──────────────────────────────────────╯\n\n> Without using any tools, explain how a coding agent like you works, for a new teammate. Use a \nshort heading and a few bullet points.\nHow a coding agent like me works                                                                    \n\n • The loop: You give me a task in plain language. I decide what I need to know, call a tool, read  \n   the result, and repeat until the task is done. Then I summarize what I did.                      \n • My tools: I can search (Glob for file names, Grep for contents), read files (Read), change files \n   (Edit for small changes, Write for new files or full rewrites), and run shell commands (Bash)    \n   such as tests, git, and package installs.                                                        \n • Look before changing: I read a file before I edit it. Edits are exact find-and-replace, so I need\n   the file's real contents rather than a guess.                                                    \n • Parallel work: When several lookups don't depend on each other, such as reading three files, I   \n   run them together. When one result decides the next step, I wait for it.                         \n • Small changes: I aim for the smallest change that solves the task. I try not to refactor or      \n   reformat code you didn't ask me to touch.                                                        \n • Verification: After a change, I run the tests or the relevant command when I can. That way I     \n   report what actually happened, not what I expect to happen.                                      \n • Limits: I only know what's in the conversation and what my tools show me. I can be wrong, misread\n   unfamiliar code, or miss context that lives in your heads. Review my diffs the way you'd review a\n   teammate's, and tell me if I've misunderstood the goal.                                          \n • Working with me: Specific requests work best. Say which file, which behavior, and what \"done\"    \n   looks like. If the request is ambiguous, I may ask or state my assumption.                       \n  sonnet · 1,959 tokens on the desk · $0.0078 · /help\n\n",
+  "html": "<span class=\"k-cyan\">╭──────────────────────────────────────╮</span>\n<span class=\"k-cyan\">│</span>  <span class=\"k-cyan\">φ</span> <span class=\"b\">Cato Code</span> v0.3                    <span class=\"k-cyan\">│</span>\n<span class=\"k-cyan\">│</span>  <span class=\"k-dim\">/private/tmp/shop</span>                   <span class=\"k-cyan\">│</span>\n<span class=\"k-cyan\">│</span>  <span class=\"k-dim\">model: sonnet · /help for commands</span>  <span class=\"k-cyan\">│</span>\n<span class=\"k-cyan\">╰──────────────────────────────────────╯</span>\n\n<span class=\"k-yel\">&gt;</span> Without using any tools, explain how a coding agent like you works, for a new teammate. Use a \nshort heading and a few bullet points.\n<span class=\"k-ink\">How a coding agent like me works</span>                                                                    \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I decide what I need to know, call a tool, read  \n<span class=\"b\">   </span>the result, and repeat until the task is done. Then I summarize what I did.                      \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for contents), read files (Read), change files \n<span class=\"b\">   </span>(Edit for small changes, Write for new files or full rewrites), and run shell commands (Bash)    \n<span class=\"b\">   </span>such as tests, git, and package installs.                                                        \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it. Edits are exact find-and-replace, so I need\n<span class=\"b\">   </span>the file&#x27;s real contents rather than a guess.                                                    \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on each other, such as reading three files, I   \n<span class=\"b\">   </span>run them together. When one result decides the next step, I wait for it.                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that solves the task. I try not to refactor or      \n<span class=\"b\">   </span>reformat code you didn&#x27;t ask me to touch.                                                        \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the relevant command when I can. That way I     \n<span class=\"b\">   </span>report what actually happened, not what I expect to happen.                                      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and what my tools show me. I can be wrong, misread\n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your heads. Review my diffs the way you&#x27;d review a\n<span class=\"b\">   </span>teammate&#x27;s, and tell me if I&#x27;ve misunderstood the goal.                                          \n<span class=\"b\"> • Working with me:</span> Specific requests work best. Say which file, which behavior, and what &quot;done&quot;    \n<span class=\"b\">   </span>looks like. If the request is ambiguous, I may ask or state my assumption.                       \n<span class=\"k-dim\">  sonnet · 1,959 tokens on the desk · $0.0078 · /help</span>\n\n",
+  "calls": [
+   {
+    "first_line": 1.026,
+    "first_text": 1.026,
+    "last_line": 5.071,
+    "in": 1475,
+    "out": 484,
+    "cost": 0.00779,
+    "pieces": 125
+   }
+  ],
+  "events": [
+   [
+    1.029,
+    {
+     "type": "text",
+     "text": "## How a coding agent like"
+    }
+   ],
+   [
+    1.235,
+    {
+     "type": "text",
+     "text": " me works\n\n-"
+    }
+   ],
+   [
+    1.242,
+    {
+     "type": "text",
+     "text": " **The"
+    }
+   ],
+   [
+    1.243,
+    {
+     "type": "text",
+     "text": " loop:** You"
+    }
+   ],
+   [
+    1.243,
+    {
+     "type": "text",
+     "text": " give"
+    }
+   ],
+   [
+    1.243,
+    {
+     "type": "text",
+     "text": " me a task in"
+    }
+   ],
+   [
+    1.245,
+    {
+     "type": "text",
+     "text": " pl"
+    }
+   ],
+   [
+    1.245,
+    {
+     "type": "text",
+     "text": "ain language"
+    }
+   ],
+   [
+    1.46,
+    {
+     "type": "text",
+     "text": ". I dec"
+    }
+   ],
+   [
+    1.46,
+    {
+     "type": "text",
+     "text": "ide what I"
+    }
+   ],
+   [
+    1.464,
+    {
+     "type": "text",
+     "text": " need to know, call a tool"
+    }
+   ],
+   [
+    1.465,
+    {
+     "type": "text",
+     "text": ", read"
+    }
+   ],
+   [
+    1.465,
+    {
+     "type": "text",
+     "text": " the result, and rep"
+    }
+   ],
+   [
+    1.465,
+    {
+     "type": "text",
+     "text": "eat until the"
+    }
+   ],
+   [
+    1.466,
+    {
+     "type": "text",
+     "text": " task is done."
+    }
+   ],
+   [
+    1.466,
+    {
+     "type": "text",
+     "text": " Then I summ"
+    }
+   ],
+   [
+    1.742,
+    {
+     "type": "text",
+     "text": "arize what I did."
+    }
+   ],
+   [
+    1.744,
+    {
+     "type": "text",
+     "text": "\n- **My tools:**"
+    }
+   ],
+   [
+    1.748,
+    {
+     "type": "text",
+     "text": " I can search"
+    }
+   ],
+   [
+    1.749,
+    {
+     "type": "text",
+     "text": " ("
+    }
+   ],
+   [
+    1.749,
+    {
+     "type": "text",
+     "text": "Glob for"
+    }
+   ],
+   [
+    1.749,
+    {
+     "type": "text",
+     "text": " file names, Grep for cont"
+    }
+   ],
+   [
+    1.749,
+    {
+     "type": "text",
+     "text": "ents), read files (Read),"
+    }
+   ],
+   [
+    1.766,
+    {
+     "type": "text",
+     "text": " change files (Edit for"
+    }
+   ],
+   [
+    1.8,
+    {
+     "type": "text",
+     "text": " small changes, Write for new"
+    }
+   ],
+   [
+    1.837,
+    {
+     "type": "text",
+     "text": " files or full rewrites),"
+    }
+   ],
+   [
+    1.871,
+    {
+     "type": "text",
+     "text": " and run shell commands ("
+    }
+   ],
+   [
+    1.905,
+    {
+     "type": "text",
+     "text": "Bash)"
+    }
+   ],
+   [
+    1.933,
+    {
+     "type": "text",
+     "text": " such"
+    }
+   ],
+   [
+    1.969,
+    {
+     "type": "text",
+     "text": " as tests, git, and package"
+    }
+   ],
+   [
+    2.004,
+    {
+     "type": "text",
+     "text": " installs.\n- **Look"
+    }
+   ],
+   [
+    2.036,
+    {
+     "type": "text",
+     "text": " before chang"
+    }
+   ],
+   [
+    2.068,
+    {
+     "type": "text",
+     "text": "ing:** I read a"
+    }
+   ],
+   [
+    2.103,
+    {
+     "type": "text",
+     "text": " file before I edit it."
+    }
+   ],
+   [
+    2.136,
+    {
+     "type": "text",
+     "text": " Edits are"
+    }
+   ],
+   [
+    2.17,
+    {
+     "type": "text",
+     "text": " exact find"
+    }
+   ],
+   [
+    2.204,
+    {
+     "type": "text",
+     "text": "-and-replace, so I"
+    }
+   ],
+   [
+    2.236,
+    {
+     "type": "text",
+     "text": " need the file"
+    }
+   ],
+   [
+    2.27,
+    {
+     "type": "text",
+     "text": "'s real"
+    }
+   ],
+   [
+    2.303,
+    {
+     "type": "text",
+     "text": " cont"
+    }
+   ],
+   [
+    2.335,
+    {
+     "type": "text",
+     "text": "ents r"
+    }
+   ],
+   [
+    2.367,
+    {
+     "type": "text",
+     "text": "ather than a"
+    }
+   ],
+   [
+    2.403,
+    {
+     "type": "text",
+     "text": " guess.\n- **Par"
+    }
+   ],
+   [
+    2.437,
+    {
+     "type": "text",
+     "text": "allel work:** When several"
+    }
+   ],
+   [
+    2.47,
+    {
+     "type": "text",
+     "text": " lookups don't depend on"
+    }
+   ],
+   [
+    2.504,
+    {
+     "type": "text",
+     "text": " each other,"
+    }
+   ],
+   [
+    2.535,
+    {
+     "type": "text",
+     "text": " such"
+    }
+   ],
+   [
+    2.568,
+    {
+     "type": "text",
+     "text": " as reading three"
+    }
+   ],
+   [
+    2.604,
+    {
+     "type": "text",
+     "text": " files,"
+    }
+   ],
+   [
+    2.635,
+    {
+     "type": "text",
+     "text": " I run them together"
+    }
+   ],
+   [
+    2.668,
+    {
+     "type": "text",
+     "text": ". When one"
+    }
+   ],
+   [
+    2.701,
+    {
+     "type": "text",
+     "text": " result"
+    }
+   ],
+   [
+    2.733,
+    {
+     "type": "text",
+     "text": " dec"
+    }
+   ],
+   [
+    2.765,
+    {
+     "type": "text",
+     "text": "ides the"
+    }
+   ],
+   [
+    2.799,
+    {
+     "type": "text",
+     "text": " next step, I w"
+    }
+   ],
+   [
+    2.832,
+    {
+     "type": "text",
+     "text": "ait for it.\n- **"
+    }
+   ],
+   [
+    2.867,
+    {
+     "type": "text",
+     "text": "Small changes:** I a"
+    }
+   ],
+   [
+    2.904,
+    {
+     "type": "text",
+     "text": "im for the smallest change that"
+    }
+   ],
+   [
+    2.937,
+    {
+     "type": "text",
+     "text": " solves the task."
+    }
+   ],
+   [
+    2.968,
+    {
+     "type": "text",
+     "text": " I try"
+    }
+   ],
+   [
+    3.004,
+    {
+     "type": "text",
+     "text": " not"
+    }
+   ],
+   [
+    3.033,
+    {
+     "type": "text",
+     "text": " to ref"
+    }
+   ],
+   [
+    3.066,
+    {
+     "type": "text",
+     "text": "actor or"
+    }
+   ],
+   [
+    3.099,
+    {
+     "type": "text",
+     "text": " re"
+    }
+   ],
+   [
+    3.135,
+    {
+     "type": "text",
+     "text": "format code"
+    }
+   ],
+   [
+    3.165,
+    {
+     "type": "text",
+     "text": " you"
+    }
+   ],
+   [
+    3.2,
+    {
+     "type": "text",
+     "text": " didn't ask me"
+    }
+   ],
+   [
+    3.239,
+    {
+     "type": "text",
+     "text": " to"
+    }
+   ],
+   [
+    3.268,
+    {
+     "type": "text",
+     "text": " touch.\n- **Ver"
+    }
+   ],
+   [
+    3.299,
+    {
+     "type": "text",
+     "text": "ification:** After"
+    }
+   ],
+   [
+    3.331,
+    {
+     "type": "text",
+     "text": " a"
+    }
+   ],
+   [
+    3.369,
+    {
+     "type": "text",
+     "text": " change,"
+    }
+   ],
+   [
+    3.411,
+    {
+     "type": "text",
+     "text": " I run the"
+    }
+   ],
+   [
+    3.43,
+    {
+     "type": "text",
+     "text": " tests or the"
+    }
+   ],
+   [
+    3.465,
+    {
+     "type": "text",
+     "text": " relevant command when I can."
+    }
+   ],
+   [
+    3.495,
+    {
+     "type": "text",
+     "text": " That"
+    }
+   ],
+   [
+    3.531,
+    {
+     "type": "text",
+     "text": " way I report"
+    }
+   ],
+   [
+    3.565,
+    {
+     "type": "text",
+     "text": " what"
+    }
+   ],
+   [
+    3.662,
+    {
+     "type": "text",
+     "text": " actually happened, not what I"
+    }
+   ],
+   [
+    3.662,
+    {
+     "type": "text",
+     "text": " exp"
+    }
+   ],
+   [
+    3.666,
+    {
+     "type": "text",
+     "text": "ect to"
+    }
+   ],
+   [
+    3.971,
+    {
+     "type": "text",
+     "text": " happen.\n- **Lim"
+    }
+   ],
+   [
+    3.971,
+    {
+     "type": "text",
+     "text": "its:** I only"
+    }
+   ],
+   [
+    3.971,
+    {
+     "type": "text",
+     "text": " know"
+    }
+   ],
+   [
+    3.971,
+    {
+     "type": "text",
+     "text": " what's"
+    }
+   ],
+   [
+    3.971,
+    {
+     "type": "text",
+     "text": " in the"
+    }
+   ],
+   [
+    3.971,
+    {
+     "type": "text",
+     "text": " con"
+    }
+   ],
+   [
+    3.971,
+    {
+     "type": "text",
+     "text": "versation and what my"
+    }
+   ],
+   [
+    3.971,
+    {
+     "type": "text",
+     "text": " tools show me. I can be"
+    }
+   ],
+   [
+    4.196,
+    {
+     "type": "text",
+     "text": " wrong,"
+    }
+   ],
+   [
+    4.197,
+    {
+     "type": "text",
+     "text": " misread un"
+    }
+   ],
+   [
+    4.197,
+    {
+     "type": "text",
+     "text": "f"
+    }
+   ],
+   [
+    4.197,
+    {
+     "type": "text",
+     "text": "amiliar code, or mi"
+    }
+   ],
+   [
+    4.197,
+    {
+     "type": "text",
+     "text": "ss context that"
+    }
+   ],
+   [
+    4.197,
+    {
+     "type": "text",
+     "text": " lives in"
+    }
+   ],
+   [
+    4.2,
+    {
+     "type": "text",
+     "text": " your he"
+    }
+   ],
+   [
+    4.204,
+    {
+     "type": "text",
+     "text": "ads. Review my"
+    }
+   ],
+   [
+    4.466,
+    {
+     "type": "text",
+     "text": " diffs the"
+    }
+   ],
+   [
+    4.466,
+    {
+     "type": "text",
+     "text": " way you'"
+    }
+   ],
+   [
+    4.466,
+    {
+     "type": "text",
+     "text": "d review a te"
+    }
+   ],
+   [
+    4.466,
+    {
+     "type": "text",
+     "text": "ammate's,"
+    }
+   ],
+   [
+    4.466,
+    {
+     "type": "text",
+     "text": " and t"
+    }
+   ],
+   [
+    4.466,
+    {
+     "type": "text",
+     "text": "ell me if I"
+    }
+   ],
+   [
+    4.466,
+    {
+     "type": "text",
+     "text": "'ve"
+    }
+   ],
+   [
+    4.466,
+    {
+     "type": "text",
+     "text": " misun"
+    }
+   ],
+   [
+    4.733,
+    {
+     "type": "text",
+     "text": "derstood the"
+    }
+   ],
+   [
+    4.733,
+    {
+     "type": "text",
+     "text": " goal.\n- **Working"
+    }
+   ],
+   [
+    4.733,
+    {
+     "type": "text",
+     "text": " with me"
+    }
+   ],
+   [
+    4.733,
+    {
+     "type": "text",
+     "text": ":**"
+    }
+   ],
+   [
+    4.733,
+    {
+     "type": "text",
+     "text": " Specific requ"
+    }
+   ],
+   [
+    4.733,
+    {
+     "type": "text",
+     "text": "ests work best. Say"
+    }
+   ],
+   [
+    4.734,
+    {
+     "type": "text",
+     "text": " which"
+    }
+   ],
+   [
+    4.734,
+    {
+     "type": "text",
+     "text": " file, which beh"
+    }
+   ],
+   [
+    4.996,
+    {
+     "type": "text",
+     "text": "avior, and"
+    }
+   ],
+   [
+    4.999,
+    {
+     "type": "text",
+     "text": " what \""
+    }
+   ],
+   [
+    5.001,
+    {
+     "type": "text",
+     "text": "done\" loo"
+    }
+   ],
+   [
+    5.001,
+    {
+     "type": "text",
+     "text": "ks like. If the request"
+    }
+   ],
+   [
+    5.001,
+    {
+     "type": "text",
+     "text": " is ambiguous, I"
+    }
+   ],
+   [
+    5.001,
+    {
+     "type": "text",
+     "text": " may"
+    }
+   ],
+   [
+    5.002,
+    {
+     "type": "text",
+     "text": " ask or"
+    }
+   ],
+   [
+    5.002,
+    {
+     "type": "text",
+     "text": " state"
+    }
+   ],
+   [
+    5.072,
+    {
+     "type": "text",
+     "text": " my assumption"
+    }
+   ],
+   [
+    5.073,
+    {
+     "type": "text",
+     "text": "."
+    }
+   ],
+   [
+    5.081,
+    {
+     "type": "usage",
+     "tokens_in": 1475,
+     "tokens_out": 484,
+     "cost": 0.00779
+    }
+   ],
+   [
+    5.081,
+    {
+     "type": "done",
+     "text": "## How a coding agent like me works\n\n- **The loop:** You give me a task in plain language. I decide what I need to know, call a tool, read the result, and repeat until the task is done. Then I summarize what I did.\n- **My tools:** I can search (Glob for file names, Grep for contents), read files (Read), change files (Edit for small changes, Write for new files or full rewrites), and run shell commands (Bash) such as tests, git, and package installs.\n- **Look before changing:** I read a file before I edit it. Edits are exact find-and-replace, so I need the file's real contents rather than a guess.\n- **Parallel work:** When several lookups don't depend on each other, such as reading three files, I run them together. When one result decides the next step, I wait for it.\n- **Small changes:** I aim for the smallest change that solves the task. I try not to refactor or reformat code you didn't ask me to touch.\n- **Verification:** After a change, I run the tests or the relevant command when I can. That way I report what actually happened, not what I expect to happen.\n- **Limits:** I only know what's in the conversation and what my tools show me. I can be wrong, misread unfamiliar code, or miss context that lives in your heads. Review my diffs the way you'd review a teammate's, and tell me if I've misunderstood the goal.\n- **Working with me:** Specific requests work best. Say which file, which behavior, and what \"done\" looks like. If the request is ambiguous, I may ask or state my assumption.",
+     "reason": "end",
+     "turns": 1
+    }
+   ]
+  ],
+  "asked": 0,
+  "turns": 1,
+  "pieces": [
+   [
+    1.026,
+    "## How a coding agent like"
+   ],
+   [
+    1.231,
+    " me works\n\n-"
+   ],
+   [
+    1.238,
+    " **The"
+   ],
+   [
+    1.24,
+    " loop:** You"
+   ],
+   [
+    1.24,
+    " give"
+   ],
+   [
+    1.24,
+    " me a task in"
+   ],
+   [
+    1.241,
+    " pl"
+   ],
+   [
+    1.241,
+    "ain language"
+   ],
+   [
+    1.457,
+    ". I dec"
+   ],
+   [
+    1.457,
+    "ide what I"
+   ],
+   [
+    1.46,
+    " need to know, call a tool"
+   ],
+   [
+    1.462,
+    ", read"
+   ],
+   [
+    1.462,
+    " the result, and rep"
+   ],
+   [
+    1.462,
+    "eat until the"
+   ],
+   [
+    1.462,
+    " task is done."
+   ],
+   [
+    1.462,
+    " Then I summ"
+   ],
+   [
+    1.739,
+    "arize what I did."
+   ],
+   [
+    1.741,
+    "\n- **My tools:**"
+   ],
+   [
+    1.744,
+    " I can search"
+   ],
+   [
+    1.745,
+    " ("
+   ],
+   [
+    1.745,
+    "Glob for"
+   ],
+   [
+    1.745,
+    " file names, Grep for cont"
+   ],
+   [
+    1.746,
+    "ents), read files (Read),"
+   ],
+   [
+    1.762,
+    " change files (Edit for"
+   ],
+   [
+    1.796,
+    " small changes, Write for new"
+   ],
+   [
+    1.833,
+    " files or full rewrites),"
+   ],
+   [
+    1.867,
+    " and run shell commands ("
+   ],
+   [
+    1.902,
+    "Bash)"
+   ],
+   [
+    1.93,
+    " such"
+   ],
+   [
+    1.965,
+    " as tests, git, and package"
+   ],
+   [
+    2.001,
+    " installs.\n- **Look"
+   ],
+   [
+    2.032,
+    " before chang"
+   ],
+   [
+    2.064,
+    "ing:** I read a"
+   ],
+   [
+    2.1,
+    " file before I edit it."
+   ],
+   [
+    2.132,
+    " Edits are"
+   ],
+   [
+    2.167,
+    " exact find"
+   ],
+   [
+    2.201,
+    "-and-replace, so I"
+   ],
+   [
+    2.232,
+    " need the file"
+   ],
+   [
+    2.266,
+    "'s real"
+   ],
+   [
+    2.3,
+    " cont"
+   ],
+   [
+    2.331,
+    "ents r"
+   ],
+   [
+    2.363,
+    "ather than a"
+   ],
+   [
+    2.399,
+    " guess.\n- **Par"
+   ],
+   [
+    2.433,
+    "allel work:** When several"
+   ],
+   [
+    2.467,
+    " lookups don't depend on"
+   ],
+   [
+    2.501,
+    " each other,"
+   ],
+   [
+    2.531,
+    " such"
+   ],
+   [
+    2.565,
+    " as reading three"
+   ],
+   [
+    2.601,
+    " files,"
+   ],
+   [
+    2.631,
+    " I run them together"
+   ],
+   [
+    2.664,
+    ". When one"
+   ],
+   [
+    2.698,
+    " result"
+   ],
+   [
+    2.729,
+    " dec"
+   ],
+   [
+    2.762,
+    "ides the"
+   ],
+   [
+    2.796,
+    " next step, I w"
+   ],
+   [
+    2.829,
+    "ait for it.\n- **"
+   ],
+   [
+    2.863,
+    "Small changes:** I a"
+   ],
+   [
+    2.901,
+    "im for the smallest change that"
+   ],
+   [
+    2.934,
+    " solves the task."
+   ],
+   [
+    2.964,
+    " I try"
+   ],
+   [
+    3.001,
+    " not"
+   ],
+   [
+    3.03,
+    " to ref"
+   ],
+   [
+    3.062,
+    "actor or"
+   ],
+   [
+    3.096,
+    " re"
+   ],
+   [
+    3.131,
+    "format code"
+   ],
+   [
+    3.161,
+    " you"
+   ],
+   [
+    3.196,
+    " didn't ask me"
+   ],
+   [
+    3.236,
+    " to"
+   ],
+   [
+    3.265,
+    " touch.\n- **Ver"
+   ],
+   [
+    3.295,
+    "ification:** After"
+   ],
+   [
+    3.327,
+    " a"
+   ],
+   [
+    3.365,
+    " change,"
+   ],
+   [
+    3.407,
+    " I run the"
+   ],
+   [
+    3.427,
+    " tests or the"
+   ],
+   [
+    3.461,
+    " relevant command when I can."
+   ],
+   [
+    3.492,
+    " That"
+   ],
+   [
+    3.527,
+    " way I report"
+   ],
+   [
+    3.562,
+    " what"
+   ],
+   [
+    3.659,
+    " actually happened, not what I"
+   ],
+   [
+    3.659,
+    " exp"
+   ],
+   [
+    3.662,
+    "ect to"
+   ],
+   [
+    3.967,
+    " happen.\n- **Lim"
+   ],
+   [
+    3.967,
+    "its:** I only"
+   ],
+   [
+    3.968,
+    " know"
+   ],
+   [
+    3.968,
+    " what's"
+   ],
+   [
+    3.968,
+    " in the"
+   ],
+   [
+    3.968,
+    " con"
+   ],
+   [
+    3.968,
+    "versation and what my"
+   ],
+   [
+    3.968,
+    " tools show me. I can be"
+   ],
+   [
+    4.193,
+    " wrong,"
+   ],
+   [
+    4.193,
+    " misread un"
+   ],
+   [
+    4.193,
+    "f"
+   ],
+   [
+    4.193,
+    "amiliar code, or mi"
+   ],
+   [
+    4.193,
+    "ss context that"
+   ],
+   [
+    4.193,
+    " lives in"
+   ],
+   [
+    4.196,
+    " your he"
+   ],
+   [
+    4.2,
+    "ads. Review my"
+   ],
+   [
+    4.462,
+    " diffs the"
+   ],
+   [
+    4.462,
+    " way you'"
+   ],
+   [
+    4.462,
+    "d review a te"
+   ],
+   [
+    4.462,
+    "ammate's,"
+   ],
+   [
+    4.462,
+    " and t"
+   ],
+   [
+    4.463,
+    "ell me if I"
+   ],
+   [
+    4.463,
+    "'ve"
+   ],
+   [
+    4.463,
+    " misun"
+   ],
+   [
+    4.729,
+    "derstood the"
+   ],
+   [
+    4.729,
+    " goal.\n- **Working"
+   ],
+   [
+    4.73,
+    " with me"
+   ],
+   [
+    4.73,
+    ":**"
+   ],
+   [
+    4.73,
+    " Specific requ"
+   ],
+   [
+    4.73,
+    "ests work best. Say"
+   ],
+   [
+    4.73,
+    " which"
+   ],
+   [
+    4.73,
+    " file, which beh"
+   ],
+   [
+    4.993,
+    "avior, and"
+   ],
+   [
+    4.995,
+    " what \""
+   ],
+   [
+    4.997,
+    "done\" loo"
+   ],
+   [
+    4.997,
+    "ks like. If the request"
+   ],
+   [
+    4.997,
+    " is ambiguous, I"
+   ],
+   [
+    4.997,
+    " may"
+   ],
+   [
+    4.998,
+    " ask or"
+   ],
+   [
+    4.998,
+    " state"
+   ],
+   [
+    5.068,
+    " my assumption"
+   ],
+   [
+    5.069,
+    "."
+   ]
+  ],
+  "first_word": 1.026,
+  "last_word": 5.069,
+  "raw_head": [
+   "data: {\"id\":\"gen-1794438140-FBA76rFeN0aWIBEwC8br\",\"object\":\"chat.completion.chunk\",\"created\":1794438140,\"model\":\"anthropic/claude-sonnet-5.5\",\"provider\":\"Claude Platform on AWS\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"## How a coding agent like\",\"role\":\"assistant\"},\"finish_reason\":null,\"native_finish_reason\":null}]}",
+   "",
+   "data: {\"id\":\"gen-1794438140-FBA76rFeN0aWIBEwC8br\",\"object\":\"chat.completion.chunk\",\"created\":1794438140,\"model\":\"anthropic/claude-sonnet-5.5\",\"provider\":\"Claude Platform on AWS\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" me works\\n\\n-\",\"role\":\"assistant\"},\"finish_reason\":null,\"native_finish_reason\":null}]}",
+   "",
+   "data: {\"id\":\"gen-1794438140-FBA76rFeN0aWIBEwC8br\",\"object\":\"chat.completion.chunk\",\"created\":1794438140,\"model\":\"anthropic/claude-sonnet-5.5\",\"provider\":\"Claude Platform on AWS\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\" **The\",\"role\":\"assistant\"},\"finish_reason\":null,\"native_finish_reason\":null}]}",
+   ""
+  ],
+  "raw_tail": [
+   "data: {\"id\":\"gen-1794438140-FBA76rFeN0aWIBEwC8br\",\"object\":\"chat.completion.chunk\",\"created\":1794438140,\"model\":\"anthropic/claude-sonnet-5.5\",\"provider\":\"Claude Platform on AWS\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\"}]}",
+   "",
+   "data: {\"id\":\"gen-1794438140-FBA76rFeN0aWIBEwC8br\",\"object\":\"chat.completion.chunk\",\"created\":1794438140,\"model\":\"anthropic/claude-sonnet-5.5\",\"provider\":\"Claude Platform on AWS\",\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"delta\":{\"content\":\"\",\"role\":\"assistant\"},\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\"}],\"usage\":{\"prompt_tokens\":1475,\"completion_tokens\":484,\"total_tokens\":1959,\"cost\":0.00779,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.00779,\"upstream_inference_prompt_cost\":0.00295,\"upstream_inference_completions_cost\":0.00484},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"image_tokens\":0,\"audio_tokens\":0}}}",
+   "",
+   "data: [DONE]"
+  ],
+  "meter": "1,475 in · 484 out · $0.0078",
+  "status": "sonnet · 1,959 tokens on the desk · $0.0078 · /help",
+  "frames": [
+   [
+    1.026,
+    "<span class=\"k-ink\">How a coding agent like</span>                                 \n"
+   ],
+   [
+    1.109,
+    "<span class=\"k-ink\">How a coding agent like</span>                                 \n"
+   ],
+   [
+    1.193,
+    "<span class=\"k-ink\">How a coding agent like</span>                                 \n"
+   ],
+   [
+    1.276,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language       \n"
+   ],
+   [
+    1.359,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language       \n"
+   ],
+   [
+    1.443,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language       \n"
+   ],
+   [
+    1.526,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summ                                                 \n"
+   ],
+   [
+    1.609,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summ                                                 \n"
+   ],
+   [
+    1.693,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summ                                                 \n"
+   ],
+   [
+    1.776,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n"
+   ],
+   [
+    1.859,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n"
+   ],
+   [
+    1.943,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such                   \n"
+   ],
+   [
+    2.026,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • </span>**Look                                               \n"
+   ],
+   [
+    2.109,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n"
+   ],
+   [
+    2.193,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find                                 \n"
+   ],
+   [
+    2.276,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real                                          \n"
+   ],
+   [
+    2.359,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents r                               \n"
+   ],
+   [
+    2.443,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several                          \n"
+   ],
+   [
+    2.526,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other,                                          \n"
+   ],
+   [
+    2.609,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files,             \n"
+   ],
+   [
+    2.693,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one                                   \n"
+   ],
+   [
+    2.776,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the                \n"
+   ],
+   [
+    2.859,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • </span>**                                                   \n"
+   ],
+   [
+    2.943,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task.                                     \n"
+   ],
+   [
+    3.026,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not                           \n"
+   ],
+   [
+    3.109,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or re         \n"
+   ],
+   [
+    3.193,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you                                             \n"
+   ],
+   [
+    3.276,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • </span>**Ver                                                \n"
+   ],
+   [
+    3.359,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a                                \n"
+   ],
+   [
+    3.443,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n"
+   ],
+   [
+    3.526,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That                    \n"
+   ],
+   [
+    3.609,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n"
+   ],
+   [
+    3.693,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to              \n"
+   ],
+   [
+    3.776,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to              \n"
+   ],
+   [
+    3.859,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to              \n"
+   ],
+   [
+    3.943,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to              \n"
+   ],
+   [
+    4.026,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be                      \n"
+   ],
+   [
+    4.109,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be                      \n"
+   ],
+   [
+    4.193,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in       \n"
+   ],
+   [
+    4.276,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my                                     \n"
+   ],
+   [
+    4.359,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my                                     \n"
+   ],
+   [
+    4.443,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my                                     \n"
+   ],
+   [
+    4.526,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my diffs the way you&#x27;d review a        \n<span class=\"b\">   </span>teammate&#x27;s, and tell me if I&#x27;ve misun                \n"
+   ],
+   [
+    4.609,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my diffs the way you&#x27;d review a        \n<span class=\"b\">   </span>teammate&#x27;s, and tell me if I&#x27;ve misun                \n"
+   ],
+   [
+    4.693,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my diffs the way you&#x27;d review a        \n<span class=\"b\">   </span>teammate&#x27;s, and tell me if I&#x27;ve misun                \n"
+   ],
+   [
+    4.776,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my diffs the way you&#x27;d review a        \n<span class=\"b\">   </span>teammate&#x27;s, and tell me if I&#x27;ve misunderstood the    \n<span class=\"b\">   </span>goal.                                                \n<span class=\"b\"> • Working with me:</span> Specific requests work best. Say    \n<span class=\"b\">   </span>which file, which beh                                \n"
+   ],
+   [
+    4.859,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my diffs the way you&#x27;d review a        \n<span class=\"b\">   </span>teammate&#x27;s, and tell me if I&#x27;ve misunderstood the    \n<span class=\"b\">   </span>goal.                                                \n<span class=\"b\"> • Working with me:</span> Specific requests work best. Say    \n<span class=\"b\">   </span>which file, which beh                                \n"
+   ],
+   [
+    4.943,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my diffs the way you&#x27;d review a        \n<span class=\"b\">   </span>teammate&#x27;s, and tell me if I&#x27;ve misunderstood the    \n<span class=\"b\">   </span>goal.                                                \n<span class=\"b\"> • Working with me:</span> Specific requests work best. Say    \n<span class=\"b\">   </span>which file, which beh                                \n"
+   ],
+   [
+    5.026,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my diffs the way you&#x27;d review a        \n<span class=\"b\">   </span>teammate&#x27;s, and tell me if I&#x27;ve misunderstood the    \n<span class=\"b\">   </span>goal.                                                \n<span class=\"b\"> • Working with me:</span> Specific requests work best. Say    \n<span class=\"b\">   </span>which file, which behavior, and what &quot;done&quot; looks    \n<span class=\"b\">   </span>like. If the request is ambiguous, I may ask or state\n"
+   ],
+   [
+    5.109,
+    "<span class=\"k-ink\">How a coding agent like me works</span>                        \n\n<span class=\"b\"> • The loop:</span> You give me a task in plain language. I    \n<span class=\"b\">   </span>decide what I need to know, call a tool, read the    \n<span class=\"b\">   </span>result, and repeat until the task is done. Then I    \n<span class=\"b\">   </span>summarize what I did.                                \n<span class=\"b\"> • My tools:</span> I can search (Glob for file names, Grep for\n<span class=\"b\">   </span>contents), read files (Read), change files (Edit for \n<span class=\"b\">   </span>small changes, Write for new files or full rewrites),\n<span class=\"b\">   </span>and run shell commands (Bash) such as tests, git, and\n<span class=\"b\">   </span>package installs.                                    \n<span class=\"b\"> • Look before changing:</span> I read a file before I edit it.\n<span class=\"b\">   </span>Edits are exact find-and-replace, so I need the      \n<span class=\"b\">   </span>file&#x27;s real contents rather than a guess.            \n<span class=\"b\"> • Parallel work:</span> When several lookups don&#x27;t depend on  \n<span class=\"b\">   </span>each other, such as reading three files, I run them  \n<span class=\"b\">   </span>together. When one result decides the next step, I   \n<span class=\"b\">   </span>wait for it.                                         \n<span class=\"b\"> • Small changes:</span> I aim for the smallest change that    \n<span class=\"b\">   </span>solves the task. I try not to refactor or reformat   \n<span class=\"b\">   </span>code you didn&#x27;t ask me to touch.                     \n<span class=\"b\"> • Verification:</span> After a change, I run the tests or the \n<span class=\"b\">   </span>relevant command when I can. That way I report what  \n<span class=\"b\">   </span>actually happened, not what I expect to happen.      \n<span class=\"b\"> • Limits:</span> I only know what&#x27;s in the conversation and   \n<span class=\"b\">   </span>what my tools show me. I can be wrong, misread       \n<span class=\"b\">   </span>unfamiliar code, or miss context that lives in your  \n<span class=\"b\">   </span>heads. Review my diffs the way you&#x27;d review a        \n<span class=\"b\">   </span>teammate&#x27;s, and tell me if I&#x27;ve misunderstood the    \n<span class=\"b\">   </span>goal.                                                \n<span class=\"b\"> • Working with me:</span> Specific requests work best. Say    \n<span class=\"b\">   </span>which file, which behavior, and what &quot;done&quot; looks    \n<span class=\"b\">   </span>like. If the request is ambiguous, I may ask or state\n<span class=\"b\">   </span>my assumption.                                       \n"
+   ]
+  ]
+ },
+ "fix": {
+  "task": "The tests in test_shop.py fail. Find the bug and fix it.",
+  "seconds": 6.09,
+  "cost": 0.0217,
+  "tokens": 2815,
+  "text": "╭──────────────────────────────────────╮\n│  φ Cato Code v0.3                    │\n│  /private/tmp/shop                   │\n│  model: sonnet · /help for commands  │\n╰──────────────────────────────────────╯\n\n> The tests in test_shop.py fail. Find the bug and fix it.\n● Bash(cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | )\n  Cato wants to run cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | tail -30\n  Allow? (y/n) y\n  └ shop.py\n    test_shop.py\n    .F … +13 lines\n● Glob(**/*.py)\n  └ test_shop.py\n    shop.py\n● Read(/private/tmp/shop/shop.py)\n  └      1      \"\"\"A tiny shop: prices in cents, a cart, and a discount code.\"\"\"\n         2      \n         3      PRICES = {\"apple\": 50, \"bread\": 250, \"milk\": 120, \"coffee\": 899} … +24 lines\n● Edit(/private/tmp/shop/shop.py)\n  Cato wants to use Edit(/private/tmp/shop/shop.py)\n  Allow? (y/n) y\n  └ Edited shop.py.\n    @@ -10,5 +10,5 @@\n         total = 0\n         for product, count in items.items():\n    -        total += PRICES[product]\n    +        total += PRICES[product] * count\n         return total\n     \n● Bash(cd /private/tmp/shop && python -m pytest -q 2>&1 | tail -15)\n  Cato wants to run cd /private/tmp/shop && python -m pytest -q 2>&1 | tail -15\n  Allow? (y/n) y\n  └ ....                                                                     [100%]\n    4 passed in 0.01s\nThe bug was in cart_total in shop.py. It added each product's price once and ignored the quantity,  \nso 3 apples came to 50 instead of 150. I changed it to PRICES[product] * count. All 4 tests in      \ntest_shop.py now pass.                                                                              \n  sonnet · 2,815 tokens on the desk · $0.0217 · /help\n\n",
+  "html": "<span class=\"k-cyan\">╭──────────────────────────────────────╮</span>\n<span class=\"k-cyan\">│</span>  <span class=\"k-cyan\">φ</span> <span class=\"b\">Cato Code</span> v0.3                    <span class=\"k-cyan\">│</span>\n<span class=\"k-cyan\">│</span>  <span class=\"k-dim\">/private/tmp/shop</span>                   <span class=\"k-cyan\">│</span>\n<span class=\"k-cyan\">│</span>  <span class=\"k-dim\">model: sonnet · /help for commands</span>  <span class=\"k-cyan\">│</span>\n<span class=\"k-cyan\">╰──────────────────────────────────────╯</span>\n\n<span class=\"k-yel\">&gt;</span> The tests in test_shop.py fail. Find the bug and fix it.\n<span class=\"k-blue\">●</span> <span class=\"b\">Bash(cd /private/tmp/shop &amp;&amp; ls &amp;&amp; python -m pytest -x -q 2&gt;&amp;1 | )</span>\n  <span class=\"k-yel\">Cato wants to run </span><span class=\"k-yel b\">cd /private/tmp/shop &amp;&amp; ls &amp;&amp; python -m pytest -x -q 2&gt;&amp;1 | tail -30</span>\n  Allow? <span class=\"b\">(y/n)</span> y\n  <span class=\"k-dim\">└ shop.py</span>\n<span class=\"k-dim\">    test_shop.py</span>\n<span class=\"k-dim\">    .F</span> <span class=\"k-dim\">… +13 lines</span>\n<span class=\"k-blue\">●</span> <span class=\"b\">Glob(**/*.py)</span>\n  <span class=\"k-dim\">└ test_shop.py</span>\n<span class=\"k-dim\">    shop.py</span>\n<span class=\"k-blue\">●</span> <span class=\"b\">Read(/private/tmp/shop/shop.py)</span>\n  <span class=\"k-dim\">└      1      &quot;&quot;&quot;A tiny shop: prices in cents, a cart, and a discount code.&quot;&quot;&quot;</span>\n<span class=\"k-dim\">         2      </span>\n<span class=\"k-dim\">         3      PRICES = {&quot;apple&quot;: 50, &quot;bread&quot;: 250, &quot;milk&quot;: 120, &quot;coffee&quot;: 899}</span> <span class=\"k-dim\">… +24 lines</span>\n<span class=\"k-blue\">●</span> <span class=\"b\">Edit(/private/tmp/shop/shop.py)</span>\n  <span class=\"k-yel\">Cato wants to use Edit(/private/tmp/shop/shop.py)</span>\n  Allow? <span class=\"b\">(y/n)</span> y\n  <span class=\"k-dim\">└ Edited shop.py.</span>\n    <span class=\"k-dim\">@@ -10,5 +10,5 @@</span>\n    <span class=\"k-dim\">     total = 0</span>\n    <span class=\"k-dim\">     for product, count in items.items():</span>\n    <span class=\"k-red\">-        total += PRICES[product]</span>\n    <span class=\"k-green\">+        total += PRICES[product] * count</span>\n    <span class=\"k-dim\">     return total</span>\n    <span class=\"k-dim\"> </span>\n<span class=\"k-blue\">●</span> <span class=\"b\">Bash(cd /private/tmp/shop &amp;&amp; python -m pytest -q 2&gt;&amp;1 | tail -15)</span>\n  <span class=\"k-yel\">Cato wants to run </span><span class=\"k-yel b\">cd /private/tmp/shop &amp;&amp; python -m pytest -q 2&gt;&amp;1 | tail -15</span>\n  Allow? <span class=\"b\">(y/n)</span> y\n  <span class=\"k-dim\">└ ....                                                                     [100%]</span>\n<span class=\"k-dim\">    4 passed in 0.01s</span>\nThe bug was in <span class=\"k-cyan b\">cart_total</span> in <span class=\"k-cyan b\">shop.py</span>. It added each product&#x27;s price once and ignored the quantity,  \nso 3 apples came to 50 instead of 150. I changed it to <span class=\"k-cyan b\">PRICES[product] * count</span>. All 4 tests in      \n<span class=\"k-cyan b\">test_shop.py</span> now pass.                                                                              \n<span class=\"k-dim\">  sonnet · 2,815 tokens on the desk · $0.0217 · /help</span>\n\n",
+  "calls": [
+   {
+    "first_line": 0.894,
+    "first_text": null,
+    "last_line": 1.539,
+    "in": 1458,
+    "out": 132,
+    "cost": 0.004236,
+    "pieces": 18
+   },
+   {
+    "first_line": 0.793,
+    "first_text": null,
+    "last_line": 1.002,
+    "in": 1916,
+    "out": 61,
+    "cost": 0.004442,
+    "pieces": 8
+   },
+   {
+    "first_line": 0.813,
+    "first_text": null,
+    "last_line": 1.663,
+    "in": 2358,
+    "out": 198,
+    "cost": 0.006696,
+    "pieces": 21
+   },
+   {
+    "first_line": 0.816,
+    "first_text": 1.288,
+    "last_line": 1.308,
+    "in": 2725,
+    "out": 90,
+    "cost": 0.00635,
+    "pieces": 18
+   }
+  ],
+  "events": [
+   [
+    1.546,
+    {
+     "type": "usage",
+     "tokens_in": 1458,
+     "tokens_out": 132,
+     "cost": 0.004236
+    }
+   ],
+   [
+    1.546,
+    {
+     "type": "tool_start",
+     "id": "toolu_01NE6kE9Rj3Wb8Rk5pKNBqBE",
+     "name": "Bash",
+     "arguments": "{\"command\": \"cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | tail -30\"}"
+    }
+   ],
+   [
+    1.852,
+    {
+     "type": "tool_end",
+     "id": "toolu_01NE6kE9Rj3Wb8Rk5pKNBqBE",
+     "name": "Bash",
+     "output": "shop.py\ntest_shop.py\n.F\n=================================== FAILURES ===================================\n______________________________ test_counts_matter ______________________________\n\n    def test_counts_matter():\n>       assert cart_total({\"apple\": 3}) == 150\nE       AssertionError: assert 50 == 150\nE        +  where 50 = cart_total({'apple': 3})\n\ntest_shop.py:10: AssertionError\n==============",
+     "ok": true
+    }
+   ],
+   [
+    1.853,
+    {
+     "type": "tool_start",
+     "id": "toolu_01KgtvXxAE9era2q1XhXRknG",
+     "name": "Glob",
+     "arguments": "{\"pattern\": \"**/*.py\"}"
+    }
+   ],
+   [
+    1.855,
+    {
+     "type": "tool_end",
+     "id": "toolu_01KgtvXxAE9era2q1XhXRknG",
+     "name": "Glob",
+     "output": "test_shop.py\nshop.py",
+     "ok": true
+    }
+   ],
+   [
+    2.861,
+    {
+     "type": "usage",
+     "tokens_in": 1916,
+     "tokens_out": 61,
+     "cost": 0.004442
+    }
+   ],
+   [
+    2.861,
+    {
+     "type": "tool_start",
+     "id": "toolu_01ApmLQ5QCNCrMbVgp7X2wTC",
+     "name": "Read",
+     "arguments": "{\"file_path\": \"/private/tmp/shop/shop.py\"}"
+    }
+   ],
+   [
+    2.862,
+    {
+     "type": "tool_end",
+     "id": "toolu_01ApmLQ5QCNCrMbVgp7X2wTC",
+     "name": "Read",
+     "output": "     1\t\"\"\"A tiny shop: prices in cents, a cart, and a discount code.\"\"\"\n     2\t\n     3\tPRICES = {\"apple\": 50, \"bread\": 250, \"milk\": 120, \"coffee\": 899}\n     4\t\n     5\tCODES = {\"SAVE10\": 10, \"HALF\": 50}\n     6\t\n     7\t\n     8\tdef cart_total(items):\n     9\t    \"\"\"Total price of a cart, in cents. items maps a product to how many.\"\"\"\n    10\t    total = 0\n    11\t    for product, count in items.items():",
+     "ok": true
+    }
+   ],
+   [
+    4.529,
+    {
+     "type": "usage",
+     "tokens_in": 2358,
+     "tokens_out": 198,
+     "cost": 0.006696
+    }
+   ],
+   [
+    4.529,
+    {
+     "type": "tool_start",
+     "id": "toolu_01ADtTiUi12c2RFFnJyFwYg2",
+     "name": "Edit",
+     "arguments": "{\"file_path\": \"/private/tmp/shop/shop.py\", \"old_string\": \"PRICES[product]\\n\", \"new_string\": \"PRICES[product] * count\\n\"}"
+    }
+   ],
+   [
+    4.53,
+    {
+     "type": "tool_end",
+     "id": "toolu_01ADtTiUi12c2RFFnJyFwYg2",
+     "name": "Edit",
+     "output": "Edited shop.py.\n--- a/shop.py\n+++ b/shop.py\n@@ -10,5 +10,5 @@\n     total = 0\n     for product, count in items.items():\n-        total += PRICES[product]\n+        total += PRICES[product] * count\n     return total\n ",
+     "ok": true
+    }
+   ],
+   [
+    4.531,
+    {
+     "type": "tool_start",
+     "id": "toolu_013FoDyTby8whAbLV3VjrWgw",
+     "name": "Bash",
+     "arguments": "{\"command\": \"cd /private/tmp/shop && python -m pytest -q 2>&1 | tail -15\"}"
+    }
+   ],
+   [
+    4.778,
+    {
+     "type": "tool_end",
+     "id": "toolu_013FoDyTby8whAbLV3VjrWgw",
+     "name": "Bash",
+     "output": "....                                                                     [100%]\n4 passed in 0.01s",
+     "ok": true
+    }
+   ],
+   [
+    6.067,
+    {
+     "type": "text",
+     "text": "The bug was in `cart"
+    }
+   ],
+   [
+    6.07,
+    {
+     "type": "text",
+     "text": "_total` in `shop."
+    }
+   ],
+   [
+    6.07,
+    {
+     "type": "text",
+     "text": "py`. It added each"
+    }
+   ],
+   [
+    6.07,
+    {
+     "type": "text",
+     "text": " product's price once and"
+    }
+   ],
+   [
+    6.07,
+    {
+     "type": "text",
+     "text": " ignored the quantity,"
+    }
+   ],
+   [
+    6.071,
+    {
+     "type": "text",
+     "text": " so "
+    }
+   ],
+   [
+    6.071,
+    {
+     "type": "text",
+     "text": "3 apples came"
+    }
+   ],
+   [
+    6.071,
+    {
+     "type": "text",
+     "text": " to"
+    }
+   ],
+   [
+    6.071,
+    {
+     "type": "text",
+     "text": " 50 inst"
+    }
+   ],
+   [
+    6.071,
+    {
+     "type": "text",
+     "text": "ead of 150. I changed"
+    }
+   ],
+   [
+    6.071,
+    {
+     "type": "text",
+     "text": " it to `P"
+    }
+   ],
+   [
+    6.071,
+    {
+     "type": "text",
+     "text": "RICES[product] * count"
+    }
+   ],
+   [
+    6.071,
+    {
+     "type": "text",
+     "text": "`. All 4 tests"
+    }
+   ],
+   [
+    6.079,
+    {
+     "type": "text",
+     "text": " in"
+    }
+   ],
+   [
+    6.079,
+    {
+     "type": "text",
+     "text": " `test_shop.py`"
+    }
+   ],
+   [
+    6.086,
+    {
+     "type": "text",
+     "text": " now pass."
+    }
+   ],
+   [
+    6.091,
+    {
+     "type": "usage",
+     "tokens_in": 2725,
+     "tokens_out": 90,
+     "cost": 0.00635
+    }
+   ],
+   [
+    6.091,
+    {
+     "type": "done",
+     "text": "The bug was in `cart_total` in `shop.py`. It added each product's price once and ignored the quantity, so 3 apples came to 50 instead of 150. I changed it to `PRICES[product] * count`. All 4 tests in `test_shop.py` now pass.",
+     "reason": "end",
+     "turns": 4
+    }
+   ]
+  ],
+  "asked": 3,
+  "turns": 4,
+  "fragments": [
+   {
+    "t": 0.928,
+    "index": 0,
+    "id": "toolu_01NE6kE9Rj3Wb8Rk5pKNBqBE",
+    "name": "Bash",
+    "args": ""
+   },
+   {
+    "t": 0.928,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": ""
+   },
+   {
+    "t": 0.961,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": "{\"command\": \"cd"
+   },
+   {
+    "t": 1.22,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": " /private"
+   },
+   {
+    "t": 1.221,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": "/tmp/shop &&"
+   },
+   {
+    "t": 1.221,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": " "
+   },
+   {
+    "t": 1.221,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": "ls &&"
+   },
+   {
+    "t": 1.221,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": " python -m pytest -x"
+   },
+   {
+    "t": 1.221,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": " -"
+   },
+   {
+    "t": 1.221,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": "q 2>&1 |"
+   },
+   {
+    "t": 1.469,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": " tail -30"
+   },
+   {
+    "t": 1.469,
+    "index": 0,
+    "id": "",
+    "name": "",
+    "args": "\"}"
+   },
+   {
+    "t": 1.469,
+    "index": 1,
+    "id": "toolu_01KgtvXxAE9era2q1XhXRknG",
+    "name": "Glob",
+    "args": ""
+   },
+   {
+    "t": 1.47,
+    "index": 1,
+    "id": "",
+    "name": "",
+    "args": ""
+   },
+   {
+    "t": 1.47,
+    "index": 1,
+    "id": "",
+    "name": "",
+    "args": "{\"pattern\": \"**/*.py"
+   },
+   {
+    "t": 1.523,
+    "index": 1,
+    "id": "",
+    "name": "",
+    "args": "\"}"
+   }
+  ],
+  "tests_after": "4 passed",
+  "cumulative": [
+   0.0042,
+   0.0087,
+   0.0154,
+   0.0217
+  ]
+ },
+ "v02_wait": {
+  "seconds": 4.68,
+  "chars": 1411
+ },
+ "v02": {
+  "printed": [
+   [
+    0.0,
+    "Cato v0.2 · sonnet · type a task, or 'exit'"
+   ],
+   [
+    0.0,
+    "\n"
+   ],
+   [
+    0.0,
+    "\n"
+   ],
+   [
+    0.0,
+    "> Without using any tools, explain how a coding agent like you works, for a new teammate. Use a short heading and a few bullet points."
+   ],
+   [
+    0.0,
+    "\n"
+   ],
+   [
+    5.247,
+    "  [1475 tokens in, 464 out, $0.0076]"
+   ],
+   [
+    5.247,
+    "\n"
+   ],
+   [
+    5.247,
+    "## How a coding agent like me works\n\n- **Loop of think, act, observe:** I read your request and decide what I need to know. Then I call a tool, look at the result, and repeat until the task is done. After that I summarize what I did.\n- **Tools are my hands:** I can search (Glob for filenames, Grep for contents), read files (Read), change them (Edit for small changes, Write for new files or full rewrites), and run shell commands (Bash) for tests, git and installs. I only see and change the project through these tools.\n- **Read before editing:** I always look at a file before changing it. Edits are exact find-and-replace, so I need the real text. This also helps me match the existing style and avoid breaking things.\n- **Parallel when possible:** If several lookups don't depend on each other, such as reading three files, I run them together to save time. If one step needs another's output, I wait for it.\n- **Small, focused changes:** I try to make the smallest change that solves the task. I avoid unrelated refactors, and I run tests when they're available to check my work.\n- **Limits to know about:** I only know what's in my context: your messages, the files I've read, and command output. I can be wrong, so review my diffs, especially for anything risky. Clear requests with a goal, relevant files, and how to verify the result get the best results.\n- **Working with me:** Treat me like a quick junior pair-programmer. Give me context, let me explore the code, and check the result before you merge it."
+   ],
+   [
+    5.247,
+    "\n"
+   ]
+  ],
+  "seconds": 5.25,
+  "first_output": 5.247,
+  "meter": "1,475 in · 464 out · $0.0076"
+ },
+ "sooner": 5.1,
+ "pairing": {
+  "calls": 2,
+  "quiet_status": 200,
+  "quiet_thought": "I'm going to read shop.py to see what it does, since the earlier tool results came back empty and I haven't actually seen its contents yet. I'd rather check than guess at its purpose.",
+  "strict_status": 400,
+  "strict_error": "No tool output found for function call toolu_01NE6kE9Rj3Wb8Rk5pKNBqBE.",
+  "fixed_status": 200,
+  "repair_added": [
+   {
+    "role": "tool",
+    "tool_call_id": "toolu_01NE6kE9Rj3Wb8Rk5pKNBqBE",
+    "content": "Stopped by the user before this finished."
+   },
+   {
+    "role": "tool",
+    "tool_call_id": "toolu_01KgtvXxAE9era2q1XhXRknG",
+    "content": "Stopped by the user before this finished."
+   }
+  ]
+ }
+}

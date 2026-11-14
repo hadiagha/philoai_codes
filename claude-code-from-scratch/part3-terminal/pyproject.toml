@@ -1,0 +1,16 @@
+[project]
+name = "cato-code"
+version = "0.3"
+description = "Cato Code: a Claude Code clone in Python, built one part at a time"
+requires-python = ">=3.10"
+dependencies = ["httpx", "rich", "prompt_toolkit"]
+
+[project.scripts]
+cato = "cato.__main__:main"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["cato"]

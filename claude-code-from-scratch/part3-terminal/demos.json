@@ -1,0 +1,227 @@
+{
+ "replay": {
+  "text": "╭──────────────────────────────────────╮\n│  φ Cato Code v0.3                    │\n│  /private/tmp/shop                   │\n│  model: sonnet · /help for commands  │\n╰──────────────────────────────────────╯\n\n> The tests in test_shop.py fail. Find the bug and fix it.\n● Bash(cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | )\n  Cato wants to run cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | tail -30\n  Allow? (y/n) y\n  └ shop.py\n    test_shop.py\n    .F … +13 lines\n● Glob(**/*.py)\n  └ test_shop.py\n    shop.py\n● Read(/private/tmp/shop/shop.py)\n  └      1      \"\"\"A tiny shop: prices in cents, a cart, and a discount code.\"\"\"\n         2      \n         3      PRICES = {\"apple\": 50, \"bread\": 250, \"milk\": 120, \"coffee\": 899} … +24 lines\n● Edit(/private/tmp/shop/shop.py)\n  Cato wants to use Edit(/private/tmp/shop/shop.py)\n  Allow? (y/n) y\n  └ Edited shop.py.\n    @@ -10,5 +10,5 @@\n         total = 0\n         for product, count in items.items():\n    -        total += PRICES[product]\n    +        total += PRICES[product] * count\n         return total\n     \n● Bash(cd /private/tmp/shop && python -m pytest -q 2>&1 | tail -15)\n  Cato wants to run cd /private/tmp/shop && python -m pytest -q 2>&1 | tail -15\n  Allow? (y/n) y\n  └ ....                                                                     [100%]\n    4 passed in 0.02s\nThe bug was in cart_total in shop.py. It added each product's price once and ignored the quantity,  \nso 3 apples came to 50 instead of 150. I changed it to PRICES[product] * count. All 4 tests in      \ntest_shop.py now pass.                                                                              \n  sonnet · 2,815 tokens on the desk · $0.0217 · /help\n\n",
+  "cost": 0.021724
+ },
+ "headless_json": {
+  "result": "The bug was in `cart_total` in `shop.py`. It added each product's price once and ignored the quantity, so 3 apples came to 50 instead of 150. I changed it to `PRICES[product] * count`. All 4 tests in `test_shop.py` now pass.",
+  "turns": 4,
+  "cost": 0.021724,
+  "tokens": 8938,
+  "reason": "end",
+  "seconds": 2.3
+ },
+ "cost_limit": {
+  "result": "",
+  "turns": 3,
+  "cost": 0.015373999999999999,
+  "tokens": 6123,
+  "reason": "cost limit $0.01",
+  "seconds": 1.7
+ },
+ "headless_command": "cato -p \"The tests in test_shop.py fail. Find the bug and fix it.\" --json --yes",
+ "ctrl_c": {
+  "text": "╭──────────────────────────────────────╮\n│  φ Cato Code v0.3                    │\n│  /private/tmp/shop                   │\n│  model: sonnet · /help for commands  │\n╰──────────────────────────────────────╯\n\n> The tests in test_shop.py fail. Find the bug and fix it.\n● Bash(cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | )\n  Cato wants to run cd /private/tmp/shop && ls && python -m pytest -x -q 2>&1 | tail -30\n  Allow? (y/n) ^C\n  Interrupted. Tell Cato what to do instead.\n  sonnet · 1,590 tokens on the desk · $0.0042 · /help\n\n",
+  "html": "<span style=\"color: #00dffe; text-decoration-color: #00dffe\">╭──────────────────────────────────────╮</span>\n<span style=\"color: #00dffe; text-decoration-color: #00dffe\">│</span>  <span style=\"color: #00dffe; text-decoration-color: #00dffe\">φ</span> <span style=\"font-weight: bold\">Cato Code</span> v0.3                    <span style=\"color: #00dffe; text-decoration-color: #00dffe\">│</span>\n<span style=\"color: #00dffe; text-decoration-color: #00dffe\">│</span>  <span style=\"color: #7a7f86; text-decoration-color: #7a7f86\">/private/tmp/shop</span>                   <span style=\"color: #00dffe; text-decoration-color: #00dffe\">│</span>\n<span style=\"color: #00dffe; text-decoration-color: #00dffe\">│</span>  <span style=\"color: #7a7f86; text-decoration-color: #7a7f86\">model: sonnet · /help for commands</span>  <span style=\"color: #00dffe; text-decoration-color: #00dffe\">│</span>\n<span style=\"color: #00dffe; text-decoration-color: #00dffe\">╰──────────────────────────────────────╯</span>\n\n<span style=\"color: #ffb848; text-decoration-color: #ffb848\">&gt;</span> The tests in test_shop.py fail. Find the bug and fix it.\n<span style=\"color: #a7c9ff; text-decoration-color: #a7c9ff\">●</span> <span style=\"font-weight: bold\">Bash(cd /private/tmp/shop &amp;&amp; ls &amp;&amp; python -m pytest -x -q 2&gt;&amp;1 | )</span>\n  <span style=\"color: #ffb848; text-decoration-color: #ffb848\">Cato wants to run </span><span style=\"color: #ffb848; text-decoration-color: #ffb848; font-weight: bold\">cd /private/tmp/shop &amp;&amp; ls &amp;&amp; python -m pytest -x -q 2&gt;&amp;1 | tail -30</span>\n  Allow? <span style=\"font-weight: bold\">(y/n)</span> ^C\n<span style=\"color: #ff6670; text-decoration-color: #ff6670\">  Interrupted.</span> <span style=\"color: #7a7f86; text-decoration-color: #7a7f86\">Tell Cato what to do instead.</span>\n<span style=\"color: #7a7f86; text-decoration-color: #7a7f86\">  sonnet · 1,590 tokens on the desk · $0.0042 · /help</span>\n\n",
+  "last": [
+   {
+    "role": "tool",
+    "tool_call_id": "toolu_01NE6kE9Rj3Wb8Rk5pKNBqBE",
+    "content": "Stopped by the user before this finished."
+   },
+   {
+    "role": "tool",
+    "tool_call_id": "toolu_01KgtvXxAE9era2q1XhXRknG",
+    "content": "Stopped by the user before this finished."
+   }
+  ],
+  "roles": [
+   "system",
+   "user",
+   "assistant",
+   "tool",
+   "tool"
+  ]
+ },
+ "commands_html": "<span style=\"color: #ffb848; text-decoration-color: #ffb848\">&gt;</span> /help\n<span style=\"font-weight: bold\">Commands</span>\n  /help           this list\n  /model [name]   show or switch the model: sonnet, opus, sol, terra, gemini\n  /cost           tokens and dollars so far\n  /clear          start a fresh chat\n  /exit           quit (or Ctrl+D)\n<span style=\"color: #7a7f86; text-decoration-color: #7a7f86\">Ctrl+C stops Cato in the middle of an answer.</span>\n\n<span style=\"color: #ffb848; text-decoration-color: #ffb848\">&gt;</span> /model\n  model: <span style=\"color: #00dffe; text-decoration-color: #00dffe\">sonnet</span>  <span style=\"color: #7a7f86; text-decoration-color: #7a7f86\">(choices: sonnet, opus, sol, terra, gemini, or any OpenRouter id)</span>\n\n<span style=\"color: #ffb848; text-decoration-color: #ffb848\">&gt;</span> /cost\n  2,815 tokens on the desk · $0.0217 so far\n\n",
+ "ctrl_c_v02": {
+  "text": "Cato v0.2 · sonnet · type a task, or 'exit'\n\n> Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n    main()\n    ~~~~^^\n  File \"__main__.py\", line 22, in main\n    print(agent_loop(messages, args.model))\n          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"agent.py\", line 46, in agent_loop\n    reply, usage = ask_model(messages, schemas, model)\n                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 6, in model_is_thinking\n    raise KeyboardInterrupt        # you press Ctrl+C while the model is still thinking\n    ^^^^^^^^^^^^^^^^^^^^^^^\nKeyboardInterrupt\n",
+  "exit": -2
+ },
+ "generator": {
+  "code": "def count_to(n):\n    for i in range(1, n + 1):\n        yield i            # hand out one value, then wait here\n\nfor number in count_to(3):\n    print(\"got\", number)",
+  "output": "got 1\ngot 2\ngot 3"
+ },
+ "codes": {
+  "live": [
+   {
+    "markdown": "- **The lo",
+    "bytes": "\n • **The lo                             "
+   },
+   {
+    "markdown": "- **The loop:** You give me a task",
+    "bytes": "\r\u001b[2K\u001b[1A\u001b[2K\n • The loop: You give me a task         "
+   }
+  ],
+  "spinner": "\u001b[?25l⠋ Thinking…\r\u001b[2K⠙ Thinking…\r\u001b[2K⠹ Thinking…\n\u001b[?25h\r\u001b[1A\u001b[2K",
+  "spinner_frames": "⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏",
+  "spinner_ms": 80,
+  "status_fps": 12.5,
+  "live_fps": 12
+ },
+ "stack_v03": {
+  "stack": [
+   "repl",
+   "answer",
+   "run_agent",
+   "stream_model",
+   "pieces_then_ctrl_c"
+  ],
+  "screen": "╭──────────────────────────────────────╮\n│  φ Cato Code v0.3                    │\n│  /private/tmp/shop                   │\n│  model: sonnet · /help for commands  │\n╰──────────────────────────────────────╯\n\n  Interrupted. Tell Cato what to do instead.\n  sonnet · 0 tokens on the desk · $0.0000 · /help\n\n"
+ },
+ "files": {
+  "part1": {
+   "cato.py": {
+    "defs": [
+     "ask_model",
+     "run_bash",
+     "agent_loop",
+     "main"
+    ],
+    "imports": []
+   }
+  },
+  "part2": {
+   "__main__.py": {
+    "defs": [
+     "main"
+    ],
+    "imports": [
+     "agent.py",
+     "model.py"
+    ]
+   },
+   "agent.py": {
+    "defs": [
+     "system_prompt",
+     "describe",
+     "confirm",
+     "agent_loop"
+    ],
+    "imports": [
+     "model.py",
+     "tools.py"
+    ]
+   },
+   "model.py": {
+    "defs": [
+     "ModelError",
+     "model_id",
+     "ask_model"
+    ],
+    "imports": []
+   },
+   "tools.py": {
+    "defs": [
+     "Tool",
+     "full_path",
+     "remember_read",
+     "check_read_first",
+     "make_diff",
+     "short",
+     "walk_files",
+     "read_file",
+     "write_file",
+     "edit_file",
+     "run_bash",
+     "glob_files",
+     "grep_files",
+     "find_tool",
+     "tool_schemas",
+     "check_form",
+     "trim",
+     "run_tool"
+    ],
+    "imports": []
+   }
+  },
+  "part3": {
+   "__main__.py": {
+    "defs": [
+     "headless",
+     "main"
+    ],
+    "imports": [
+     "agent.py",
+     "model.py",
+     "ui.py"
+    ]
+   },
+   "agent.py": {
+    "defs": [
+     "system_prompt",
+     "describe",
+     "run_agent",
+     "repair"
+    ],
+    "imports": [
+     "model.py",
+     "tools.py"
+    ]
+   },
+   "model.py": {
+    "defs": [
+     "ModelError",
+     "model_id",
+     "live_pieces",
+     "replayed_pieces",
+     "glue_tool_call",
+     "glue_reasoning",
+     "stream_model"
+    ],
+    "imports": []
+   },
+   "tools.py": {
+    "defs": [
+     "Tool",
+     "full_path",
+     "remember_read",
+     "check_read_first",
+     "make_diff",
+     "short",
+     "walk_files",
+     "read_file",
+     "write_file",
+     "edit_file",
+     "run_bash",
+     "glob_files",
+     "grep_files",
+     "find_tool",
+     "tool_schemas",
+     "check_form",
+     "trim",
+     "run_tool"
+    ],
+    "imports": []
+   },
+   "ui.py": {
+    "defs": [
+     "Screen",
+     "read_line",
+     "ask_permission",
+     "show_tool_start",
+     "show_tool_end",
+     "status_line",
+     "answer",
+     "run_command",
+     "banner",
+     "repl"
+    ],
+    "imports": [
+     "agent.py",
+     "model.py"
+    ]
+   }
+  }
+ }
+}
