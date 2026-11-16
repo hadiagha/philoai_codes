@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": ["Bash(python3 test_shop.py)", "Bash(ls *)", "Bash(cat *)", "Bash(git status)"],
+    "ask": ["Bash(git push *)"],
+    "deny": ["Bash(rm *)", "Read(.env)", "Edit(.env)", "Write(.env)"]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {"matcher": "Edit|Write", "hooks": [{"type": "command", "command": "python3 .cato/hooks/protect_files.py"}]}
+    ],
+    "PostToolUse": [
+      {"matcher": "Edit|Write", "hooks": [{"type": "command", "command": "python3 .cato/hooks/check_python.py"}]}
+    ]
+  }
+}
