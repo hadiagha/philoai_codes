@@ -10,6 +10,7 @@ Cato is named after Cato the Younger, a Roman known for logic and for sticking t
 | [`part2-tools/`](part2-tools/) | Part 2: Tools That Read and Edit Code | six tools (Read, Write, Edit, Bash, Glob, Grep), one path for every call, and edits that read first, match exactly and match once |
 | [`part3-terminal/`](part3-terminal/) | Part 3: A Terminal Like Claude Code | a real screen: the answer streams in, the loop hands out events, headless mode, Ctrl+C that keeps your chat, a cost limit, and record and replay |
 | [`part4-permissions/`](part4-permissions/) | Part 4: Permissions and Hooks | a gate before every tool: allow, ask or deny rules that read each piece of a command, hooks before and after a tool, four modes including plan mode, and reads side by side |
+| [`part5-memory/`](part5-memory/) | Part 5: Memory and Context | a desk it can measure and clear: `/context`, notes in `CATO.md` read folder by folder, the reread discount (prompt caching), big output saved to a file, old results cleared, and `/compact` |
 
 New parts are added here as each video comes out.
 
