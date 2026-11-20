@@ -12,7 +12,8 @@ Cato is named after Cato the Younger, a Roman known for logic and for sticking t
 | [`part4-permissions/`](part4-permissions/) | Part 4: Permissions and Hooks | a gate before every tool: allow, ask or deny rules that read each piece of a command, hooks before and after a tool, four modes including plan mode, and reads side by side |
 | [`part5-memory/`](part5-memory/) | Part 5: Memory and Context | a desk it can measure and clear: `/context`, notes in `CATO.md` read folder by folder, the reread discount (prompt caching), big output saved to a file, old results cleared, and `/compact` |
 | [`part6-subagents-skills-mcp/`](part6-subagents-skills-mcp/) | Part 6: Subagents, Skills and MCP | help, through the same tool list: helpers that work on a desk of their own and send back only a report, skills loaded from a short menu when a task needs them, slash commands, and tools from other programs over MCP |
+| [`part7-how-it-connects/`](part7-how-it-connects/) | Part 7: How It All Connects | no new code: one real request traced through every function (398 of them, in 11 files), and a small test of Cato against the real Claude Code on eight tasks |
 
-New parts are added here as each video comes out.
+The series is complete: Cato v0.6 is the whole system.
 
 Cato talks to models through [OpenRouter](https://openrouter.ai), so one key works with many models. This is an independent educational project, not affiliated with or endorsed by Anthropic.

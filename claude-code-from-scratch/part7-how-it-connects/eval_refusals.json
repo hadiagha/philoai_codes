@@ -1,0 +1,44 @@
+{
+ "cato-gemini_08-tidy-folder": [
+  {
+   "tool": "Bash",
+   "cmd": "mkdir -p downloads/images downloads/docs downloads/data && \\\nmv downloads/cat.png downloads/holiday.jpg downloads/logo.svg downloads/scan.PN",
+   "out": "The user said no. Ask them what to do instead."
+  }
+ ],
+ "cato-opus_06-clean-csv": [
+  {
+   "tool": "Bash",
+   "cmd": "python3 - <<'EOF'\nimport csv,re\nfrom datetime import datetime\nwith open('customers.csv',newline='') as f:\n    r=csv.reader(f); hdr=[h.strip(",
+   "out": "The user said no. Ask them what to do instead."
+  }
+ ],
+ "cato-opus_08-tidy-folder": [
+  {
+   "tool": "Bash",
+   "cmd": "cd downloads && mkdir -p images docs data && for f in *; do [ -f \"$f\" ] || continue; ext=$(echo \"${f##*.}\" | tr 'A-Z' 'a-z'); case \"$ext\" in",
+   "out": "The user said no. Ask them what to do instead."
+  }
+ ],
+ "cato-sonnet_06-clean-csv": [
+  {
+   "tool": "Bash",
+   "cmd": "python3 - <<'E'\nimport csv\nfrom datetime import datetime\ndef d(s):\n    for f in (\"%Y-%m-%d\",\"%m/%d/%Y\",\"%Y/%m/%d\"):\n        try: return date",
+   "out": "The user said no. Ask them what to do instead."
+  }
+ ],
+ "cato-sonnet_07-log-detective": [
+  {
+   "tool": "Bash",
+   "cmd": "printf 'user=omar\\ntime=09:12:30\\nerrors=3\\n' > answer.txt; cat answer.txt",
+   "out": "The user said no. Ask them what to do instead."
+  }
+ ],
+ "cato-sonnet_08-tidy-folder": [
+  {
+   "tool": "Bash",
+   "cmd": "cd downloads && mkdir -p images docs data && \nfor f in *; do [ -f \"$f\" ] || continue\next=\"${f##*.}\"; ext=$(printf %s \"$ext\" | tr A-Z a-z)\nca",
+   "out": "The user said no. Ask them what to do instead."
+  }
+ ]
+}

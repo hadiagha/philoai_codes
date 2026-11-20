@@ -1,0 +1,4975 @@
+{
+ "calls": [
+  {
+   "n": 0,
+   "file": "ui.py",
+   "fn": "repl",
+   "line": 344,
+   "thread": false,
+   "from": null
+  },
+  {
+   "n": 1,
+   "file": "context.py",
+   "fn": "system_prompt",
+   "line": 59,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "repl",
+    "line": 347
+   }
+  },
+  {
+   "n": 2,
+   "file": "context.py",
+   "fn": "environment",
+   "line": 48,
+   "thread": false,
+   "from": {
+    "file": "context.py",
+    "fn": "system_prompt",
+    "line": 61
+   }
+  },
+  {
+   "n": 3,
+   "file": "settings.py",
+   "fn": "load_settings",
+   "line": 24,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "repl",
+    "line": 350
+   }
+  },
+  {
+   "n": 4,
+   "file": "settings.py",
+   "fn": "settings_files",
+   "line": 20,
+   "thread": false,
+   "from": {
+    "file": "settings.py",
+    "fn": "load_settings",
+    "line": 27
+   }
+  },
+  {
+   "n": 5,
+   "file": "ui.py",
+   "fn": "banner",
+   "line": 337,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "repl",
+    "line": 365
+   }
+  },
+  {
+   "n": 6,
+   "file": "mcp.py",
+   "fn": "load_servers",
+   "line": 118,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "repl",
+    "line": 366
+   }
+  },
+  {
+   "n": 7,
+   "file": "ui.py",
+   "fn": "answer",
+   "line": 211,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "repl",
+    "line": 391
+   }
+  },
+  {
+   "n": 8,
+   "file": "context.py",
+   "fn": "with_reminders",
+   "line": 86,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 214
+   }
+  },
+  {
+   "n": 9,
+   "file": "context.py",
+   "fn": "reminders",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "context.py",
+    "fn": "with_reminders",
+    "line": 88
+   }
+  },
+  {
+   "n": 10,
+   "file": "context.py",
+   "fn": "memory_files",
+   "line": 66,
+   "thread": false,
+   "from": {
+    "file": "context.py",
+    "fn": "reminders",
+    "line": 76
+   }
+  },
+  {
+   "n": 11,
+   "file": "cards.py",
+   "fn": "skill_menu",
+   "line": 43,
+   "thread": false,
+   "from": {
+    "file": "context.py",
+    "fn": "reminders",
+    "line": 79
+   }
+  },
+  {
+   "n": 12,
+   "file": "cards.py",
+   "fn": "find_cards",
+   "line": 32,
+   "thread": false,
+   "from": {
+    "file": "cards.py",
+    "fn": "skill_menu",
+    "line": 45
+   }
+  },
+  {
+   "n": 13,
+   "file": "cards.py",
+   "fn": "read_card",
+   "line": 18,
+   "thread": false,
+   "from": {
+    "file": "cards.py",
+    "fn": "find_cards",
+    "line": 38
+   }
+  },
+  {
+   "n": 14,
+   "file": "cards.py",
+   "fn": "skill_menu",
+   "line": 43,
+   "thread": false,
+   "from": {
+    "file": "context.py",
+    "fn": "reminders",
+    "line": 80
+   }
+  },
+  {
+   "n": 15,
+   "file": "cards.py",
+   "fn": "find_cards",
+   "line": 32,
+   "thread": false,
+   "from": {
+    "file": "cards.py",
+    "fn": "skill_menu",
+    "line": 45
+   }
+  },
+  {
+   "n": 16,
+   "file": "cards.py",
+   "fn": "read_card",
+   "line": 18,
+   "thread": false,
+   "from": {
+    "file": "cards.py",
+    "fn": "find_cards",
+    "line": 38
+   }
+  },
+  {
+   "n": 17,
+   "file": "ui.py",
+   "fn": "Screen.__init__",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 215
+   }
+  },
+  {
+   "n": 18,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 216
+   }
+  },
+  {
+   "n": 19,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 20,
+   "file": "ui.py",
+   "fn": "session_tools",
+   "line": 167,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 220
+   }
+  },
+  {
+   "n": 21,
+   "file": "helpers.py",
+   "fn": "helper_tools",
+   "line": 53,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "session_tools",
+    "line": 169
+   }
+  },
+  {
+   "n": 22,
+   "file": "helpers.py",
+   "fn": "all_helpers",
+   "line": 27,
+   "thread": false,
+   "from": {
+    "file": "helpers.py",
+    "fn": "helper_tools",
+    "line": 55
+   }
+  },
+  {
+   "n": 23,
+   "file": "cards.py",
+   "fn": "find_cards",
+   "line": 32,
+   "thread": false,
+   "from": {
+    "file": "helpers.py",
+    "fn": "all_helpers",
+    "line": 28
+   }
+  },
+  {
+   "n": 24,
+   "file": "cards.py",
+   "fn": "read_card",
+   "line": 18,
+   "thread": false,
+   "from": {
+    "file": "cards.py",
+    "fn": "find_cards",
+    "line": 38
+   }
+  },
+  {
+   "n": 25,
+   "file": "helpers.py",
+   "fn": "helper_tools.<locals>.<genexpr>",
+   "line": 56,
+   "thread": false,
+   "from": {
+    "file": "helpers.py",
+    "fn": "helper_tools",
+    "line": 56
+   }
+  },
+  {
+   "n": 26,
+   "file": "agent.py",
+   "fn": "run_agent",
+   "line": 42,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 220
+   }
+  },
+  {
+   "n": 27,
+   "file": "tools.py",
+   "fn": "tool_schemas",
+   "line": 246,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 50
+   }
+  },
+  {
+   "n": 28,
+   "file": "model.py",
+   "fn": "stream_model",
+   "line": 97,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 77
+   }
+  },
+  {
+   "n": 29,
+   "file": "model.py",
+   "fn": "request_body",
+   "line": 86,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 99
+   }
+  },
+  {
+   "n": 30,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 87
+   }
+  },
+  {
+   "n": 31,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 90
+   }
+  },
+  {
+   "n": 32,
+   "file": "model.py",
+   "fn": "replayed_pieces",
+   "line": 51,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 102
+   }
+  },
+  {
+   "n": 33,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 34,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 35,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 36,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 37,
+   "file": "agent.py",
+   "fn": "group_calls",
+   "line": 29,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 91
+   }
+  },
+  {
+   "n": 38,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "group_calls",
+    "line": 33
+   }
+  },
+  {
+   "n": 39,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 226
+   }
+  },
+  {
+   "n": 40,
+   "file": "ui.py",
+   "fn": "show_tool_start",
+   "line": 139,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 227
+   }
+  },
+  {
+   "n": 41,
+   "file": "agent.py",
+   "fn": "describe",
+   "line": 16,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_start",
+    "line": 140
+   }
+  },
+  {
+   "n": 42,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 228
+   }
+  },
+  {
+   "n": 43,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 44,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 45,
+   "file": "permissions.py",
+   "fn": "check_call",
+   "line": 132,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 46,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 140
+   }
+  },
+  {
+   "n": 47,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 48,
+   "file": "permissions.py",
+   "fn": "decide",
+   "line": 95,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 143
+   }
+  },
+  {
+   "n": 49,
+   "file": "permissions.py",
+   "fn": "targets",
+   "line": 68,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 97
+   }
+  },
+  {
+   "n": 50,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 51,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 52,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 53,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 54,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 55,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 56,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 57,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 58,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 102,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 102
+   }
+  },
+  {
+   "n": 59,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 102
+   }
+  },
+  {
+   "n": 60,
+   "file": "permissions.py",
+   "fn": "inside_project",
+   "line": 62,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 110
+   }
+  },
+  {
+   "n": 61,
+   "file": "agent.py",
+   "fn": "run_agent.<locals>.run_one",
+   "line": 101,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 108
+   }
+  },
+  {
+   "n": 62,
+   "file": "tools.py",
+   "fn": "run_tool",
+   "line": 287,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent.<locals>.run_one",
+    "line": 105
+   }
+  },
+  {
+   "n": 63,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 292
+   }
+  },
+  {
+   "n": 64,
+   "file": "tools.py",
+   "fn": "check_form",
+   "line": 257,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 300
+   }
+  },
+  {
+   "n": 65,
+   "file": "helpers.py",
+   "fn": "helper_tools.<locals>.skill",
+   "line": 65,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 301
+   }
+  },
+  {
+   "n": 66,
+   "file": "cards.py",
+   "fn": "find_cards",
+   "line": 32,
+   "thread": false,
+   "from": {
+    "file": "helpers.py",
+    "fn": "helper_tools.<locals>.skill",
+    "line": 66
+   }
+  },
+  {
+   "n": 67,
+   "file": "cards.py",
+   "fn": "read_card",
+   "line": 18,
+   "thread": false,
+   "from": {
+    "file": "cards.py",
+    "fn": "find_cards",
+    "line": 38
+   }
+  },
+  {
+   "n": 68,
+   "file": "tools.py",
+   "fn": "trim",
+   "line": 273,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 304
+   }
+  },
+  {
+   "n": 69,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 117
+   }
+  },
+  {
+   "n": 70,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 71,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 230
+   }
+  },
+  {
+   "n": 72,
+   "file": "ui.py",
+   "fn": "show_tool_end",
+   "line": 143,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 231
+   }
+  },
+  {
+   "n": 73,
+   "file": "ui.py",
+   "fn": "show_tool_end.<locals>.<genexpr>",
+   "line": 156,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_end",
+    "line": 156
+   }
+  },
+  {
+   "n": 74,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 232
+   }
+  },
+  {
+   "n": 75,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 76,
+   "file": "model.py",
+   "fn": "stream_model",
+   "line": 97,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 77
+   }
+  },
+  {
+   "n": 77,
+   "file": "model.py",
+   "fn": "request_body",
+   "line": 86,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 99
+   }
+  },
+  {
+   "n": 78,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 87
+   }
+  },
+  {
+   "n": 79,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 90
+   }
+  },
+  {
+   "n": 80,
+   "file": "model.py",
+   "fn": "replayed_pieces",
+   "line": 51,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 102
+   }
+  },
+  {
+   "n": 81,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 82,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 83,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 84,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 85,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 86,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 87,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 88,
+   "file": "agent.py",
+   "fn": "group_calls",
+   "line": 29,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 91
+   }
+  },
+  {
+   "n": 89,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "group_calls",
+    "line": 33
+   }
+  },
+  {
+   "n": 90,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 226
+   }
+  },
+  {
+   "n": 91,
+   "file": "ui.py",
+   "fn": "show_tool_start",
+   "line": 139,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 227
+   }
+  },
+  {
+   "n": 92,
+   "file": "agent.py",
+   "fn": "describe",
+   "line": 16,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_start",
+    "line": 140
+   }
+  },
+  {
+   "n": 93,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 228
+   }
+  },
+  {
+   "n": 94,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 95,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 96,
+   "file": "permissions.py",
+   "fn": "check_call",
+   "line": 132,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 97,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 140
+   }
+  },
+  {
+   "n": 98,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 99,
+   "file": "permissions.py",
+   "fn": "decide",
+   "line": 95,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 143
+   }
+  },
+  {
+   "n": 100,
+   "file": "permissions.py",
+   "fn": "targets",
+   "line": 68,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 97
+   }
+  },
+  {
+   "n": 101,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 102,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 103,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 104,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 105,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 106,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 107,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 108,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 109,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 102,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 102
+   }
+  },
+  {
+   "n": 110,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 102
+   }
+  },
+  {
+   "n": 111,
+   "file": "permissions.py",
+   "fn": "inside_project",
+   "line": 62,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 110
+   }
+  },
+  {
+   "n": 112,
+   "file": "agent.py",
+   "fn": "run_agent.<locals>.run_one",
+   "line": 101,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 108
+   }
+  },
+  {
+   "n": 113,
+   "file": "tools.py",
+   "fn": "run_tool",
+   "line": 287,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent.<locals>.run_one",
+    "line": 105
+   }
+  },
+  {
+   "n": 114,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 292
+   }
+  },
+  {
+   "n": 115,
+   "file": "tools.py",
+   "fn": "check_form",
+   "line": 257,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 300
+   }
+  },
+  {
+   "n": 116,
+   "file": "tools.py",
+   "fn": "grep_files",
+   "line": 151,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 301
+   }
+  },
+  {
+   "n": 117,
+   "file": "tools.py",
+   "fn": "full_path",
+   "line": 33,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "grep_files",
+    "line": 153
+   }
+  },
+  {
+   "n": 118,
+   "file": "tools.py",
+   "fn": "short",
+   "line": 60,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "grep_files",
+    "line": 165
+   }
+  },
+  {
+   "n": 119,
+   "file": "tools.py",
+   "fn": "short",
+   "line": 60,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "grep_files",
+    "line": 165
+   }
+  },
+  {
+   "n": 120,
+   "file": "tools.py",
+   "fn": "trim",
+   "line": 273,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 304
+   }
+  },
+  {
+   "n": 121,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 117
+   }
+  },
+  {
+   "n": 122,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 123,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 230
+   }
+  },
+  {
+   "n": 124,
+   "file": "ui.py",
+   "fn": "show_tool_end",
+   "line": 143,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 231
+   }
+  },
+  {
+   "n": 125,
+   "file": "ui.py",
+   "fn": "show_tool_end.<locals>.<genexpr>",
+   "line": 156,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_end",
+    "line": 156
+   }
+  },
+  {
+   "n": 126,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 232
+   }
+  },
+  {
+   "n": 127,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 128,
+   "file": "model.py",
+   "fn": "stream_model",
+   "line": 97,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 77
+   }
+  },
+  {
+   "n": 129,
+   "file": "model.py",
+   "fn": "request_body",
+   "line": 86,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 99
+   }
+  },
+  {
+   "n": 130,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 87
+   }
+  },
+  {
+   "n": 131,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 90
+   }
+  },
+  {
+   "n": 132,
+   "file": "model.py",
+   "fn": "replayed_pieces",
+   "line": 51,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 102
+   }
+  },
+  {
+   "n": 133,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 134,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 135,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 136,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 137,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 138,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 139,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 140,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 141,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 142,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 143,
+   "file": "agent.py",
+   "fn": "group_calls",
+   "line": 29,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 91
+   }
+  },
+  {
+   "n": 144,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "group_calls",
+    "line": 33
+   }
+  },
+  {
+   "n": 145,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 226
+   }
+  },
+  {
+   "n": 146,
+   "file": "ui.py",
+   "fn": "show_tool_start",
+   "line": 139,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 227
+   }
+  },
+  {
+   "n": 147,
+   "file": "agent.py",
+   "fn": "describe",
+   "line": 16,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_start",
+    "line": 140
+   }
+  },
+  {
+   "n": 148,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 228
+   }
+  },
+  {
+   "n": 149,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 150,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 151,
+   "file": "permissions.py",
+   "fn": "check_call",
+   "line": 132,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 152,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 140
+   }
+  },
+  {
+   "n": 153,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 154,
+   "file": "permissions.py",
+   "fn": "decide",
+   "line": 95,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 143
+   }
+  },
+  {
+   "n": 155,
+   "file": "permissions.py",
+   "fn": "targets",
+   "line": 68,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 97
+   }
+  },
+  {
+   "n": 156,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 157,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 158,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 159,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 160,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 161,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 162,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 163,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 164,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 102,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 102
+   }
+  },
+  {
+   "n": 165,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 102
+   }
+  },
+  {
+   "n": 166,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 117,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 117
+   }
+  },
+  {
+   "n": 167,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>.<genexpr>",
+   "line": 117,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 168,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 169,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 170,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 171,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 172,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 173,
+   "file": "ui.py",
+   "fn": "answer.<locals>.<lambda>",
+   "line": 217,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 147
+   }
+  },
+  {
+   "n": 174,
+   "file": "ui.py",
+   "fn": "ask_permission",
+   "line": 111,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer.<locals>.<lambda>",
+    "line": 217
+   }
+  },
+  {
+   "n": 175,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "ask_permission",
+    "line": 113
+   }
+  },
+  {
+   "n": 176,
+   "file": "agent.py",
+   "fn": "describe",
+   "line": 16,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "ask_permission",
+    "line": 121
+   }
+  },
+  {
+   "n": 177,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "ask_permission",
+    "line": 133
+   }
+  },
+  {
+   "n": 178,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 179,
+   "file": "agent.py",
+   "fn": "run_agent.<locals>.run_one",
+   "line": 101,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 108
+   }
+  },
+  {
+   "n": 180,
+   "file": "tools.py",
+   "fn": "run_tool",
+   "line": 287,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent.<locals>.run_one",
+    "line": 105
+   }
+  },
+  {
+   "n": 181,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 292
+   }
+  },
+  {
+   "n": 182,
+   "file": "tools.py",
+   "fn": "check_form",
+   "line": 257,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 300
+   }
+  },
+  {
+   "n": 183,
+   "file": "tools.py",
+   "fn": "edit_file",
+   "line": 109,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 301
+   }
+  },
+  {
+   "n": 184,
+   "file": "tools.py",
+   "fn": "full_path",
+   "line": 33,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "edit_file",
+    "line": 110
+   }
+  },
+  {
+   "n": 185,
+   "file": "tools.py",
+   "fn": "check_read_first",
+   "line": 45,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "edit_file",
+    "line": 111
+   }
+  },
+  {
+   "n": 186,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 230
+   }
+  },
+  {
+   "n": 187,
+   "file": "ui.py",
+   "fn": "show_tool_end",
+   "line": 143,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 231
+   }
+  },
+  {
+   "n": 188,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 232
+   }
+  },
+  {
+   "n": 189,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 190,
+   "file": "model.py",
+   "fn": "stream_model",
+   "line": 97,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 77
+   }
+  },
+  {
+   "n": 191,
+   "file": "model.py",
+   "fn": "request_body",
+   "line": 86,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 99
+   }
+  },
+  {
+   "n": 192,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 87
+   }
+  },
+  {
+   "n": 193,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 90
+   }
+  },
+  {
+   "n": 194,
+   "file": "model.py",
+   "fn": "replayed_pieces",
+   "line": 51,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 102
+   }
+  },
+  {
+   "n": 195,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 196,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 197,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 198,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 199,
+   "file": "agent.py",
+   "fn": "group_calls",
+   "line": 29,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 91
+   }
+  },
+  {
+   "n": 200,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "group_calls",
+    "line": 33
+   }
+  },
+  {
+   "n": 201,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 226
+   }
+  },
+  {
+   "n": 202,
+   "file": "ui.py",
+   "fn": "show_tool_start",
+   "line": 139,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 227
+   }
+  },
+  {
+   "n": 203,
+   "file": "agent.py",
+   "fn": "describe",
+   "line": 16,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_start",
+    "line": 140
+   }
+  },
+  {
+   "n": 204,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 228
+   }
+  },
+  {
+   "n": 205,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 206,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 207,
+   "file": "permissions.py",
+   "fn": "check_call",
+   "line": 132,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 208,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 140
+   }
+  },
+  {
+   "n": 209,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 210,
+   "file": "permissions.py",
+   "fn": "decide",
+   "line": 95,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 143
+   }
+  },
+  {
+   "n": 211,
+   "file": "permissions.py",
+   "fn": "targets",
+   "line": 68,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 97
+   }
+  },
+  {
+   "n": 212,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 213,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 214,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 215,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 216,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 217,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 218,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 219,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 220,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 102,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 102
+   }
+  },
+  {
+   "n": 221,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 102
+   }
+  },
+  {
+   "n": 222,
+   "file": "permissions.py",
+   "fn": "inside_project",
+   "line": 62,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 110
+   }
+  },
+  {
+   "n": 223,
+   "file": "agent.py",
+   "fn": "run_agent.<locals>.run_one",
+   "line": 101,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 108
+   }
+  },
+  {
+   "n": 224,
+   "file": "tools.py",
+   "fn": "run_tool",
+   "line": 287,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent.<locals>.run_one",
+    "line": 105
+   }
+  },
+  {
+   "n": 225,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 292
+   }
+  },
+  {
+   "n": 226,
+   "file": "tools.py",
+   "fn": "check_form",
+   "line": 257,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 300
+   }
+  },
+  {
+   "n": 227,
+   "file": "tools.py",
+   "fn": "read_file",
+   "line": 78,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 301
+   }
+  },
+  {
+   "n": 228,
+   "file": "tools.py",
+   "fn": "full_path",
+   "line": 33,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "read_file",
+    "line": 79
+   }
+  },
+  {
+   "n": 229,
+   "file": "tools.py",
+   "fn": "remember_read",
+   "line": 41,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "read_file",
+    "line": 83
+   }
+  },
+  {
+   "n": 230,
+   "file": "tools.py",
+   "fn": "trim",
+   "line": 273,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 304
+   }
+  },
+  {
+   "n": 231,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 117
+   }
+  },
+  {
+   "n": 232,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 233,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 230
+   }
+  },
+  {
+   "n": 234,
+   "file": "ui.py",
+   "fn": "show_tool_end",
+   "line": 143,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 231
+   }
+  },
+  {
+   "n": 235,
+   "file": "ui.py",
+   "fn": "show_tool_end.<locals>.<genexpr>",
+   "line": 156,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_end",
+    "line": 156
+   }
+  },
+  {
+   "n": 236,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 232
+   }
+  },
+  {
+   "n": 237,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 238,
+   "file": "model.py",
+   "fn": "stream_model",
+   "line": 97,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 77
+   }
+  },
+  {
+   "n": 239,
+   "file": "model.py",
+   "fn": "request_body",
+   "line": 86,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 99
+   }
+  },
+  {
+   "n": 240,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 87
+   }
+  },
+  {
+   "n": 241,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 90
+   }
+  },
+  {
+   "n": 242,
+   "file": "model.py",
+   "fn": "replayed_pieces",
+   "line": 51,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 102
+   }
+  },
+  {
+   "n": 243,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 244,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 245,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 246,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 247,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 248,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 249,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 250,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 251,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 252,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 253,
+   "file": "agent.py",
+   "fn": "group_calls",
+   "line": 29,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 91
+   }
+  },
+  {
+   "n": 254,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "group_calls",
+    "line": 33
+   }
+  },
+  {
+   "n": 255,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 226
+   }
+  },
+  {
+   "n": 256,
+   "file": "ui.py",
+   "fn": "show_tool_start",
+   "line": 139,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 227
+   }
+  },
+  {
+   "n": 257,
+   "file": "agent.py",
+   "fn": "describe",
+   "line": 16,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_start",
+    "line": 140
+   }
+  },
+  {
+   "n": 258,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 228
+   }
+  },
+  {
+   "n": 259,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 260,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 261,
+   "file": "permissions.py",
+   "fn": "check_call",
+   "line": 132,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 262,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 140
+   }
+  },
+  {
+   "n": 263,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 264,
+   "file": "permissions.py",
+   "fn": "decide",
+   "line": 95,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 143
+   }
+  },
+  {
+   "n": 265,
+   "file": "permissions.py",
+   "fn": "targets",
+   "line": 68,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 97
+   }
+  },
+  {
+   "n": 266,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 267,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 268,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 269,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 270,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 271,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 272,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 273,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 274,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 102,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 102
+   }
+  },
+  {
+   "n": 275,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 102
+   }
+  },
+  {
+   "n": 276,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 117,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 117
+   }
+  },
+  {
+   "n": 277,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>.<genexpr>",
+   "line": 117,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 278,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 279,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 280,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 281,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 282,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 283,
+   "file": "ui.py",
+   "fn": "answer.<locals>.<lambda>",
+   "line": 217,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 147
+   }
+  },
+  {
+   "n": 284,
+   "file": "ui.py",
+   "fn": "ask_permission",
+   "line": 111,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer.<locals>.<lambda>",
+    "line": 217
+   }
+  },
+  {
+   "n": 285,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "ask_permission",
+    "line": 113
+   }
+  },
+  {
+   "n": 286,
+   "file": "agent.py",
+   "fn": "describe",
+   "line": 16,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "ask_permission",
+    "line": 121
+   }
+  },
+  {
+   "n": 287,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "ask_permission",
+    "line": 133
+   }
+  },
+  {
+   "n": 288,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 289,
+   "file": "agent.py",
+   "fn": "run_agent.<locals>.run_one",
+   "line": 101,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 108
+   }
+  },
+  {
+   "n": 290,
+   "file": "tools.py",
+   "fn": "run_tool",
+   "line": 287,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent.<locals>.run_one",
+    "line": 105
+   }
+  },
+  {
+   "n": 291,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 292
+   }
+  },
+  {
+   "n": 292,
+   "file": "tools.py",
+   "fn": "check_form",
+   "line": 257,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 300
+   }
+  },
+  {
+   "n": 293,
+   "file": "tools.py",
+   "fn": "edit_file",
+   "line": 109,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 301
+   }
+  },
+  {
+   "n": 294,
+   "file": "tools.py",
+   "fn": "full_path",
+   "line": 33,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "edit_file",
+    "line": 110
+   }
+  },
+  {
+   "n": 295,
+   "file": "tools.py",
+   "fn": "check_read_first",
+   "line": 45,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "edit_file",
+    "line": 111
+   }
+  },
+  {
+   "n": 296,
+   "file": "tools.py",
+   "fn": "remember_read",
+   "line": 41,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "edit_file",
+    "line": 122
+   }
+  },
+  {
+   "n": 297,
+   "file": "tools.py",
+   "fn": "short",
+   "line": 60,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "edit_file",
+    "line": 123
+   }
+  },
+  {
+   "n": 298,
+   "file": "tools.py",
+   "fn": "make_diff",
+   "line": 53,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "edit_file",
+    "line": 123
+   }
+  },
+  {
+   "n": 299,
+   "file": "tools.py",
+   "fn": "trim",
+   "line": 273,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 304
+   }
+  },
+  {
+   "n": 300,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 117
+   }
+  },
+  {
+   "n": 301,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 302,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 230
+   }
+  },
+  {
+   "n": 303,
+   "file": "ui.py",
+   "fn": "show_tool_end",
+   "line": 143,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 231
+   }
+  },
+  {
+   "n": 304,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 232
+   }
+  },
+  {
+   "n": 305,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 306,
+   "file": "model.py",
+   "fn": "stream_model",
+   "line": 97,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 77
+   }
+  },
+  {
+   "n": 307,
+   "file": "model.py",
+   "fn": "request_body",
+   "line": 86,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 99
+   }
+  },
+  {
+   "n": 308,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 87
+   }
+  },
+  {
+   "n": 309,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 90
+   }
+  },
+  {
+   "n": 310,
+   "file": "model.py",
+   "fn": "replayed_pieces",
+   "line": 51,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 102
+   }
+  },
+  {
+   "n": 311,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 312,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 313,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 314,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 315,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 316,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 317,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 318,
+   "file": "model.py",
+   "fn": "glue_tool_call",
+   "line": 64,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 113
+   }
+  },
+  {
+   "n": 319,
+   "file": "agent.py",
+   "fn": "group_calls",
+   "line": 29,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 91
+   }
+  },
+  {
+   "n": 320,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "group_calls",
+    "line": 33
+   }
+  },
+  {
+   "n": 321,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 226
+   }
+  },
+  {
+   "n": 322,
+   "file": "ui.py",
+   "fn": "show_tool_start",
+   "line": 139,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 227
+   }
+  },
+  {
+   "n": 323,
+   "file": "agent.py",
+   "fn": "describe",
+   "line": 16,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_start",
+    "line": 140
+   }
+  },
+  {
+   "n": 324,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 228
+   }
+  },
+  {
+   "n": 325,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 326,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 327,
+   "file": "permissions.py",
+   "fn": "check_call",
+   "line": 132,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 97
+   }
+  },
+  {
+   "n": 328,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 140
+   }
+  },
+  {
+   "n": 329,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 330,
+   "file": "permissions.py",
+   "fn": "decide",
+   "line": 95,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 143
+   }
+  },
+  {
+   "n": 331,
+   "file": "permissions.py",
+   "fn": "targets",
+   "line": 68,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 97
+   }
+  },
+  {
+   "n": 332,
+   "file": "permissions.py",
+   "fn": "split_command",
+   "line": 23,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "targets",
+    "line": 71
+   }
+  },
+  {
+   "n": 333,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 334,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 335,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 336,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 337,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 338,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 339,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 340,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 341,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 342,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 99,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 99
+   }
+  },
+  {
+   "n": 343,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 344,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 99
+   }
+  },
+  {
+   "n": 345,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 102,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 102
+   }
+  },
+  {
+   "n": 346,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 102
+   }
+  },
+  {
+   "n": 347,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 102
+   }
+  },
+  {
+   "n": 348,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 115,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 115
+   }
+  },
+  {
+   "n": 349,
+   "file": "permissions.py",
+   "fn": "hides_a_command",
+   "line": 57,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 115
+   }
+  },
+  {
+   "n": 350,
+   "file": "permissions.py",
+   "fn": "hides_a_command",
+   "line": 57,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 115
+   }
+  },
+  {
+   "n": 351,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>",
+   "line": 117,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide",
+    "line": 117
+   }
+  },
+  {
+   "n": 352,
+   "file": "permissions.py",
+   "fn": "decide.<locals>.<genexpr>.<genexpr>",
+   "line": 117,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 353,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 354,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 355,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 356,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 357,
+   "file": "permissions.py",
+   "fn": "matches",
+   "line": 77,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "decide.<locals>.<genexpr>.<genexpr>",
+    "line": 117
+   }
+  },
+  {
+   "n": 358,
+   "file": "ui.py",
+   "fn": "answer.<locals>.<lambda>",
+   "line": 217,
+   "thread": false,
+   "from": {
+    "file": "permissions.py",
+    "fn": "check_call",
+    "line": 147
+   }
+  },
+  {
+   "n": 359,
+   "file": "ui.py",
+   "fn": "ask_permission",
+   "line": 111,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer.<locals>.<lambda>",
+    "line": 217
+   }
+  },
+  {
+   "n": 360,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "ask_permission",
+    "line": 113
+   }
+  },
+  {
+   "n": 361,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "ask_permission",
+    "line": 133
+   }
+  },
+  {
+   "n": 362,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 363,
+   "file": "agent.py",
+   "fn": "run_agent.<locals>.run_one",
+   "line": 101,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 108
+   }
+  },
+  {
+   "n": 364,
+   "file": "tools.py",
+   "fn": "run_tool",
+   "line": 287,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent.<locals>.run_one",
+    "line": 105
+   }
+  },
+  {
+   "n": 365,
+   "file": "tools.py",
+   "fn": "find_tool",
+   "line": 239,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 292
+   }
+  },
+  {
+   "n": 366,
+   "file": "tools.py",
+   "fn": "check_form",
+   "line": 257,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 300
+   }
+  },
+  {
+   "n": 367,
+   "file": "tools.py",
+   "fn": "run_bash",
+   "line": 126,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 301
+   }
+  },
+  {
+   "n": 368,
+   "file": "tools.py",
+   "fn": "trim",
+   "line": 273,
+   "thread": false,
+   "from": {
+    "file": "tools.py",
+    "fn": "run_tool",
+    "line": 304
+   }
+  },
+  {
+   "n": 369,
+   "file": "hooks.py",
+   "fn": "run_hooks",
+   "line": 22,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 117
+   }
+  },
+  {
+   "n": 370,
+   "file": "hooks.py",
+   "fn": "matching_hooks",
+   "line": 13,
+   "thread": false,
+   "from": {
+    "file": "hooks.py",
+    "fn": "run_hooks",
+    "line": 28
+   }
+  },
+  {
+   "n": 371,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 230
+   }
+  },
+  {
+   "n": 372,
+   "file": "ui.py",
+   "fn": "show_tool_end",
+   "line": 143,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 231
+   }
+  },
+  {
+   "n": 373,
+   "file": "ui.py",
+   "fn": "show_tool_end.<locals>.<genexpr>",
+   "line": 156,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "show_tool_end",
+    "line": 156
+   }
+  },
+  {
+   "n": 374,
+   "file": "ui.py",
+   "fn": "Screen.spin",
+   "line": 69,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 232
+   }
+  },
+  {
+   "n": 375,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.spin",
+    "line": 70
+   }
+  },
+  {
+   "n": 376,
+   "file": "model.py",
+   "fn": "stream_model",
+   "line": 97,
+   "thread": false,
+   "from": {
+    "file": "agent.py",
+    "fn": "run_agent",
+    "line": 77
+   }
+  },
+  {
+   "n": 377,
+   "file": "model.py",
+   "fn": "request_body",
+   "line": 86,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 99
+   }
+  },
+  {
+   "n": 378,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 87
+   }
+  },
+  {
+   "n": 379,
+   "file": "model.py",
+   "fn": "model_id",
+   "line": 31,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "request_body",
+    "line": 90
+   }
+  },
+  {
+   "n": 380,
+   "file": "model.py",
+   "fn": "replayed_pieces",
+   "line": 51,
+   "thread": false,
+   "from": {
+    "file": "model.py",
+    "fn": "stream_model",
+    "line": 102
+   }
+  },
+  {
+   "n": 381,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 382,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "Screen.add_words",
+    "line": 76
+   }
+  },
+  {
+   "n": 383,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 384,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 385,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 386,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 387,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 388,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 389,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 390,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 391,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 392,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 393,
+   "file": "ui.py",
+   "fn": "Screen.add_words",
+   "line": 74,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 224
+   }
+  },
+  {
+   "n": 394,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 247
+   }
+  },
+  {
+   "n": 395,
+   "file": "ui.py",
+   "fn": "Screen.stop",
+   "line": 85,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 259
+   }
+  },
+  {
+   "n": 396,
+   "file": "ui.py",
+   "fn": "status_line",
+   "line": 161,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "answer",
+    "line": 260
+   }
+  },
+  {
+   "n": 397,
+   "file": "mcp.py",
+   "fn": "stop_servers",
+   "line": 137,
+   "thread": false,
+   "from": {
+    "file": "ui.py",
+    "fn": "repl",
+    "line": 392
+   }
+  }
+ ],
+ "files": [
+  "agent.py",
+  "cards.py",
+  "context.py",
+  "helpers.py",
+  "hooks.py",
+  "mcp.py",
+  "model.py",
+  "permissions.py",
+  "settings.py",
+  "tools.py",
+  "ui.py"
+ ],
+ "screen_text": "╭──────────────────────────────────────╮\n│  φ Cato Code v0.6                    │\n│  /private/tmp/shop                   │\n│  model: sonnet · /help for commands  │\n╰──────────────────────────────────────╯\n\n> Add a product called tea, for $3.50. Then run the tests.\n● Skill(add-product)\n  └ Skill 'add-product' (folder: /private/tmp/shop/.cato/skills/add-product):\n    \n    # Adding a product … +7 lines\n● Grep(PRICES)\n  └ shop.py:3: PRICES = {\"apple\": 50, \"bread\": 250, \"milk\": 120, \"coffee\": 899}\n    shop.py:12: total += PRICES[product] * count\n● Edit(shop.py)\n  Cato wants to use Edit(shop.py)\n    - \"coffee\": 899}\n    + \"coffee\": 899, \"tea\": 350}\n  (no rule allows it yet)\n  1 Yes   2 Yes, and allow all edits this session   3 No\n  > 1\n  └ Error: Read /private/tmp/shop/shop.py before changing it.\n● Read(shop.py)\n  └      1      \"\"\"A tiny shop: prices in cents, a cart, and a discount code.\"\"\"\n         2      \n         3      PRICES = {\"apple\": 50, \"bread\": 250, \"milk\": 120, \"coffee\": 899} … +24 lines\n● Edit(shop.py)\n  Cato wants to use Edit(shop.py)\n    - \"coffee\": 899}\n    + \"coffee\": 899, \"tea\": 350}\n  (no rule allows it yet)\n  1 Yes   2 Yes, and allow all edits this session   3 No\n  > 1\n  └ Edited shop.py.\n    @@ -1,5 +1,5 @@\n     \"\"\"A tiny shop: prices in cents, a cart, and a discount code.\"\"\"\n     \n    -PRICES = {\"apple\": 50, \"bread\": 250, \"milk\": 120, \"coffee\": 899}\n    +PRICES = {\"apple\": 50, \"bread\": 250, \"milk\": 120, \"coffee\": 899, \"tea\": 350}\n     \n     CODES = {\"SAVE10\": 10, \"HALF\": 50}\n● Bash(python3 .cato/skills/add-product/check_prices.py; python3 te)\n  Cato wants to run python3 .cato/skills/add-product/check_prices.py; python3 test_shop.py\n  (no rule allows it yet)\n  1 Yes   2 Yes, and don't ask again for this command   3 No\n  > 1\n  └ prices ok: 5 products\n    ok    test_one_of_each\n    ok    test_counts_matter … +3 lines\nAdded \"tea\": 350 (350 cents, i.e. $3.50) to PRICES in shop.py. The price check printed \"prices ok: 5\nproducts\", and the tests printed \"all passed\".                                                      \n  sonnet · default mode · 3,652 tokens on the desk · cache 96% · $0.0162 · /help\n\n",
+ "graph": {
+  "__main__.py": {
+   "defs": [
+    "headless",
+    "main"
+   ],
+   "imports": [
+    "agent.py",
+    "context.py",
+    "helpers.py",
+    "mcp.py",
+    "model.py",
+    "permissions.py",
+    "settings.py",
+    "tools.py",
+    "ui.py"
+   ]
+  },
+  "agent.py": {
+   "defs": [
+    "describe",
+    "group_calls",
+    "run_agent",
+    "repair"
+   ],
+   "imports": [
+    "context.py",
+    "hooks.py",
+    "model.py",
+    "permissions.py",
+    "settings.py",
+    "tools.py"
+   ]
+  },
+  "cards.py": {
+   "defs": [
+    "read_card",
+    "find_cards",
+    "skill_menu",
+    "fill"
+   ],
+   "imports": []
+  },
+  "context.py": {
+   "defs": [
+    "environment",
+    "system_prompt",
+    "memory_files",
+    "reminders",
+    "with_reminders",
+    "estimate_tokens",
+    "desk_breakdown",
+    "clear_old_results",
+    "pairs_ok",
+    "recent_files",
+    "summarize"
+   ],
+   "imports": [
+    "cards.py",
+    "model.py"
+   ]
+  },
+  "helpers.py": {
+   "defs": [
+    "all_helpers",
+    "run_helper",
+    "helper_tools"
+   ],
+   "imports": [
+    "agent.py",
+    "cards.py",
+    "context.py",
+    "tools.py"
+   ]
+  },
+  "hooks.py": {
+   "defs": [
+    "matching_hooks",
+    "run_hooks"
+   ],
+   "imports": []
+  },
+  "mcp.py": {
+   "defs": [
+    "send",
+    "read_message",
+    "request",
+    "start_server",
+    "tool_caller",
+    "server_tools",
+    "load_servers",
+    "stop_servers"
+   ],
+   "imports": [
+    "tools.py"
+   ]
+  },
+  "model.py": {
+   "defs": [
+    "ModelError",
+    "model_id",
+    "live_pieces",
+    "replayed_pieces",
+    "glue_tool_call",
+    "glue_reasoning",
+    "request_body",
+    "stream_model"
+   ],
+   "imports": []
+  },
+  "permissions.py": {
+   "defs": [
+    "split_command",
+    "hides_a_command",
+    "inside_project",
+    "targets",
+    "matches",
+    "decide",
+    "allow_from_now_on",
+    "check_call"
+   ],
+   "imports": [
+    "hooks.py"
+   ]
+  },
+  "settings.py": {
+   "defs": [
+    "settings_files",
+    "load_settings"
+   ],
+   "imports": []
+  },
+  "tools.py": {
+   "defs": [
+    "Tool",
+    "full_path",
+    "remember_read",
+    "check_read_first",
+    "make_diff",
+    "short",
+    "walk_files",
+    "read_file",
+    "write_file",
+    "edit_file",
+    "run_bash",
+    "glob_files",
+    "grep_files",
+    "find_tool",
+    "tool_schemas",
+    "check_form",
+    "trim",
+    "run_tool"
+   ],
+   "imports": []
+  },
+  "ui.py": {
+   "defs": [
+    "Screen",
+    "read_line",
+    "ask_permission",
+    "show_tool_start",
+    "show_tool_end",
+    "status_line",
+    "session_tools",
+    "approve_server",
+    "show_helper_event",
+    "show_context",
+    "answer",
+    "run_command",
+    "banner",
+    "repl"
+   ],
+   "imports": [
+    "agent.py",
+    "cards.py",
+    "context.py",
+    "helpers.py",
+    "mcp.py",
+    "model.py",
+    "permissions.py",
+    "settings.py",
+    "tools.py"
+   ]
+  }
+ }
+}

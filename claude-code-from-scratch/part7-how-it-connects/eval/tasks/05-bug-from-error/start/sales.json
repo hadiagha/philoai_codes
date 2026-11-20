@@ -1,0 +1,22 @@
+[
+  {
+    "region": "north",
+    "amount": 100
+  },
+  {
+    "region": "south",
+    "amount": 40.25
+  },
+  {
+    "region": "north",
+    "amount": "12.50"
+  },
+  {
+    "region": "south",
+    "amount": 9.75
+  },
+  {
+    "region": "east",
+    "amount": 30
+  }
+]
